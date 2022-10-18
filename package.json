@@ -1,0 +1,33 @@
+{
+  "name": "clarity-cheat-sheet",
+  "version": "1.0.0",
+  "description": "Clarity Smart Contract Language Cheat Sheet",
+  "main": "index.js",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "watch": "node scripts/watch.js",
+    "clean": "node scripts/clean.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CompanyLX/clarity-cheat-sheet.git"
+  },
+  "keywords": [
+    "Cheat",
+    "Cheatsheet",
+    "Clarity",
+    "Smart",
+    "Contracts",
+    "Clarity",
+    "Sheet",
+    "Stacks",
+    "Blockchain",
+    "Stacks"
+  ],
+  "author": "Kay Anar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CompanyLX/clarity-cheat-sheet/issues"
+  },
+  "homepage": "https://github.com/CompanyLX/clarity-cheat-sheet#readme"
+}
