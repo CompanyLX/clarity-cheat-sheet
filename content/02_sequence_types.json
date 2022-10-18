@@ -1,0 +1,62 @@
+{
+  "id": "sequence_types",
+  "name": "Sequence Types",
+  "entries": [
+    {
+      "id": "buff",
+      "name": "buff",
+      "signature": "(buff max-len)",
+      "description": "",
+      "examples": [
+        {
+          "command": "0x68656c6c6f21",
+          "output": "0x68656c6c6f21"
+        }
+      ]
+    },
+    {
+      "id": "string_ascii",
+      "name": "string-ascii",
+      "signature": "(string-ascii max-len)",
+      "description": "",
+      "examples": [
+        {
+          "command": "\"This is an ASCII string.\"",
+          "output": "\"This is an ASCII string.\""
+        }
+      ]
+    },
+    {
+      "id": "string_utf8",
+      "name": "string-utf8",
+      "signature": "(string-utf8 max-len)",
+      "description": "",
+      "examples": [
+        {
+          "command": "u\"And this is an UTF-8 string \\u{1F60B}.\"",
+          "output": "u\"And this is an UTF-8 string \\u{1F60B}.\""
+        }
+      ]
+    },
+    {
+      "id": "list",
+      "name": "list",
+      "signature": "(list max-len entry-type)",
+      "description": "",
+      "examples": [
+        {
+          "command": "(list 4 8 15 16 23 42)",
+          "output": "[4, 8, 15, 16, 23, 42]"
+        },
+        {
+          "command": "(list \"Hello\" \"World\" \"!\")",
+          "output": "[\"Hello\", \"World\", \"!\"]"
+        },
+        {
+          "command": "(list u5 10 \"hello\")",
+          "error": true
+        }
+      ]
+    }
+  ]
+}
