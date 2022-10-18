@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Clarity Smart Contract Language Cheat Sheet">
+    <meta name="author" content="Kay Anar">
+    <title>(((CCS))) Clarity Cheat Sheet</title>
+    <link href="bootstrap.5.2.2.min.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <main class="container">
+        <div id="masonry" class="row">
+            {{#each this}}
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-3 bg-body rounded">
+                <div class="card">
+                    <h5 class="card-header">{{name}}</h5>
+                    <ul class="list-group list-group-flush">
+                        {{#each entries}}
+                        <button type="button" class="btn list-group-item list-group-item-action" data-bs-toggle="modal"
+                            data-bs-target="#{{../id}}_{{id}}_modal">
+                            <span class="font-monospace">{{name}}</span>{{#if byname}} <small
+                                class="text-secondary">({{byname}})</small>{{/if}}
+                        </button>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        {{#each this}}
+        {{#each entries}}
+        <div class="modal fade" id="{{../id}}_{{id}}_modal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <ul class="nav nav-tabs justify-content-end" id="{{../id}}_{{id}}_tabs" role="tablist">
+                            <li class="nav-item flex-sm-fill">
+                                <p class="nav-link disabled"><span class="font-monospace">{{name}}</span>{{#if byname}}
+                                    <small class="text-secondary">({{byname}})</small>{{/if}}
+                                </p>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="{{../id}}_{{id}}_info_tab" data-bs-toggle="tab"
+                                    data-bs-target="#{{../id}}_{{id}}_info_pane" type="button" role="tab"
+                                    aria-controls="{{../id}}_{{id}}_info_pane" aria-selected="true">Information</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="{{../id}}_{{id}}_example_tab" data-bs-toggle="tab"
+                                    data-bs-target="#{{../id}}_{{id}}_example_pane" type="button" role="tab"
+                                    aria-controls="{{../id}}_{{id}}_example_pane"
+                                    aria-selected="false">Examples</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="{{../id}}_{{id}}_tab_content">
+                            <div class="tab-pane fade show active" id="{{../id}}_{{id}}_info_pane" role="tabpanel"
+                                aria-labelledby="{{../id}}_{{id}}_info_tab" tabindex="0">
+                                {{#if signature}}
+                                <p class="pt-1"><strong>Signature :</strong></p>
+                                <p class="font-monospace lead">{{{signature}}}</p>
+                                {{/if}}
+                                {{#if input}}
+                                <p class="pt-1"><strong>Input :</strong></p>
+                                <p class="font-monospace lead">{{{input}}}</p>
+                                {{/if}}
+                                {{#if output}}
+                                <p class="pt-1"><strong>Output :</strong></p>
+                                <p class="font-monospace lead">{{{output}}}</p>
+                                {{/if}}
+                                {{#if description}}
+                                <p class="pt-1"><strong>Description :</strong></p>
+                                <p class="lead">{{{description}}}</p>
+                                {{/if}}
+                            </div>
+                            <div class="tab-pane fade" id="{{../id}}_{{id}}_example_pane" role="tabpanel"
+                                aria-labelledby="{{../id}}_{{id}}_example_tab" tabindex="0">
+                                <div class="bg-secondary bg-gradient mt-3 p-3 pb-1 text-dark bg-opacity-10">
+                                    {{#each examples}}
+                                    <p class="font-monospace overflow-auto text-primary"><span class="text-muted">&gt;
+                                        </span>{{command}}<br />
+                                        {{#if error}}<span class="text-danger fw-light">error{{else}}<span
+                                                class="text-success fw-light">{{output}}</span>{{/if}}
+                                    </p>
+                                    {{/each}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+        {{/each}}
+    </main>
+    <script src="bootstrap.5.2.2.min.js"></script>
+    <script src="masonry.4.2.2.min.js"></script>
+    <script>
+        (function () {
+            var msnry = new Masonry("#masonry", {
+                percentPosition: true
+            });
+            const collapseElements = document.querySelectorAll(".collapse");
+            collapseElements.forEach(function (elementObj) {
+                [
+                    "hidden.bs.collapse",
+                    "shown.bs.collapse",
+                ].forEach(function (eventName) {
+                    elementObj.addEventListener(eventName, (event) => {
+                        msnry.layout();
+                    });
+                });
+            });
+        })();
+    </script>
+</body>
+
+</html>
