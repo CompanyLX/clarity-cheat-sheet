@@ -6,11 +6,15 @@
       "id": "block_height",
       "name": "block-height",
       "output": "uint",
-      "description": "Returns the current block height of the Stacks blockchain as an uint",
+      "description": "Returns the current block height of the blockchain as an unsigned integer.",
       "examples": [
         {
           "command": "block-height",
           "output": "u234"
+        },
+        {
+          "command": "block-height",
+          "output": "u78654"
         }
       ]
     },
@@ -18,11 +22,15 @@
       "id": "burn_block_height",
       "name": "burn-block-height",
       "output": "uint",
-      "description": "Returns the current block height of the underlying burn blockchain as a uint",
+      "description": "Returns the current block height of the underlying burn blockchain as unsigned integer.",
       "examples": [
         {
           "command": "burn-block-height",
           "output": "u3412"
+        },
+        {
+          "command": "burn-block-height",
+          "output": "u9786"
         }
       ]
     },
