@@ -1,0 +1,34 @@
+{
+  "id": "conversion_functions",
+  "name": "Conversion Functions",
+  "entries": [
+    {
+      "id": "to_int",
+      "name": "to-int",
+      "input": "uint",
+      "output": "int",
+      "signature": "(to-int u)",
+      "description": "Tries to convert the <u>uint</u> argument to an <u>int</u>. Will cause a runtime error and abort if the supplied argument is >= <u>pow(2, 127)</u>",
+      "examples": [
+        {
+          "command": "(to-int u238)",
+          "output": "238"
+        }
+      ]
+    },
+    {
+      "id": "to_uint",
+      "name": "to-uint",
+      "input": "int",
+      "output": "uint",
+      "signature": "(to-uint i)",
+      "description": "Tries to convert the <u>int</u> argument to a <u>uint</u>. Will cause a runtime error and abort if the supplied argument is negative.",
+      "examples": [
+        {
+          "command": "(to-uint 238)",
+          "output": "u238"
+        }
+      ]
+    }
+  ]
+}
