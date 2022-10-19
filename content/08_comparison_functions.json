@@ -1,0 +1,208 @@
+{
+  "id": "comparison_functions",
+  "name": "Comparison Functions",
+  "entries": [
+    {
+      "id": "is_eq",
+      "name": "is-eq",
+      "input": "A, A, ...",
+      "output": "bool",
+      "signature": "(is-eq v1 v2...)",
+      "description": "Compares the inputted values, returning <u>true</u> if they are all equal. Note that <strong>unlike</strong> the <u>(and ...)</u> function, <u>(is-eq ...)</u> will <strong>not</strong> short-circuit. All values supplied to is-eq <strong>must</strong> be the same type.",
+      "examples": [
+        {
+          "command": "(is-eq 1 1)",
+          "output": "true"
+        },
+        {
+          "command": "(is-eq true false)",
+          "output": "false"
+        },
+        {
+          "command": "(is-eq \"abc\" 234 234)",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "less_than_or_equal",
+      "name": "<=",
+      "byname": "less than or equal",
+      "input": "int, int | uint, uint",
+      "output": "bool",
+      "signature": "(<= number1 number2)",
+      "description": "Compares two integers, returning true if <u>number1</u> is less than or equal to <u>number2</u> and <u>false</u> otherwise.",
+      "examples": [
+        {
+          "command": "(<= 1 1)",
+          "output": "true"
+        },
+        {
+          "command": "(<= 5 2)",
+          "output": "false"
+        },
+        {
+          "command": "(<= 3 6)",
+          "output": "true"
+        }
+      ]
+    },
+    {
+      "id": "less_than",
+      "name": "<",
+      "byname": "less than",
+      "input": "int, int | uint, uint",
+      "output": "bool",
+      "signature": "(< number1 number2)",
+      "description": "Compares two integers, returning <u>true</u> if <u>number1</u> is less than <u>number2</u> and <u>false</u> otherwise.",
+      "examples": [
+        {
+          "command": "(< 1 2)",
+          "output": "true"
+        },
+        {
+          "command": "(< 1 1)",
+          "output": "false"
+        },
+        {
+          "command": "(< 5 2)",
+          "output": "false"
+        }
+      ]
+    },
+    {
+      "id": "greater_than_or_equal",
+      "name": ">=",
+      "byname": "greater than or equal",
+      "input": "int, int | uint, uint",
+      "output": "bool",
+      "signature": "(>= number1 number2)",
+      "description": "Compares two integers, returning true if <u>number1</u> is greater than or equal to <u>number2</u> and <u>false</u> otherwise.",
+      "examples": [
+        {
+          "command": "(>= 1 1)",
+          "output": "true"
+        },
+        {
+          "command": "(>= 5 2)",
+          "output": "true"
+        },
+        {
+          "command": "(>= 3 6)",
+          "output": "false"
+        }
+      ]
+    },
+    {
+      "id": "greater_than",
+      "name": ">",
+      "byname": "greater than",
+      "input": "int, int | uint, uint",
+      "output": "bool",
+      "signature": "(> number1 number2)",
+      "description": "Compares two integers, returning <u>true</u> if <u>number1</u> is greater than <u>number2</u> and <u>false</u> otherwise.",
+      "examples": [
+        {
+          "command": "(> 1 2)",
+          "output": "false"
+        },
+        {
+          "command": "(> 1 1)",
+          "output": "false"
+        },
+        {
+          "command": "(> 5 2)",
+          "output": "true"
+        }
+      ]
+    },
+    {
+      "id": "is_ok",
+      "name": "is-ok",
+      "input": "(response A B)",
+      "output": "bool",
+      "signature": "(is-ok value)",
+      "description": "<u>is-ok</u> tests a supplied response value, returning <u>true</u> if the response was <u>ok</u>, and <u>false</u> if it was an <u>err</u>.",
+      "examples": [
+        {
+          "command": "(is-ok (ok 1))",
+          "output": "true"
+        },
+        {
+          "command": "(is-ok (err 1))",
+          "output": "false"
+        }
+      ]
+    },
+    {
+      "id": "is_err",
+      "name": "is-err",
+      "input": "(response A B)",
+      "output": "bool",
+      "signature": "(is-err value)",
+      "description": "<u>is-err</u> tests a supplied response value, returning <u>true</u> if the response was an <u>err</u>, and <u>false</u> if it was an <u>ok</u>.",
+      "examples": [
+        {
+          "command": "(is-err (ok 1))",
+          "output": "false"
+        },
+        {
+          "command": "(is-err (err 1))",
+          "output": "true"
+        }
+      ]
+    },
+    {
+      "id": "is_some",
+      "name": "is-some",
+      "input": "(optional A)",
+      "output": "bool",
+      "signature": "(is-some value)",
+      "description": "<u>is-some</u> tests a supplied option value, returning <u>true</u> if the option value is <u>(some ...)</u>, and <u>false</u> if it is a <u>none</u>.",
+      "examples": [
+        {
+          "command": "(define-map names-map { name: (string-ascii 12) } { id: int })",
+          "output": ""
+        },
+        {
+          "command": "(map-set names-map { name: \"blockstack\" } { id: 1337 })",
+          "output": ""
+        },
+        {
+          "command": "(is-some (get id (map-get? names-map { name: \"blockstack\" })))",
+          "output": "true"
+        },
+        {
+          "command": "(is-some (get id (map-get? names-map { name: \"non-existant\" })))",
+          "output": "false"
+        }
+      ]
+    },
+    {
+      "id": "is_none",
+      "name": "is-none",
+      "input": "(optional A)",
+      "output": "bool",
+      "signature": "(is-none value)",
+      "description": "<u>is-none</u> tests a supplied option value, returning <u>true</u> if the option value is <u>(none)</u>, and <u>false</u> if it is a <u>(some ...)</u>.",
+      "examples": [
+        {
+          "command": "(define-map names-map { name: (string-ascii 12) } { id: int })",
+          "output": ""
+        },
+        {
+          "command": "(map-set names-map { name: \"blockstack\" } { id: 1337 })",
+          "output": ""
+        },
+        {
+          "command": "(is-none (get id (map-get? names-map { name: \"blockstack\" })))",
+          "output": "false"
+        },
+        {
+          "command": "(is-none (get id (map-get? names-map { name: \"non-existant\" })))",
+          "output": "true"
+        }
+      ]
+    }
+  ]
+}
