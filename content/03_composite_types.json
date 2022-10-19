@@ -1,0 +1,27 @@
+{
+  "id": "composite_types",
+  "name": "Composite Types",
+  "entries": [
+    {
+      "id": "optional",
+      "name": "optional",
+      "description": "",
+      "examples": [
+      ]
+    },
+    {
+      "id": "tuple",
+      "name": "tuple",
+      "description": "",
+      "examples": [
+      ]
+    },
+    {
+      "id": "response",
+      "name": "response",
+      "description": "",
+      "examples": [
+      ]
+    }
+  ]
+}
