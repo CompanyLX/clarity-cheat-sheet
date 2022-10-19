@@ -29,6 +29,67 @@
           "output": "u238"
         }
       ]
+    },
+    {
+      "id": "buff_to_int_le",
+      "name": "buff-to-int-le",
+      "input": "(buff 16)",
+      "output": "int",
+      "signature": "(buff-to-int-le (buff 16))",
+      "description": "Converts a byte buffer to a signed integer use a little-endian encoding. The byte buffer can be up to 16 bytes in length. If there are fewer than 16 bytes, as this function uses a little-endian encoding, the input behaves as if it is zero-padded on the _right_.",
+      "examples": [
+        {
+          "command": "(buff-to-int-le 0x01)",
+          "output": "1"
+        },
+        {
+          "command": "(buff-to-int-le 0x01000000000000000000000000000000)",
+          "output": "1"
+        },
+        {
+          "command": "(buff-to-int-le 0xffffffffffffffffffffffffffffffff)",
+          "output": "-1"
+        },
+        {
+          "command": "(buff-to-int-le 0x)",
+          "output": "0"
+        },
+        {
+          "command": "(buff-to-int-le 0xcafebebe)",
+          "output": "3200188106"
+        }
+      ]
+    }
+    ,
+    {
+      "id": "buff_to_uint_le",
+      "name": "buff-to-uint-le",
+      "input": "(buff 16)",
+      "output": "int",
+      "signature": "(buff-to-uint-le (buff 16))",
+      "description": "Converts a byte buffer to an unsigned integer use a little-endian encoding. The byte buffer can be up to 16 bytes in length. If there are fewer than 16 bytes, as this function uses a little-endian encoding, the input behaves as if it is zero-padded on the _right_.",
+      "examples": [
+        {
+          "command": "(buff-to-uint-le 0x01)",
+          "output": "1"
+        },
+        {
+          "command": "(buff-to-uint-le 0x01000000000000000000000000000000)",
+          "output": "1"
+        },
+        {
+          "command": "(buff-to-uint-le 0xffffffffffffffffffffffffffffffff)",
+          "output": "u340282366920938463463374607431768211455"
+        },
+        {
+          "command": "(buff-to-uint-le 0x)",
+          "output": "0"
+        },
+        {
+          "command": "(buff-to-uint-le 0xcafebebe)",
+          "output": "3200188106"
+        }
+      ]
     }
   ]
 }
