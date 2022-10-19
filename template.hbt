@@ -76,15 +76,15 @@
                                 aria-labelledby="{{../id}}_{{id}}_info_tab" tabindex="0">
                                 {{#if signature}}
                                 <p class="pt-1"><strong>Signature :</strong></p>
-                                <p class="font-monospace lead">{{{signature}}}</p>
+                                <p class="font-monospace">{{{signature}}}</p>
                                 {{/if}}
                                 {{#if input}}
                                 <p class="pt-1"><strong>Input :</strong></p>
-                                <p class="font-monospace lead">{{{input}}}</p>
+                                <p class="font-monospace">{{{input}}}</p>
                                 {{/if}}
                                 {{#if output}}
                                 <p class="pt-1"><strong>Output :</strong></p>
-                                <p class="font-monospace lead">{{{output}}}</p>
+                                <p class="font-monospace">{{{output}}}</p>
                                 {{/if}}
                                 {{#if description}}
                                 <p class="pt-1"><strong>Description :</strong></p>
