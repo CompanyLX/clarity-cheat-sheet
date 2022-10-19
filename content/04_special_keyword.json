@@ -1,0 +1,126 @@
+{
+  "id": "special_keyword",
+  "name": "Special Keywords",
+  "entries": [
+    {
+      "id": "block_height",
+      "name": "block-height",
+      "output": "uint",
+      "description": "Returns the current block height of the Stacks blockchain as an uint",
+      "examples": [
+        {
+          "command": "block-height",
+          "output": "u234"
+        }
+      ]
+    },
+    {
+      "id": "burn_block_height",
+      "name": "burn-block-height",
+      "output": "uint",
+      "description": "Returns the current block height of the underlying burn blockchain as a uint",
+      "examples": [
+        {
+          "command": "burn-block-height",
+          "output": "u3412"
+        }
+      ]
+    },
+    {
+      "id": "contract_caller",
+      "name": "contract-caller",
+      "output": "principal",
+      "description": "Returns the caller of the current contract context. If this contract is the first one called by a signed transaction, the caller will be equal to the signing principal. If `contract-call? was used to invoke a function from a new contract, `contract-caller` changes to the _calling_ contract's principal. If `as-contract` is used to change the `tx-sender` context, `contract-caller` _also_ changes to the same contract principal.",
+      "examples": [
+        {
+          "command": "contract-caller",
+          "output": "ST000000000000000000002AMW42H"
+        }
+      ]
+    },
+    {
+      "id": "tx_sender",
+      "name": "tx-sender",
+      "output": "principal",
+      "description": "Returns the original sender of the current transaction, or if `as-contract` was called to modify the sending context, it returns that contract principal.",
+      "examples": [
+        {
+          "command": "tx-sender",
+          "output": "ST000000000000000000002AMW42H"
+        }
+      ]
+    },
+    {
+      "id": "tx_sponsor",
+      "name": "tx-sponsor?",
+      "output": "optional principal",
+      "description": "Returns the sponsor of the current transaction if there is a sponsor, otherwise returns None.",
+      "examples": [
+        {
+          "command": "tx-sponsor?",
+          "output": "(some ST000000000000000000002AMW42H)"
+        },
+        {
+          "command": "tx-sponsor?",
+          "output": "(none)"
+        }
+      ]
+    },
+    {
+      "id": "stx_liquid_supply",
+      "name": "stx-liquid-supply",
+      "output": "uint",
+      "description": "Returns the total number of micro-STX (uSTX) that are liquid in the system as of this block.",
+      "examples": [
+        {
+          "command": "stx-liquid-supply",
+          "output": "u456738924"
+        }
+      ]
+    },
+    {
+      "id": "is_in_regtest",
+      "name": "is-in-regtest",
+      "output": "bool",
+      "description": "Returns whether or not the code is running in a regression test",
+      "examples": [
+        {
+          "command": "is-in-regtest",
+          "output": "true"
+        }
+      ]
+    },
+    {
+      "id": "is_in_mainnet",
+      "name": "is-in-mainnet",
+      "output": "bool",
+      "description": "Returns a boolean indicating whether or not the code is running on the mainnet",
+      "examples": [
+        {
+          "command": "is-in-mainnet",
+          "output": "false"
+        }
+      ]
+    },
+    {
+      "id": "chain-id",
+      "name": "chain-id",
+      "output": "uint",
+      "description": "Returns the 32-bit chain ID of the blockchain running this transaction. Will print 'u1' if the code is running on mainnet, and 'u2147483648' on testnet, and other values on different chains.",
+      "examples": [
+        {
+          "command": "chain-id",
+          "output": "u1"
+        },
+        {
+          "command": "chain-id",
+          "output": "u2147483648"
+        },
+        {
+          "command": "chain-id",
+          "output": "u326646"
+        }
+      ]
+    }
+  ]
+}
