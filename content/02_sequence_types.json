@@ -5,12 +5,28 @@
     {
       "id": "buff",
       "name": "buff",
-      "signature": "(buff max-len)",
-      "description": "",
+      "signature": "(buff MAXIMUM_LENGTH)",
+      "description": "Buffers are unstructured data of a <mark>fixed maximum length</mark>. Length must be a positive integer (numbers greater than 0).<br/>Buffer values always start with the prefix 0x followed by a hexadecimal string. Each byte is thus represented by two so-called hexits.<br/><br/>Notice although maximum length must be a postive integer there is <mark>no unsigned integer prefix character <strong>u</strong></mark>.",
       "examples": [
         {
           "command": "0x68656c6c6f21",
           "output": "0x68656c6c6f21"
+        },
+        {
+          "command": "0x0304",
+          "output": "0x0304"
+        },
+        {
+          "command": "(define-data-var variable (buff 5) 0x0102030405)",
+          "output": "(none)"
+        },
+        {
+          "command": "(len (var-get variable))",
+          "output": "u5"
+        },
+        {
+          "command": "(var-get variable)",
+          "output": "0x0102030405"
         }
       ]
     },
@@ -29,7 +45,7 @@
     {
       "id": "string_utf8",
       "name": "string-utf8",
-      "signature": "(string-utf8 max-len)",
+      "signature": "(string-utf8 MAXIMUM_LENGTH)",
       "description": "",
       "examples": [
         {
