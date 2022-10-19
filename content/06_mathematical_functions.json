@@ -1,0 +1,138 @@
+{
+  "id": "mathematical_functions",
+  "name": "Mathematical Functions",
+  "entries": [
+    {
+      "id": "mod",
+      "name": "mod",
+      "input": "int, int | uint, uint",
+      "output": "int | uint",
+      "signature": "(mod number1 number2)",
+      "description": "Returns the integer remainder from integer dividing <u>number1</u> by <u>number2</u>. In the event of a <strong>division by zero</strong>, throws a runtime error.",
+      "examples": [
+        {
+          "command": "(mod 2 3)",
+          "output": "2"
+        },
+        {
+          "command": "(mod 5 2)",
+          "output": "1"
+        },
+        {
+          "command": "(mod 7 1)",
+          "output": "0"
+        },
+        {
+          "command": "(mod -10 3)",
+          "output": "-1"
+        },
+        {
+          "command": "(mod -8 -3)",
+          "output": "-2"
+        },
+        {
+          "command": "(mod 5 0)",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "pow",
+      "name": "pow",
+      "input": "int, int | uint, uint",
+      "output": "int | uint",
+      "signature": "(pow number1 number2)",
+      "description": "Returns the result of raising <u>number1</u> to the power of <u>number2</u>. In the event of an <strong>overflow</strong>, throws a runtime error.",
+      "examples": [
+        {
+          "command": "(pow 2 3)",
+          "output": "8"
+        },
+        {
+          "command": "(pow 2 2)",
+          "output": "4"
+        },
+        {
+          "command": "(pow 7 1)",
+          "output": "7"
+        },
+        {
+          "command": "(pow 7 1)",
+          "output": "7"
+        },
+        {
+          "command": "(pow 3 0)",
+          "output": "1"
+        },
+        {
+          "command": "(pow -2 3)",
+          "output": "-8"
+        },
+        {
+          "command": "(pow 0 -2)",
+          "output": "0"
+        },
+        {
+          "command": "(pow 5 -1)",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "sqrti",
+      "name": "sqrti",
+      "input": "int | uint",
+      "output": "int | uint",
+      "signature": "(sqrti n)",
+      "description": "Returns the largest integer that is less than or equal to the square root of <u>n</u>. Fails on a negative numbers.",
+      "examples": [
+        {
+          "command": "(sqrti u11)",
+          "output": "u3"
+        },
+        {
+          "command": "(sqrti 1000000)",
+          "output": "1000"
+        },
+        {
+          "command": "(sqrti u1)",
+          "output": "u1"
+        },
+        {
+          "command": "(sqrti 0)",
+          "output": "0"
+        },
+        {
+          "command": "(sqrti -3)",
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "log2",
+      "name": "log2",
+      "input": "int | uint",
+      "output": "int | uint",
+      "signature": "(log2 n)",
+      "description": "the <b>integer part</b> of the power to which the number 2 must be raised to to obtain the value <u>n</u>. Fails on zero or a negative number.",
+      "examples": [
+        {
+          "command": "(log2 u8)",
+          "output": "u3"
+        },
+        {
+          "command": "(log2 8)",
+          "output": "3"
+        },
+        {
+          "command": "(log2 u1)",
+          "output": "u0"
+        },
+        {
+          "command": "(log2 1000)",
+          "output": "9"
+        }
+      ]
+    }
+  ]
+}
