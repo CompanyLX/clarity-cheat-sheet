@@ -6,22 +6,19 @@
       "id": "optional",
       "name": "optional",
       "description": "",
-      "examples": [
-      ]
+      "examples": []
     },
     {
       "id": "tuple",
       "name": "tuple",
       "description": "",
-      "examples": [
-      ]
+      "examples": []
     },
     {
       "id": "response",
       "name": "response",
       "description": "",
-      "examples": [
-      ]
+      "examples": []
     }
   ]
 }
