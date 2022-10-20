@@ -28,6 +28,29 @@
           "output": "(some (tuple (id 1337)))"
         }
       ]
+    },
+    {
+      "id": "map_set",
+      "name": "map-set",
+      "input": "MAP_NAME, tuple, tuple",
+      "output": "bool",
+      "signature": "(map-set MAP_NAME KEY_TUPLE VALUE_TUPLE)",
+      "description": "The `map-set` function sets the value associated with the input key to the inputted value. This function performs a _blind_ update; whether or not a value is already associated with the key, the function overwrites that existing association. Note: the `value-tuple` requires 1 additional byte for storage in the materialized blockchain state, and therefore the maximum size of a value that may be inserted into a map is MAX_CLARITY_VALUE - 1.",
+      "examples": [
+        {
+          "command": "(define-map names-map { name: (string-ascii 10) } { id: int })",
+          "output": "none"
+        },
+        {
+          "command": "(map-set names-map { name: \"companylx\" } { id: 1337 })",
+          "output": "true"
+        },
+        {
+          "comment": "Same command, using a shorthand for constructing the tuple.",
+          "command": "(map-set names-map (tuple (name \"companylx\")) (tuple (id 1337)))",
+          "output": "true"
+        }
+      ]
     }
   ]
 }
