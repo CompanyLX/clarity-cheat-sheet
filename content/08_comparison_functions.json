@@ -8,7 +8,7 @@
       "input": "A, A, ...",
       "output": "bool",
       "signature": "(is-eq v1 v2...)",
-      "description": "Compares the inputted values, returning <u>true</u> if they are all equal. Note that <strong>unlike</strong> the <u>(and ...)</u> function, <u>(is-eq ...)</u> will <strong>not</strong> short-circuit. All values supplied to is-eq <strong>must</strong> be the same type.",
+      "description": "Compares the inputted values, returning `true` if they are all equal. Note that _unlike_ the `(and ...)` function, `(is-eq ...)` will _not_ short-circuit. All values supplied to is-eq _must_ be the same type.",
       "examples": [
         {
           "command": "(is-eq 1 1)",
@@ -31,7 +31,7 @@
       "input": "int, int | uint, uint",
       "output": "bool",
       "signature": "(<= number1 number2)",
-      "description": "Compares two integers, returning true if <u>number1</u> is less than or equal to <u>number2</u> and <u>false</u> otherwise.",
+      "description": "Compares two integers, returning true if `i1` is less than or equal to `i2` and `false` otherwise. i1 and i2 must be of the same type. Starting with Stacks 1.0, the `<=`-comparable types are `int` and `uint`. Starting with Stacks 2.1, the `<=`-comparable types are expanded to include `string-ascii`, `string-utf8` and `buff`.",
       "examples": [
         {
           "command": "(<= 1 1)",
@@ -44,6 +44,22 @@
         {
           "command": "(<= 3 6)",
           "output": "true"
+        },
+        {
+          "command": "(<= \"aaa\" \"baa\")",
+          "output": "true"
+        },
+        {
+          "command": "(<= \"aa\" \"aaa\")",
+          "output": "true"
+        },
+        {
+          "command": "(<= 0x01 0x02)",
+          "output": "true"
+        },
+        {
+          "command": "(<= 5 u2)",
+          "error": true
         }
       ]
     },
@@ -54,7 +70,7 @@
       "input": "int, int | uint, uint",
       "output": "bool",
       "signature": "(< number1 number2)",
-      "description": "Compares two integers, returning <u>true</u> if <u>number1</u> is less than <u>number2</u> and <u>false</u> otherwise.",
+      "description": "Compares two integers, returning `true` if `i1` is less than `i2` and `false` otherwise. i1 and i2 must be of the same type. Starting with Stacks 1.0, the `<`-comparable types are `int` and `uint`. Starting with Stacks 2.1, the `<`-comparable types are expanded to include `string-ascii`, `string-utf8` and `buff`.",
       "examples": [
         {
           "command": "(< 1 2)",
@@ -67,6 +83,22 @@
         {
           "command": "(< 5 2)",
           "output": "false"
+        },
+        {
+          "command": "(< \"aaa\" \"baa\")",
+          "output": "true"
+        },
+        {
+          "command": "(< \"aa\" \"aaa\")",
+          "output": "true"
+        },
+        {
+          "command": "(< 0x01 0x02)",
+          "output": "true"
+        },
+        {
+          "command": "(< 5 u2)",
+          "error": true
         }
       ]
     },
@@ -74,10 +106,10 @@
       "id": "greater_than_or_equal",
       "name": ">=",
       "byname": "greater than or equal",
-      "input": "int, int | uint, uint",
+      "input": "int, int | uint, uint | string-ascii, string-ascii | string-utf8, string-utf8 | buff, buff",
       "output": "bool",
-      "signature": "(>= number1 number2)",
-      "description": "Compares two integers, returning true if <u>number1</u> is greater than or equal to <u>number2</u> and <u>false</u> otherwise.",
+      "signature": "(>= type1 type2)",
+      "description": "Compares the value of the two types, returning `true` if `type1` is greater than or equal to `tyoe2` and `false` otherwise. type1 and type2 must be of the same type.",
       "examples": [
         {
           "command": "(>= 1 1)",
@@ -90,6 +122,22 @@
         {
           "command": "(>= 3 6)",
           "output": "false"
+        },
+        {
+          "command": "(>= \"baa\" \"aaa\")",
+          "output": "true"
+        },
+        {
+          "command": "(>= \"aaa\" \"aa\")",
+          "output": "true"
+        },
+        {
+          "command": "(>= 0x02 0x01)",
+          "output": "true"
+        },
+        {
+          "command": "(>= 5 u2)",
+          "error": true
         }
       ]
     },
@@ -100,7 +148,7 @@
       "input": "int, int | uint, uint",
       "output": "bool",
       "signature": "(> number1 number2)",
-      "description": "Compares two integers, returning <u>true</u> if <u>number1</u> is greater than <u>number2</u> and <u>false</u> otherwise.",
+      "description": "ompares two integers, returning `true` if `i1` is greater than `i2` and false otherwise. i1 and i2 must be of the same type. Starting with Stacks 1.0, the `>`-comparable types are `int` and `uint`. Starting with Stacks 2.1, the `>`-comparable types are expanded to include `string-ascii`, `string-utf8` and `buff`.",
       "examples": [
         {
           "command": "(> 1 2)",
@@ -113,6 +161,22 @@
         {
           "command": "(> 5 2)",
           "output": "true"
+        },
+        {
+          "command": "(> \"baa\" \"aaa\")",
+          "output": "true"
+        },
+        {
+          "command": "(> \"aaa\" \"aa\")",
+          "output": "true"
+        },
+        {
+          "command": "(> 0x02 0x01)",
+          "output": "true"
+        },
+        {
+          "command": "(> 5 u2)",
+          "error": true
         }
       ]
     },
