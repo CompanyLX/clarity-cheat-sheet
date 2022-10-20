@@ -99,13 +99,15 @@
                             <div class="tab-pane fade" id="{{../id}}_{{id}}_example_pane" role="tabpanel"
                                 aria-labelledby="{{../id}}_{{id}}_example_tab" tabindex="0">
                                 <div class="bg-secondary bg-gradient mt-3 p-3 pb-1 text-dark bg-opacity-10">
+                                    <p class="font-monospace overflow-auto text-primary">
                                     {{#each examples}}
-                                    <p class="font-monospace overflow-auto text-primary"><span class="text-muted">&gt;
-                                        </span>{{command}}<br />
-                                        {{#if error}}<span class="text-danger fw-light">error{{else}}<span
-                                                class="text-success fw-light">{{output}}</span>{{/if}}
-                                    </p>
+                                    
+                                    {{#if command}}<span class="text-muted">&gt; </span>{{command}}<br />{{/if}}
+                                    {{#if comment}}<span class="text-muted">;; {{comment}}<br /></span>{{/if}}
+                                    {{#if error}}<span class="text-danger fw-light">error{{else}}{{#if output}}<span class="text-success fw-light">{{output}}</span>{{/if}}{{/if}}
+                                    <br />
                                     {{/each}}
+                                    </p>
                                 </div>
                             </div>
                         </div>
