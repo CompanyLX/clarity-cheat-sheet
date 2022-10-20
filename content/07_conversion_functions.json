@@ -150,6 +150,52 @@
           "output": "u3405692606"
         }
       ]
+    },
+
+    {
+      "id": "string_to_int",
+      "name": "string-to-int",
+      "input": "string-ascii|string-utf8",
+      "output": "int",
+      "signature": "(string-to-int (string-ascii|string-utf8))",
+      "description": "Converts a string, either `string-ascii` or `string-utf8`, to an optional-wrapped signed integer. If the input string does not represent a valid integer, then the function returns `none`. Otherwise it returns an integer wrapped in `some`.",
+      "examples": [
+        {
+          "command": "(string-to-int \"1\")",
+          "output": "(some 1)"
+        },
+        {
+          "command": "(string-to-int u\"-1\")",
+          "output": "(some -1)"
+        },
+        {
+          "command": "(string-to-int \"a\")",
+          "output": "(none)"
+        }
+      ]
+    },
+
+    {
+      "id": "string_to_uint",
+      "name": "string-to-uint",
+      "input": "string-ascii|string-utf8",
+      "output": "uint",
+      "signature": "(string-to-uint (string-ascii|string-utf8))",
+      "description": "Converts a string, either `string-ascii` or `string-utf8`, to an optional-wrapped unsigned integer. If the input string does not represent a valid integer, then the function returns `none`. Otherwise it returns an unsigned integer wrapped in `some`.",
+      "examples": [
+        {
+          "command": "(string-to-uint \"1\")",
+          "output": "(some u1)"
+        },
+        {
+          "command": "(string-to-uint u\"1\")",
+          "output": "(some u1)"
+        },
+        {
+          "command": "(string-to-uint \"a\")",
+          "output": "(none)"
+        }
+      ]
     }
   ]
 }
