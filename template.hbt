@@ -25,6 +25,11 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <style>
+        body {
+            padding-bottom: 4em;
+        }
+    </style>
 </head>
 
 <body>
@@ -110,6 +115,9 @@
         </div>
         {{/each}}
         {{/each}}
+        <div class="fixed-bottom text-bg-light border-top border-secondary border-2 border-opacity-10 p-1">
+            <span class="font-monospace text-secondary">(((CCS))) Clarity Cheat Sheet by Kay Anar of <a href="//CompanyLX.com">CompanyLX</a>, based on <a href="https://book.clarity-lang.org">Clarity of Mind</a> &amp; <a href="https://docs.stacks.co/docs/write-smart-contracts/clarity-language/">Stacks Docs</a>. </span>
+        </div>
     </main>
     <script src="bootstrap.5.2.2.min.js"></script>
     <script src="masonry.4.2.2.min.js"></script>
