@@ -1,0 +1,33 @@
+{
+  "id": "map_functions",
+  "name": "Map Functions",
+  "entries": [
+    {
+      "id": "map_get",
+      "name": "map-get?",
+      "input": "MAP_NAME, tuple",
+      "output": "(optional (tuple))",
+      "signature": "(map-get? MAP_NAME tuple)",
+      "description": "The `map-get?` function looks up and returns an entry from a contract's data map. The value is looked up using `key-tuple`. If there is no value associated with that key in the data map, the function returns a `none` option. Otherwise, it returns `(some value)`.",
+      "examples": [
+        {
+          "command": "(define-map names-map { name: (string-ascii 10) } { id: int })",
+          "output": "none"
+        },
+        {
+          "command": "(map-set names-map { name: \"companylx\" } { id: 1337 })",
+          "output": "true"
+        },
+        {
+          "command": "(map-get? names-map (tuple (name \"companylx\")))",
+          "output": "(some (tuple (id 1337)))"
+        },
+        {
+          "comment": "Same command, using a shorthand for constructing the tuple.",
+          "command": "(map-get? names-map { name: \"companylx\" })",
+          "output": "(some (tuple (id 1337)))"
+        }
+      ]
+    }
+  ]
+}
