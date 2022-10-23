@@ -1,0 +1,57 @@
+[
+  {
+    "id": "primitive_types",
+    "name": "Primitive Types",
+    "entries": []
+  },
+  {
+    "id": "sequence_types",
+    "name": "Sequence Types",
+    "entries": []
+  },
+  {
+    "id": "composite_types",
+    "name": "Composite Types",
+    "entries": []
+  },
+  {
+    "id": "special_keyword",
+    "name": "Special Keywords",
+    "entries": []
+  },
+  {
+    "id": "arithmetic_operations",
+    "name": "Arithmetic Operations",
+    "entries": []
+  },
+  {
+    "id": "mathematical_functions",
+    "name": "Mathematical Functions",
+    "entries": []
+  },
+  {
+    "id": "conversion_functions",
+    "name": "Conversion Functions",
+    "entries": []
+  },
+  {
+    "id": "comparison_functions",
+    "name": "Comparison Functions",
+    "entries": []
+  },
+  {
+    "id": "logical_operators",
+    "name": "Logical Operators",
+    "entries": []
+  },
+  {
+    "id": "accessors_and_mutators",
+    "name": "Accessors & Mutators",
+    "entries": []
+  },
+  {
+    "id": "map_functions",
+    "name": "Map Functions",
+    "entries": []
+  }
+]
