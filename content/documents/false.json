@@ -1,7 +1,7 @@
 {
   "name": "false",
-  "snippet": "false",
   "output": "bool",
+  "snippet": "false",
   "description": ["Boolean false constant."],
   "examples": [
     {

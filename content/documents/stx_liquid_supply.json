@@ -1,7 +1,7 @@
 {
   "name": "stx-liquid-supply",
-  "snippet": "stx-liquid-supply",
   "output": "uint",
+  "snippet": "stx-liquid-supply",
   "description": [
     "Returns the total number of micro-STX (uSTX) that are liquid in the system as of this block."
   ],

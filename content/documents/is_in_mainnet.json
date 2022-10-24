@@ -1,7 +1,7 @@
 {
   "name": "is-in-mainnet",
-  "snippet": "is-in-mainnet",
   "output": "bool",
+  "snippet": "is-in-mainnet",
   "description": [
     "Returns a boolean indicating whether or not the code is running on the mainnet."
   ],

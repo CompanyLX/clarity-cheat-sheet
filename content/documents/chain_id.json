@@ -1,7 +1,7 @@
 {
   "name": "chain-id",
-  "snippet": "chain-id",
   "output": "uint",
+  "snippet": "chain-id",
   "description": [
     "Returns the 32-bit chain ID of the blockchain running this transaction.",
     "Will print <strong>u1</strong> if the code is running on mainnet, and <strong>u2147483648</strong> on testnet, and other values on different chains."

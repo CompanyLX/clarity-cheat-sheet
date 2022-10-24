@@ -1,7 +1,7 @@
 {
   "name": "tx-sponsor?",
+  "output": "(optional principal)",
   "snippet": "tx-sponsor?",
-  "output": "principal",
   "description": [
     "Returns the sponsor of the current transaction if there is a sponsor, otherwise returns None."
   ],

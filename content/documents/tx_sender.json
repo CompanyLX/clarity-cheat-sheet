@@ -1,7 +1,7 @@
 {
   "name": "tx-sender",
-  "snippet": "tx-sender",
   "output": "principal",
+  "snippet": "tx-sender",
   "description": [
     "Returns the original sender of the current transaction, or if <strong>as-contract</strong> was called to modify the sending context, it returns that contract principal."
   ],

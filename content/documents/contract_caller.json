@@ -1,7 +1,7 @@
 {
   "name": "contract-caller",
-  "snippet": "contract-caller",
   "output": "principal",
+  "snippet": "contract-caller",
   "description": [
     "Returns the caller of the current contract context. If this contract is the first one called by a signed transaction, the caller will be equal to the signing principal. If <strong>contract-call?</strong> was used to invoke a function from a new contract, <strong>contract-caller</strong> changes to the <u>calling</u> contract's principal. If <strong>as-contract</strong> is used to change the <strong>tx-sender</strong> context, <strong>contract-caller</strong> <u>also</u> changes to the same contract principal."
   ],

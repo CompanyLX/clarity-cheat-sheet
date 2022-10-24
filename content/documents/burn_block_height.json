@@ -1,7 +1,7 @@
 {
   "name": "burn-block-height",
-  "snippet": "burn-block-height",
   "output": "uint",
+  "snippet": "burn-block-height",
   "description": [
     "Returns the current block height of the underlying burn blockchain as unsigned integer."
   ],

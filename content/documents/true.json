@@ -1,7 +1,7 @@
 {
   "name": "true",
-  "snippet": "true",
   "output": "bool",
+  "snippet": "true",
   "description": ["Boolean true constant."],
   "examples": [
     {

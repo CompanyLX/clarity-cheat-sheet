@@ -1,7 +1,7 @@
 {
   "name": "block-height",
-  "snippet": "block-height",
   "output": "uint",
+  "snippet": "block-height",
   "description": [
     "Returns the current block height of the blockchain as an unsigned integer."
   ],

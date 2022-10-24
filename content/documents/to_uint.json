@@ -1,0 +1,26 @@
+{
+  "name": "to-uint",
+  "input": "int",
+  "output": "uint",
+  "snippet": "(to-uint IN1)",
+  "description": [
+    "Tries to convert the <strong>int</strong> argument to a <strong>uint</strong>. Will cause a runtime error and abort if the supplied argument is negative."
+  ],
+  "examples": [
+    {
+      "command": "(to-uint 232)"
+    },
+    {
+      "output": "u232"
+    },
+    {
+      "command": "(define-data-var size int 21)"
+    },
+    {
+      "command": "(to-uint (var-set size))"
+    },
+    {
+      "output": "u21"
+    }
+  ]
+}

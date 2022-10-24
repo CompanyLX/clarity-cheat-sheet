@@ -1,7 +1,7 @@
 {
   "name": "is-in-regtest",
-  "snippet": "is-in-regtest",
   "output": "bool",
+  "snippet": "is-in-regtest",
   "description": [
     "Returns whether or not the code is running in a regression test."
   ],
