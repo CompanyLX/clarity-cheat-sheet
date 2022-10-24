@@ -1,0 +1,20 @@
+{
+  "name": "false",
+  "snippet": "false",
+  "output": "bool",
+  "description": ["Boolean false constant."],
+  "examples": [
+    {
+      "command": "(and true false)"
+    },
+    {
+      "output": "false"
+    },
+    {
+      "command": "(or false true)"
+    },
+    {
+      "output": "true"
+    }
+  ]
+}
