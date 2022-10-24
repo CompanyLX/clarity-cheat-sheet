@@ -77,7 +77,7 @@ const IS_STANDARD_API: SimpleFunctionAPI {
     signature: "(is-standard standard-or-contract-principal)",
     description: "Tests whether <strong>standard-or-contract-principal</strong> <u>matches</u> the current network
 type, and therefore represents a principal that can spend tokens on the current
-network type. That is, the network is either of type <strong>mainnet`, or <strong>testnet</strong>.
+network type. That is, the network is either of type <strong>mainnet</stront>, or <strong>testnet</strong>.
 Only <strong>SPxxxx</strong> and <strong>SMxxxx</strong> <u>c32check form</u> addresses can spend tokens on
 a mainnet, whereas only <strong>STxxxx</strong> and <strong>SNxxxx</strong> <u>c32check forms</u> addresses can spend
 tokens on a testnet. All addresses can <u>receive</u> tokens, but only principal
@@ -100,11 +100,11 @@ const principal_destruct_API: SimpleFunctionAPI {
     snippet: "principal-destruct ${1:principal-address}",
     signature: "(principal-destruct principal-address)",
     description:  "A principal value represents either a set of keys, or a smart contract.
-The former, called a <u>standard principal_,
+The former, called a <u>standard principal</u>,
 is encoded as a <strong>(buff 1)</strong> *version byte*, indicating the type of account
 and the type of network that this principal can spend tokens on,
 and a <strong>(buff 20)</strong> *public key hash*, characterizing the principal's unique identity.
-The latter, a <u>contract principal_, is encoded as a standard principal concatenated with
+The latter, a <u>contract principal</u>, is encoded as a standard principal concatenated with
 a <strong>(string-ascii 40)</strong> *contract name* that identifies the code body.
 
 `principal-destruct</strong> will decompose a principal into its component parts: either`{version-byte, hash-bytes}`
@@ -118,8 +118,8 @@ returns the pair as its <strong>ok</strong> value.
 If the version byte of <strong>principal-address</strong> does not match the network, then this method
 returns the pair as its <strong>err</strong> value.
 
-In both cases, the value itself is a tuple containing three fields: a <strong>version</strong> value as a <strong>(buff 1)`,
-a <strong>hash-bytes</strong> value as a <strong>(buff 20)`, and a <strong>name</strong> value as an <strong>(optional (string-ascii 40))</strong>.  The <strong>name`
+In both cases, the value itself is a tuple containing three fields: a <strong>version</strong> value as a <strong>(buff 1)</stront>,
+a <strong>hash-bytes</strong> value as a <strong>(buff 20)</stront>, and a <strong>name</strong> value as an <strong>(optional (string-ascii 40))</strong>.  The <strong>name`
 field will only be <strong>(some ..)</strong> if the principal is a contract principal.
 
 Note: This function is only available starting with Stacks 2.1.",
@@ -136,18 +136,18 @@ const PRINCIPAL_CONSTRUCT_API: SimpleFunctionAPI {
     snippet: "principal-construct ${1:version} ${2:pub-key-hash}",
     signature: "(principal-construct (buff 1) (buff 20) [(string-ascii 40)])",
     description: "A principal value represents either a set of keys, or a smart contract.
-The former, called a <u>standard principal_,
+The former, called a <u>standard principal</u>,
 is encoded as a <strong>(buff 1)</strong> *version byte*, indicating the type of account
 and the type of network that this principal can spend tokens on,
 and a <strong>(buff 20)</strong> *public key hash*, characterizing the principal's unique identity.
-The latter, a <u>contract principal_, is encoded as a standard principal concatenated with
+The latter, a <u>contract principal</u>, is encoded as a standard principal concatenated with
 a <strong>(string-ascii 40)</strong> *contract name* that identifies the code body.
 
 The <strong>principal-construct</strong> function allows users to create either standard or contract principals,
 depending on which form is used.  To create a standard principal, 
 `principal-construct</strong> would be called with two arguments: it
 takes as input a <strong>(buff 1)</strong> which encodes the principal address's
-`version-byte`, a <strong>(buff 20)</strong> which encodes the principal address's <strong>hash-bytes</strong>.
+`version-byte</stront>, a <strong>(buff 20)</strong> which encodes the principal address's <strong>hash-bytes</strong>.
 To create a contract principal, <strong>principal-construct</strong> would be called with
 three arguments: the <strong>(buff 1)</strong> and <strong>(buff 20)</strong> to represent the standard principal
 that created the contract, and a <strong>(string-ascii 40)</strong> which encodes the contract's name.
@@ -157,13 +157,13 @@ depending on whether or not the third <strong>(string-ascii 40)</strong> argumen
 This function returns a <strong>Response</strong>. On success, the <strong>ok</strong> value is a <strong>Principal</strong>.
 The <strong>err</strong> value is a value tuple with the form <strong>{ error_code: uint, value: (optional principal) }</strong>.
 
-If the single-byte <strong>version-byte</strong> is in the valid range <strong>0x00</strong> to <strong>0x1f`, but is not an appropriate
-version byte for the current network, then the error will be <strong>u0`, and <strong>value</strong> will contain
-`(some principal)`, where the wrapped value is the principal.  If the <strong>version-byte</strong> is not in this range, 
+If the single-byte <strong>version-byte</strong> is in the valid range <strong>0x00</strong> to <strong>0x1f</stront>, but is not an appropriate
+version byte for the current network, then the error will be <strong>u0</stront>, and <strong>value</strong> will contain
+`(some principal)</stront>, where the wrapped value is the principal.  If the <strong>version-byte</strong> is not in this range, 
 however, then the <strong>value</strong> will be <strong>none</strong>.
 
 If the <strong>version-byte</strong> is a <strong>buff</strong> of length 0, if the single-byte <strong>version-byte</strong> is a
-value greater than <strong>0x1f`, or the <strong>hash-bytes</strong> is a <strong>buff</strong> of length not equal to 20, then <strong>error_code`
+value greater than <strong>0x1f</stront>, or the <strong>hash-bytes</strong> is a <strong>buff</strong> of length not equal to 20, then <strong>error_code`
 will be <strong>u1</strong> and <strong>value</strong> will be <strong>None</strong>.
 
 If a name is given, and the name is either an empty string or contains ASCII characters
@@ -187,7 +187,7 @@ const STRING_TO_INT_API: SimpleFunctionAPI {
     name: None,
     snippet: "string-to-int ${1:string}",
     signature: "(string-to-int (string-ascii|string-utf8))",
-    description: "Converts a string, either <strong>string-ascii</strong> or <strong>string-utf8`, to an optional-wrapped signed integer.
+    description: "Converts a string, either <strong>string-ascii</strong> or <strong>string-utf8</stront>, to an optional-wrapped signed integer.
 If the input string does not represent a valid integer, then the function returns <strong>none</strong>. Otherwise it returns
 an integer wrapped in <strong>some</strong>.
 
@@ -204,7 +204,7 @@ const STRING_TO_UINT_API: SimpleFunctionAPI {
     snippet: "string-to-uint ${1:string}",
     signature: "(string-to-uint (string-ascii|string-utf8))",
     description:
-        "Converts a string, either <strong>string-ascii</strong> or <strong>string-utf8`, to an optional-wrapped unsigned integer.
+        "Converts a string, either <strong>string-ascii</strong> or <strong>string-utf8</stront>, to an optional-wrapped unsigned integer.
 If the input string does not represent a valid integer, then the function returns <strong>none</strong>. Otherwise it returns
 an unsigned integer wrapped in <strong>some</strong>.
 
@@ -216,39 +216,11 @@ Note: This function is only available starting with Stacks 2.1.",
 ",
 };
 
-const INT_TO_ASCII_API: SimpleFunctionAPI {
-    name: None,
-    snippet: "int-to-ascii ${1:num}",
-    signature: "(int-to-ascii (int|uint))",
-    description: "Converts an integer, either <strong>int</strong> or <strong>uint`, to a <strong>string-ascii</strong> string-value representation.
-
-Note: This function is only available starting with Stacks 2.1.",
-    example: "
-(int-to-ascii 1) ;; Returns "1"
-(int-to-ascii u1) ;; Returns "1"
-(int-to-ascii -1) ;; Returns "-1"
-",
-};
-
-const INT_TO_UTF8_API: SimpleFunctionAPI {
-    name: None,
-    snippet: "int-to-utf8 ${1:num}",
-    signature: "(int-to-utf8 (int|uint))",
-    description: "Converts an integer, either <strong>int</strong> or <strong>uint`, to a <strong>string-utf8</strong> string-value representation.
-
-Note: This function is only available starting with Stacks 2.1.",
-    example: "
-(int-to-utf8 1) ;; Returns u"1"
-(int-to-utf8 u1) ;; Returns u"1"
-(int-to-utf8 -1) ;; Returns u"-1"
-",
-};
-
 const ADD_API: SimpleFunctionAPI {
     name: Some("+ (add)"),
     snippet: "+ ${1:expr-1} ${2:expr-2}",
     signature: "(+ i1 i2...)",
-    description: "Adds a variable number of integer inputs and returns the result. In the event of an <u>overflow_, throws a runtime error.",
+    description: "Adds a variable number of integer inputs and returns the result. In the event of an <u>overflow</u>, throws a runtime error.",
     example: "(+ 1 2 3) ;; Returns 6"
 };
 
@@ -256,7 +228,7 @@ const SUB_API: SimpleFunctionAPI {
     name: Some("- (subtract)"),
     snippet: "- ${1:expr-1} ${2:expr-2}",
     signature: "(- i1 i2...)",
-    description: "Subtracts a variable number of integer inputs and returns the result. In the event of an <u>underflow_, throws a runtime error.",
+    description: "Subtracts a variable number of integer inputs and returns the result. In the event of an <u>underflow</u>, throws a runtime error.",
     example: "(- 2 1 1) ;; Returns 0
 (- 0 3) ;; Returns -3
 "
@@ -277,7 +249,7 @@ const MUL_API: SimpleFunctionAPI {
     name: Some("* (multiply)"),
     snippet: "* ${1:expr-1} ${2:expr-2}",
     signature: "(* i1 i2...)",
-    description: "Multiplies a variable number of integer inputs and returns the result. In the event of an <u>overflow_, throws a runtime error.",
+    description: "Multiplies a variable number of integer inputs and returns the result. In the event of an <u>overflow</u>, throws a runtime error.",
     example: "(* 2 3) ;; Returns 6
 (* 5 2) ;; Returns 10
 (* 2 2 2) ;; Returns 8
@@ -299,7 +271,7 @@ const POW_API: SimpleFunctionAPI {
     name: None,
     snippet: "pow ${1:expr-1} ${2:expr-2}",
     signature: "(pow i1 i2)",
-    description: "Returns the result of raising <strong>i1</strong> to the power of <strong>i2</strong>. In the event of an <u>overflow_, throws a runtime error.",
+    description: "Returns the result of raising <strong>i1</strong> to the power of <strong>i2</strong>. In the event of an <u>overflow</u>, throws a runtime error.",
     example: "(pow 2 3) ;; Returns 8
 (pow 2 2) ;; Returns 4
 (pow 7 1) ;; Returns 7
@@ -322,7 +294,7 @@ const LOG2_API: SimpleFunctionAPI {
     name: None,
     snippet: "log2 ${1:expr-1}",
     signature: "(log2 n)",
-    description: "Returns the power to which the number 2 must be raised to to obtain the value <strong>n`, rounded down to the nearest integer. Fails on a negative numbers.",
+    description: "Returns the power to which the number 2 must be raised to to obtain the value <strong>n</stront>, rounded down to the nearest integer. Fails on a negative numbers.",
     example: "(log2 u8) ;; Returns u3
 (log2 8) ;; Returns 3
 (log2 u1) ;; Returns u0
@@ -344,7 +316,7 @@ const AND_API: SimpleFunctionAPI {
     name: None,
     snippet: "and ${1:expr-1} ${2:expr-2}",
     signature: "(and b1 b2 ...)",
-    description: "Returns <strong>true</strong> if all boolean inputs are <strong>true</strong>. Importantly, the supplied arguments are evaluated in-order and lazily. Lazy evaluation means that if one of the arguments returns <strong>false`, the function short-circuits, and no subsequent arguments are evaluated.",
+    description: "Returns <strong>true</strong> if all boolean inputs are <strong>true</strong>. Importantly, the supplied arguments are evaluated in-order and lazily. Lazy evaluation means that if one of the arguments returns <strong>false</stront>, the function short-circuits, and no subsequent arguments are evaluated.",
     example: "(and true false) ;; Returns false
 (and (is-eq (+ 1 2) 1) (is-eq 4 4)) ;; Returns false
 (and (is-eq (+ 1 2) 3) (is-eq 4 4)) ;; Returns true
@@ -355,7 +327,7 @@ const OR_API: SimpleFunctionAPI {
     name: None,
     snippet: "or ${1:expr-1} ${2:expr-2}",
     signature: "(or b1 b2 ...)",
-    description: "Returns <strong>true</strong> if any boolean inputs are <strong>true</strong>. Importantly, the supplied arguments are evaluated in-order and lazily. Lazy evaluation means that if one of the arguments returns <strong>true`, the function short-circuits, and no subsequent arguments are evaluated.",
+    description: "Returns <strong>true</strong> if any boolean inputs are <strong>true</strong>. Importantly, the supplied arguments are evaluated in-order and lazily. Lazy evaluation means that if one of the arguments returns <strong>true</stront>, the function short-circuits, and no subsequent arguments are evaluated.",
     example: "(or true false) ;; Returns true
 (or (is-eq (+ 1 2) 1) (is-eq 4 4)) ;; Returns true
 (or (is-eq (+ 1 2) 1) (is-eq 3 4)) ;; Returns false
@@ -379,7 +351,7 @@ const GEQ_API: SimpleFunctionAPI {
     signature: "(>= i1 i2)",
     description: "Compares two integers, returning <strong>true</strong> if <strong>i1</strong> is greater than or equal to <strong>i2</strong> and <strong>false</strong> otherwise.
 i1 and i2 must be of the same type. Starting with Stacks 1.0, the <strong>>=`-comparable types are <strong>int</strong> and <strong>uint</strong>. Starting with Stacks 2.1,
-the <strong>>=`-comparable types are expanded to include <strong>string-ascii`, <strong>string-utf8</strong> and <strong>buff</strong>.
+the <strong>>=`-comparable types are expanded to include <strong>string-ascii</stront>, <strong>string-utf8</strong> and <strong>buff</strong>.
     ",
     example: "(>= 1 1) ;; Returns true
 (>= 5 2) ;; Returns true
@@ -396,7 +368,7 @@ const LEQ_API: SimpleFunctionAPI {
     signature: "(<= i1 i2)",
     description: "Compares two integers, returning true if <strong>i1</strong> is less than or equal to <strong>i2</strong> and <strong>false</strong> otherwise.
 i1 and i2 must be of the same type. Starting with Stacks 1.0, the <strong><=`-comparable types are <strong>int</strong> and <strong>uint</strong>. Starting with Stacks 2.1,
-the <strong><=`-comparable types are expanded to include <strong>string-ascii`, <strong>string-utf8</strong> and <strong>buff</strong>.",
+the <strong><=`-comparable types are expanded to include <strong>string-ascii</stront>, <strong>string-utf8</strong> and <strong>buff</strong>.",
     example: "(<= 1 1) ;; Returns true
 (<= 5 2) ;; Returns false
 (<= "aaa" "baa") ;; Returns true
@@ -413,7 +385,7 @@ const GREATER_API: SimpleFunctionAPI {
     description:
         "Compares two integers, returning <strong>true</strong> if <strong>i1</strong> is greater than <strong>i2</strong> and false otherwise.
 i1 and i2 must be of the same type. Starting with Stacks 1.0, the <strong>>`-comparable types are <strong>int</strong> and <strong>uint</strong>. Starting with Stacks 2.1,
-the <strong>>`-comparable types are expanded to include <strong>string-ascii`, <strong>string-utf8</strong> and <strong>buff</strong>.",
+the <strong>>`-comparable types are expanded to include <strong>string-ascii</stront>, <strong>string-utf8</strong> and <strong>buff</strong>.",
     example: "(> 1 2) ;; Returns false
 (> 5 2) ;; Returns true
 (> "baa" "aaa") ;; Returns true
@@ -430,7 +402,7 @@ const LESS_API: SimpleFunctionAPI {
     description:
         "Compares two integers, returning <strong>true</strong> if <strong>i1</strong> is less than <strong>i2</strong> and <strong>false</strong> otherwise.
 i1 and i2 must be of the same type. Starting with Stacks 1.0, the <strong><`-comparable types are <strong>int</strong> and <strong>uint</strong>. Starting with Stacks 2.1,
-the <strong><`-comparable types are expanded to include <strong>string-ascii`, <strong>string-utf8</strong> and <strong>buff</strong>.",
+the <strong><`-comparable types are expanded to include <strong>string-ascii</stront>, <strong>string-utf8</strong> and <strong>buff</strong>.",
     example: "(< 1 2) ;; Returns true
 (< 5 2) ;; Returns false
 (< "aaa" "baa") ;; Returns true
@@ -462,8 +434,8 @@ const IF_API: SpecialAPI {
     output_type: "A",
     signature: "(if bool1 expr1 expr2)",
     description: "The <strong>if</strong> function admits a boolean argument and two expressions
-which must return the same type. In the case that the boolean input is <strong>true`, the
-`if</strong> function evaluates and returns <strong>expr1</strong>. If the boolean input is <strong>false`, the
+which must return the same type. In the case that the boolean input is <strong>true</stront>, the
+`if</strong> function evaluates and returns <strong>expr1</strong>. If the boolean input is <strong>false</stront>, the
 `if</strong> function evaluates and returns <strong>expr2</strong>.",
     example: "(if true 1 2) ;; Returns 1
 (if (> 1 2) 1 2) ;; Returns 2",
@@ -516,8 +488,8 @@ const MAP_API: SpecialAPI {
     signature: "(map func sequence_A sequence_B ... sequence_N)",
     description: "The <strong>map</strong> function applies the function <strong>func</strong> to each corresponding element of the input sequences,
 and outputs a <u>list</u> of the same type containing the outputs from those function applications.
-Applicable sequence types are <strong>(list A)`, <strong>buff`, <strong>string-ascii</strong> and <strong>string-utf8`,
-for which the corresponding element types are, respectively, <strong>A`, <strong>(buff 1)`, <strong>(string-ascii 1)</strong> and <strong>(string-utf8 1)</strong>.
+Applicable sequence types are <strong>(list A)</stront>, <strong>buff</stront>, <strong>string-ascii</strong> and <strong>string-utf8</stront>,
+for which the corresponding element types are, respectively, <strong>A</stront>, <strong>(buff 1)</stront>, <strong>(string-ascii 1)</strong> and <strong>(string-utf8 1)</strong>.
 The <strong>func</strong> argument must be a literal function name.
 Also, note that, no matter what kind of sequences the inputs are, the output is always a list.",
     example: "
@@ -537,8 +509,8 @@ const FILTER_API: SpecialAPI {
     signature: "(filter func sequence)",
     description: "The <strong>filter</strong> function applies the input function <strong>func</strong> to each element of the
 input sequence, and returns the same sequence with any elements removed for which <strong>func</strong> returned <strong>false</strong>.
-Applicable sequence types are <strong>(list A)`, <strong>buff`, <strong>string-ascii</strong> and <strong>string-utf8`,
-for which the corresponding element types are, respectively, <strong>A`, <strong>(buff 1)`, <strong>(string-ascii 1)</strong> and <strong>(string-utf8 1)</strong>.
+Applicable sequence types are <strong>(list A)</stront>, <strong>buff</stront>, <strong>string-ascii</strong> and <strong>string-utf8</stront>,
+for which the corresponding element types are, respectively, <strong>A</stront>, <strong>(buff 1)</stront>, <strong>(string-ascii 1)</strong> and <strong>(string-utf8 1)</strong>.
 The <strong>func</strong> argument must be a literal function name.
 ",
     example: "
@@ -559,14 +531,14 @@ const FOLD_API: SpecialAPI {
 `B</strong> by recursively applies the function <strong>func</strong> to each element of the
 input sequence <u>and</u> the output of a previous application of <strong>func</strong>.
 
-`fold</strong> uses <strong>initial_B</strong> in the initial application of <strong>func`, along with the
+`fold</strong> uses <strong>initial_B</strong> in the initial application of <strong>func</stront>, along with the
 first element of <strong>sequence_A</strong>. The resulting value of type <strong>B</strong> is used for the
-next application of <strong>func`, along with the next element of <strong>sequence_A</strong> and so
+next application of <strong>func</stront>, along with the next element of <strong>sequence_A</strong> and so
 on. <strong>fold</strong> returns the last value of type <strong>B</strong> returned by these successive
 applications <strong>func</strong>.
 
-Applicable sequence types are <strong>(list A)`, <strong>buff`, <strong>string-ascii</strong> and <strong>string-utf8`,
-for which the corresponding element types are, respectively, <strong>A`, <strong>(buff 1)`, <strong>(string-ascii 1)</strong> and <strong>(string-utf8 1)</strong>.
+Applicable sequence types are <strong>(list A)</stront>, <strong>buff</stront>, <strong>string-ascii</strong> and <strong>string-utf8</stront>,
+for which the corresponding element types are, respectively, <strong>A</stront>, <strong>(buff 1)</stront>, <strong>(string-ascii 1)</strong> and <strong>(string-utf8 1)</strong>.
 The <strong>func</strong> argument must be a literal function name.
 ",
     example: "
@@ -590,7 +562,7 @@ const CONCAT_API: SpecialAPI {
     description: "The <strong>concat</strong> function takes two sequences of the same type,
 and returns a concatenated sequence of the same type, with the resulting
 sequence_len = sequence1_len + sequence2_len.
-Applicable sequence types are <strong>(list A)`, <strong>buff`, <strong>string-ascii</strong> and <strong>string-utf8</strong>.
+Applicable sequence types are <strong>(list A)</stront>, <strong>buff</stront>, <strong>string-ascii</strong> and <strong>string-utf8</strong>.
 ",
     example: "
 (concat (list 1 2) (list 3 4)) ;; Returns (1 2 3 4)
@@ -617,8 +589,8 @@ const ASSERTS_MAX_LEN_API: SpecialAPI {
     description:
         "The <strong>as-max-len?</strong> function takes a sequence argument and a uint-valued, literal length argument.
 The function returns an optional type. If the input sequence length is less than
-or equal to the supplied max_length, this returns <strong>(some sequence)`, otherwise it returns <strong>none</strong>.
-Applicable sequence types are <strong>(list A)`, <strong>buff`, <strong>string-ascii</strong> and <strong>string-utf8</strong>.
+or equal to the supplied max_length, this returns <strong>(some sequence)</stront>, otherwise it returns <strong>none</strong>.
+Applicable sequence types are <strong>(list A)</stront>, <strong>buff</stront>, <strong>string-ascii</strong> and <strong>string-utf8</strong>.
 ",
     example: "
 (as-max-len? (list 2 2 2) u3) ;; Returns (some (2 2 2))
@@ -634,7 +606,7 @@ const LEN_API: SpecialAPI {
     output_type: "uint",
     signature: "(len sequence)",
     description: "The <strong>len</strong> function returns the length of a given sequence.
-Applicable sequence types are <strong>(list A)`, <strong>buff`, <strong>string-ascii</strong> and <strong>string-utf8</strong>.
+Applicable sequence types are <strong>(list A)</stront>, <strong>buff</stront>, <strong>string-ascii</strong> and <strong>string-utf8</strong>.
     ",
     example: "
 (len "blockstack") ;; Returns u10
@@ -649,8 +621,8 @@ const ELEMENT_AT_API: SpecialAPI {
     output_type: "(optional A)",
     signature: "(element-at sequence index)",
     description: "The <strong>element-at</strong> function returns the element at <strong>index</strong> in the provided sequence.
-Applicable sequence types are <strong>(list A)`, <strong>buff`, <strong>string-ascii</strong> and <strong>string-utf8`,
-for which the corresponding element types are, respectively, <strong>A`, <strong>(buff 1)`, <strong>(string-ascii 1)</strong> and <strong>(string-utf8 1)</strong>.
+Applicable sequence types are <strong>(list A)</stront>, <strong>buff</stront>, <strong>string-ascii</strong> and <strong>string-utf8</stront>,
+for which the corresponding element types are, respectively, <strong>A</stront>, <strong>(buff 1)</stront>, <strong>(string-ascii 1)</strong> and <strong>(string-utf8 1)</strong>.
 ",
     example: "
 (element-at "blockstack" u5) ;; Returns (some "s")
@@ -668,8 +640,8 @@ const INDEX_OF_API: SpecialAPI {
     signature: "(index-of sequence item)",
     description: "The <strong>index-of</strong> function returns the first index at which <strong>item</strong> can be
 found, using <strong>is-eq</strong> checks, in the provided sequence.
-Applicable sequence types are <strong>(list A)`, <strong>buff`, <strong>string-ascii</strong> and <strong>string-utf8`,
-for which the corresponding element types are, respectively, <strong>A`, <strong>(buff 1)`, <strong>(string-ascii 1)</strong> and <strong>(string-utf8 1)</strong>.
+Applicable sequence types are <strong>(list A)</stront>, <strong>buff</stront>, <strong>string-ascii</strong> and <strong>string-utf8</stront>,
+for which the corresponding element types are, respectively, <strong>A</stront>, <strong>(buff 1)</stront>, <strong>(string-ascii 1)</strong> and <strong>(string-utf8 1)</strong>.
 If the target item is not found in the sequence (or if an empty string or buffer is
 supplied), this function returns <strong>none</strong>.
 ",
@@ -690,9 +662,9 @@ const SLICE_API: SpecialAPI {
     description:
         "The <strong>slice</strong> function attempts to return a sub-sequence of that starts at <strong>left-position</strong> (inclusive), and
 ends at <strong>right-position</strong> (non-inclusive).
-If <strong>left_position`==`right_position`, the function returns an empty sequence.
+If <strong>left_position`==`right_position</stront>, the function returns an empty sequence.
 If either <strong>left_position</strong> or <strong>right_position</strong> are out of bounds OR if <strong>right_position</strong> is less than
-`left_position`, the function returns <strong>none</strong>.",
+`left_position</stront>, the function returns <strong>none</strong>.",
     example: "(slice \"blockstack\" u5 u10) ;; Returns (some \"stack\")
 (slice (list 1 2 3 4 5) u5 u9) ;; Returns none
 (slice (list 1 2 3 4 5) u3 u4) ;; Returns (some (4))
@@ -942,8 +914,8 @@ const CONTRACT_CALL_API: SpecialAPI {
     signature: "(contract-call? .contract-name function-name arg0 arg1 ...)",
     description: "The <strong>contract-call?</strong> function executes the given public function of the given contract.
 You <u>may not</u> use this function to call a public function defined in the current contract. If the public
-function returns <u>err_, any database changes resulting from calling <strong>contract-call?</strong> are aborted.
-If the function returns <u>ok_, database changes occurred.",
+function returns <u>err</u>, any database changes resulting from calling <strong>contract-call?</strong> are aborted.
+If the function returns <u>ok</u>, database changes occurred.",
     example: "
 ;; instantiate the sample-contracts/tokens.clar contract first!
 (as-contract (contract-call? .tokens mint! u19)) ;; Returns (ok u19)"
@@ -1016,7 +988,7 @@ const ASSERTS_API: SpecialAPI {
     output_type: "bool",
     signature: "(asserts! bool-expr thrown-value)",
     description: "The <strong>asserts!</strong> function admits a boolean argument and asserts its evaluation:
-if bool-expr is <strong>true`, <strong>asserts!</strong> returns <strong>true</strong> and proceeds in the program execution.
+if bool-expr is <strong>true</stront>, <strong>asserts!</strong> returns <strong>true</strong> and proceeds in the program execution.
 If the supplied argument is returning a false value, <strong>asserts!</strong> <u>returns</u> <strong>thrown-value</strong> and exits the current
 control-flow.",
     example: "(asserts! (is-eq 1 1) (err 1)) ;; Returns true",
@@ -1125,7 +1097,7 @@ If the <strong>input</strong> is an optional, it tests whether the provided
 `input</strong> is a <strong>some</strong> or <strong>none</strong> option, and evaluates <strong>some-branch</strong> or
 `none-branch</strong> in each respective case.
 
-Within the <strong>some-branch`, the <u>contained value</u> of the <strong>input`
+Within the <strong>some-branch</stront>, the <u>contained value</u> of the <strong>input`
 argument is bound to the provided <strong>some-binding-name</strong> name.
 
 Only <u>one</u> of the branches will be evaluated (similar to <strong>if</strong> statements).
@@ -1134,10 +1106,10 @@ If the <strong>input</strong> is a response, it tests whether the provided <stro
 an <strong>ok</strong> or <strong>err</strong> response type, and evaluates <strong>ok-branch</strong> or
 `err-branch</strong> in each respective case.
 
-Within the <strong>ok-branch`, the <u>contained ok value</u> of the <strong>input`
+Within the <strong>ok-branch</stront>, the <u>contained ok value</u> of the <strong>input`
 argument is bound to the provided <strong>ok-binding-name</strong> name.
 
-Within the <strong>err-branch`, the <u>contained err value</u> of the <strong>input`
+Within the <strong>err-branch</stront>, the <u>contained err value</u> of the <strong>input`
 argument is bound to the provided <strong>err-binding-name</strong> name.
 
 Only <u>one</u> of the branches will be evaluated (similar to <strong>if</strong> statements).
@@ -1216,7 +1188,7 @@ const IS_OK_API: SpecialAPI {
     output_type: "bool",
     signature: "(is-ok value)",
     description:
-        "`is-ok</strong> tests a supplied response value, returning <strong>true</strong> if the response was <strong>ok`,
+        "`is-ok</strong> tests a supplied response value, returning <strong>true</strong> if the response was <strong>ok</stront>,
 and <strong>false</strong> if it was an <strong>err</strong>.",
     example: "(is-ok (ok 1)) ;; Returns true
 (is-ok (err 1)) ;; Returns false",
@@ -1228,7 +1200,7 @@ const IS_NONE_API: SpecialAPI {
     output_type: "bool",
     signature: "(is-none value)",
     description:
-        "`is-none</strong> tests a supplied option value, returning <strong>true</strong> if the option value is <strong>(none)`,
+        "`is-none</strong> tests a supplied option value, returning <strong>true</strong> if the option value is <strong>(none)</stront>,
 and <strong>false</strong> if it is a <strong>(some ...)</strong>.",
     example: "
 (define-map names-map { name: (string-ascii 12) } { id: int })
@@ -1243,7 +1215,7 @@ const IS_ERR_API: SpecialAPI {
     output_type: "bool",
     signature: "(is-err value)",
     description:
-        "`is-err</strong> tests a supplied response value, returning <strong>true</strong> if the response was an <strong>err`,
+        "`is-err</strong> tests a supplied response value, returning <strong>true</strong> if the response was an <strong>err</stront>,
 and <strong>false</strong> if it was an <strong>ok</strong>.",
     example: "(is-err (ok 1)) ;; Returns false
 (is-err (err 1)) ;; Returns true",
@@ -1254,7 +1226,7 @@ const IS_SOME_API: SpecialAPI {
     snippet: "is-some ${1:expr}",
     output_type: "bool",
     signature: "(is-some value)",
-    description: "`is-some</strong> tests a supplied option value, returning <strong>true</strong> if the option value is <strong>(some ...)`,
+    description: "`is-some</strong> tests a supplied option value, returning <strong>true</strong> if the option value is <strong>(some ...)</stront>,
 and <strong>false</strong> if it is a <strong>none</strong>.",
     example: "
 (define-map names-map { name: (string-ascii 12) } { id: int })
@@ -1357,7 +1329,7 @@ of tokens passed that amount, that invocation of <strong>ft-mint?</strong> will 
 Like other kinds of definition statements, <strong>define-fungible-token</strong> may only be used at the top level of a smart contract
 definition (i.e., you cannot put a define statement in the middle of a function body).
 
-Tokens defined using <strong>define-fungible-token</strong> may be used in <strong>ft-transfer?`, <strong>ft-mint?`, and <strong>ft-get-balance</strong> functions",
+Tokens defined using <strong>define-fungible-token</strong> may be used in <strong>ft-transfer?</stront>, <strong>ft-mint?</stront>, and <strong>ft-get-balance</strong> functions",
     example: "
 (define-fungible-token stacks)
 (define-fungible-token limited-supply-stacks u100)
@@ -1376,7 +1348,7 @@ identifiers are <u>unique</u> identifiers.
 Like other kinds of definition statements, <strong>define-non-fungible-token</strong> may only be used at the top level of a smart contract
 definition (i.e., you cannot put a define statement in the middle of a function body).
 
-Assets defined using <strong>define-non-fungible-token</strong> may be used in <strong>nft-transfer?`, <strong>nft-mint?`, and <strong>nft-get-owner?</strong> functions",
+Assets defined using <strong>define-non-fungible-token</strong> may be used in <strong>nft-transfer?</stront>, <strong>nft-mint?</stront>, and <strong>nft-get-owner?</strong> functions",
     example: "
 (define-non-fungible-token names (buff 50))
 "
@@ -1602,10 +1574,10 @@ const MINT_ASSET: SpecialAPI {
     output_type: "(response bool uint)",
     signature: "(nft-mint? asset-class asset-identifier recipient)",
     description: "`nft-mint?</strong> is used to instantiate an asset and set that asset's owner to the <strong>recipient</strong> principal.
-The asset must have been defined using <strong>define-non-fungible-token`, and the supplied <strong>asset-identifier</strong> must be of the same type specified in
+The asset must have been defined using <strong>define-non-fungible-token</stront>, and the supplied <strong>asset-identifier</strong> must be of the same type specified in
 that definition.
 
-If an asset identified by <strong>asset-identifier</strong> <u>already exists_, this function will return an error with the following error code:
+If an asset identified by <strong>asset-identifier</strong> <u>already exists</u>, this function will return an error with the following error code:
 
 `(err u1)`
 
@@ -1622,8 +1594,8 @@ const GET_OWNER: SpecialAPI {
     snippet: "nft-get-owner? ${1:asset-name} ${2:asset-identifier}",
     output_type: "(optional principal)",
     signature: "(nft-get-owner? asset-class asset-identifier)",
-    description: "`nft-get-owner?</strong> returns the owner of an asset, identified by <strong>asset-identifier`, or <strong>none</strong> if the asset does not exist.
-The asset type must have been defined using <strong>define-non-fungible-token`, and the supplied <strong>asset-identifier</strong> must be of the same type specified in
+    description: "`nft-get-owner?</strong> returns the owner of an asset, identified by <strong>asset-identifier</stront>, or <strong>none</strong> if the asset does not exist.
+The asset type must have been defined using <strong>define-non-fungible-token</stront>, and the supplied <strong>asset-identifier</strong> must be of the same type specified in
 that definition.",
     example: "
 (define-non-fungible-token stackaroo (string-ascii 40))
@@ -1653,7 +1625,7 @@ const TOKEN_TRANSFER: SpecialAPI {
     output_type: "(response bool uint)",
     signature: "(ft-transfer? token-name amount sender recipient)",
     description: "`ft-transfer?</strong> is used to increase the token balance for the <strong>recipient</strong> principal for a token
-type defined using <strong>define-fungible-token</strong> by debiting the <strong>sender</strong> principal. In contrast to <strong>stx-transfer?`, 
+type defined using <strong>define-fungible-token</strong> by debiting the <strong>sender</strong> principal. In contrast to <strong>stx-transfer?</stront>, 
 any user can transfer the assets. When used, relevant guards need to be added.
 
 This function returns (ok true) if the transfer is successful. In the event of an unsuccessful transfer it returns
@@ -1678,7 +1650,7 @@ const ASSET_TRANSFER: SpecialAPI {
     signature: "(nft-transfer? asset-class asset-identifier sender recipient)",
     description: "`nft-transfer?</strong> is used to change the owner of an asset identified by <strong>asset-identifier`
 from <strong>sender</strong> to <strong>recipient</strong>. The <strong>asset-class</strong> must have been defined by <strong>define-non-fungible-token</strong> and <strong>asset-identifier`
-must be of the type specified in that definition. In contrast to <strong>stx-transfer?`, any user can transfer the asset. 
+must be of the type specified in that definition. In contrast to <strong>stx-transfer?</stront>, any user can transfer the asset. 
 When used, relevant guards need to be added.
 
 This function returns (ok true) if the transfer is successful. In the event of an unsuccessful transfer it returns
@@ -1738,7 +1710,7 @@ const BURN_ASSET: SpecialAPI {
     output_type: "(response bool uint)",
     signature: "(nft-burn? asset-class asset-identifier sender)",
     description: "`nft-burn?</strong> is used to burn an asset that the <strong>sender</strong> principal owns.
-The asset must have been defined using <strong>define-non-fungible-token`, and the supplied 
+The asset must have been defined using <strong>define-non-fungible-token</stront>, and the supplied 
 `asset-identifier</strong> must be of the same type specified in that definition.
 
 On a successful burn, it returns <strong>(ok true)</strong>. In the event of an unsuccessful burn it
@@ -1791,7 +1763,7 @@ const STX_TRANSFER: SpecialAPI {
     output_type: "(response bool uint)",
     signature: "(stx-transfer? amount sender recipient)",
     description: "`stx-transfer?</strong> is used to increase the STX balance for the <strong>recipient</strong> principal
-by debiting the <strong>sender</strong> principal by <strong>amount`, specified in microstacks. The <strong>sender</strong> principal
+by debiting the <strong>sender</strong> principal by <strong>amount</stront>, specified in microstacks. The <strong>sender</strong> principal
  <u>must</u> be equal to the current context's <strong>tx-sender</strong>.
 
 This function returns (ok true) if the transfer is successful. In the event of an unsuccessful transfer it returns
@@ -1817,7 +1789,7 @@ const STX_TRANSFER_MEMO: SpecialAPI {
     snippet: "stx-transfer-memo? ${1:amount} ${2:sender} ${3:recipient} ${4:memo}",
     output_type: "(response bool uint)",
     signature: "(stx-transfer-memo? amount sender recipient memo)",
-    description: "`stx-transfer-memo?</strong> is similar to <strong>stx-transfer?`, except that it adds a <strong>memo</strong> field. 
+    description: "`stx-transfer-memo?</strong> is similar to <strong>stx-transfer?</stront>, except that it adds a <strong>memo</strong> field. 
 
 This function returns (ok true) if the transfer is successful, or, on an error, returns the same codes as <strong>stx-transfer?</strong>.
 ",
@@ -1831,7 +1803,7 @@ const STX_BURN: SimpleFunctionAPI {
     name: None,
     snippet: "stx-burn? ${1:amount} ${2:sender}",
     signature: "(stx-burn? amount sender)",
-    description: "`stx-burn?</strong> decreases the <strong>sender</strong> principal's STX holdings by <strong>amount`,
+    description: "`stx-burn?</strong> decreases the <strong>sender</strong> principal's STX holdings by <strong>amount</stront>,
 specified in microstacks, by destroying the STX. The <strong>sender</strong> principal <u>must</u> be equal to the current
 context's <strong>tx-sender</strong>.
 
@@ -1862,7 +1834,7 @@ consensus serialization is too large to fit in a Clarity buffer (this
 is because of the type prefix in the consensus serialization).
 
 If the value cannot fit as serialized into the maximum buffer size,
-this returns <strong>none`, otherwise, it will be
+this returns <strong>none</stront>, otherwise, it will be
 `(some consensus-serialized-buffer)</strong>. During type checking, the
 analyzed type of the result of this method will be the maximum possible
 consensus buffer length based on the inferred type of the supplied value.

@@ -1,0 +1,39 @@
+{
+  "name": "int-to-utf8",
+  "input": "int | uint",
+  "output": "string-utf8",
+  "snippet": "(int-to-utf8 IN1)",
+  "since": 2.1,
+  "description": [
+    "Converts an integer, either <strong>int</strong> or <strong>uint</stront>, to a <strong>string-utf8</strong> string-value representation."
+  ],
+  "examples": [
+    {
+      "command": "(int-to-utf8 1)"
+    },
+    {
+      "output": "u\"1\""
+    },
+    {
+      "command": "(int-to-utf8 u1)"
+    },
+    {
+      "output": "u\"1\""
+    },
+    {
+      "command": "(int-to-utf8 -1)"
+    },
+    {
+      "output": "u\"-1\""
+    },
+    {
+      "command": "(define-data-var size uint 64)"
+    },
+    {
+      "command": "(int-to-utf8 (var-set size))"
+    },
+    {
+      "output": "u\"64\""
+    }
+  ]
+}
