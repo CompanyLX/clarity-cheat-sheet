@@ -1,0 +1,25 @@
+{
+  "name": "block-height",
+  "snippet": "block-height",
+  "output": "uint",
+  "description": [
+    "Returns the current block height of the blockchain as an unsigned integer."
+  ],
+  "examples": [
+    {
+      "command": "block-height"
+    },
+    {
+      "output": "u234"
+    },
+    {
+      "comment": "Returns true if the current block-height has passed 1000 blocks."
+    },
+    {
+      "command": "(> block-height 1000)"
+    },
+    {
+      "output": "false"
+    }
+  ]
+}

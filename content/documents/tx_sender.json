@@ -1,0 +1,16 @@
+{
+  "name": "tx-sender",
+  "snippet": "tx-sender",
+  "output": "principal",
+  "description": [
+    "Returns the original sender of the current transaction, or if <strong>as-contract</strong> was called to modify the sending context, it returns that contract principal."
+  ],
+  "examples": [
+    {
+      "command": "(print tx-sender)"
+    },
+    {
+      "output": "ST000000000000000000002AMW42H"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "tx-sponsor?",
+  "snippet": "tx-sponsor?",
+  "output": "principal",
+  "description": [
+    "Returns the sponsor of the current transaction if there is a sponsor, otherwise returns None."
+  ],
+  "examples": [
+    {
+      "command": "(print tx-sponsor?)"
+    },
+    {
+      "output": "ST000000000000000000002AMW42H"
+    }
+  ]
+}

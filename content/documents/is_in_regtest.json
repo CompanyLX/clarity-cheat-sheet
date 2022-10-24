@@ -1,0 +1,16 @@
+{
+  "name": "is-in-regtest",
+  "snippet": "is-in-regtest",
+  "output": "bool",
+  "description": [
+    "Returns whether or not the code is running in a regression test."
+  ],
+  "examples": [
+    {
+      "command": "(print is-in-regtest)"
+    },
+    {
+      "output": "false"
+    }
+  ]
+}

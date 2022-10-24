@@ -1,0 +1,29 @@
+{
+  "name": "chain-id",
+  "snippet": "chain-id",
+  "output": "uint",
+  "description": [
+    "Returns the 32-bit chain ID of the blockchain running this transaction.",
+    "Will print <strong>u1</strong> if the code is running on mainnet, and <strong>u2147483648</strong> on testnet, and other values on different chains."
+  ],
+  "examples": [
+    {
+      "command": "(print chain-id)"
+    },
+    {
+      "output": "u2147483648"
+    },
+    {
+      "command": "(print chain-id)"
+    },
+    {
+      "output": "u1"
+    },
+    {
+      "command": "(print chain-id)"
+    },
+    {
+      "output": "u1923"
+    }
+  ]
+}
