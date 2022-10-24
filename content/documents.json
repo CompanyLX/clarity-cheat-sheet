@@ -96,5 +96,21 @@
         "output": "ST000000000000000000002AMW42H"
       }
     ]
+  },
+  "stx_liquid_supply": {
+    "name": "stx-liquid-supply",
+    "snippet": "stx-liquid-supply",
+    "output": "uint",
+    "description": [
+      "Returns the total number of micro-STX (uSTX) that are liquid in the system as of this block."
+    ],
+    "examples": [
+      {
+        "command": "(print stx-liquid-supply)"
+      },
+      {
+        "output": "u456738924"
+      }
+    ]
   }
 }
