@@ -128,5 +128,21 @@
         "output": "false"
       }
     ]
+  },
+  "is_in_mainnet": {
+    "name": "is-in-mainnet",
+    "snippet": "is-in-mainnet",
+    "output": "bool",
+    "description": [
+      "Returns a boolean indicating whether or not the code is running on the mainnet."
+    ],
+    "examples": [
+      {
+        "command": "(print is-in-mainnet)"
+      },
+      {
+        "output": "true"
+      }
+    ]
   }
 }
