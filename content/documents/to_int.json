@@ -1,6 +1,6 @@
 {
   "name": "to-int",
-  "input": "int",
+  "input": "uint",
   "output": "int",
   "snippet": "(to-int IN1)",
   "description": [
