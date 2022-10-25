@@ -1,5 +1,5 @@
 {
-  "name": "int-to-ascii",
+  "name": "buff-to-int-le",
   "input": "(buff 16)",
   "output": "int",
   "snippet": "(buff-to-int-le IN1)",
