@@ -6,17 +6,9 @@
     "Represents the <u>none</u> option indicating no value for a given optional (analogous to a null value)."
   ],
   "examples": [
-    {
-      "command": "(is-none (some 2))"
-    },
-    {
-      "output": "false"
-    },
-    {
-      "command": "(is-none none)"
-    },
-    {
-      "output": "true"
-    }
+    [">", "(is-none (some 2))"],
+    ["<", "false"],
+    [">", "(is-none none)"],
+    ["<", "true"]
   ]
 }

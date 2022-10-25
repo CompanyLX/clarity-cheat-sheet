@@ -6,11 +6,7 @@
     "Returns a boolean indicating whether or not the code is running on the mainnet."
   ],
   "examples": [
-    {
-      "command": "(print is-in-mainnet)"
-    },
-    {
-      "output": "true"
-    }
+    [">", "(print is-in-mainnet)"],
+    ["<", "true"]
   ]
 }

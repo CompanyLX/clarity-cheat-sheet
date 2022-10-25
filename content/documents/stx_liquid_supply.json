@@ -6,11 +6,7 @@
     "Returns the total number of micro-STX (uSTX) that are liquid in the system as of this block."
   ],
   "examples": [
-    {
-      "command": "(print stx-liquid-supply)"
-    },
-    {
-      "output": "u456738924"
-    }
+    [">", "(print stx-liquid-supply)"],
+    ["<", "u456738924"]
   ]
 }

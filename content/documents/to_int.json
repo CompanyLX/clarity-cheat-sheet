@@ -7,20 +7,10 @@
     "Tries to convert the <strong>uint</strong> argument to an <strong>int</strong>. Will cause a runtime error and abort if the supplied argument is >= <strong>pow(2, 127)</strong>"
   ],
   "examples": [
-    {
-      "command": "(to-int u232)"
-    },
-    {
-      "output": "232"
-    },
-    {
-      "command": "(define-data-var size uint 21)"
-    },
-    {
-      "command": "(to-int (var-set size))"
-    },
-    {
-      "output": "21"
-    }
+    [">", "(to-int u232)"],
+    ["<", "232"],
+    [">", "(define-data-var size uint 21)"],
+    [">", "(to-int (var-set size))"],
+    ["<", "21"]
   ]
 }

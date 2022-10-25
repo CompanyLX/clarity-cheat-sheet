@@ -4,17 +4,9 @@
   "snippet": "false",
   "description": ["Boolean false constant."],
   "examples": [
-    {
-      "command": "(and true false)"
-    },
-    {
-      "output": "false"
-    },
-    {
-      "command": "(or false true)"
-    },
-    {
-      "output": "true"
-    }
+    [">", "(and true false)"],
+    ["<", "false"],
+    [">", "(or false true)"],
+    ["<", "true"]
   ]
 }

@@ -8,32 +8,14 @@
     "Converts an integer, either <strong>int</strong> or <strong>uint</stront>, to a <strong>string-ascii</strong> string-value representation."
   ],
   "examples": [
-    {
-      "command": "(int-to-ascii 1)"
-    },
-    {
-      "output": "\"1\""
-    },
-    {
-      "command": "(int-to-ascii u1)"
-    },
-    {
-      "output": "\"1\""
-    },
-    {
-      "command": "(int-to-ascii -1)"
-    },
-    {
-      "output": "\"-1\""
-    },
-    {
-      "command": "(define-data-var size uint 64)"
-    },
-    {
-      "command": "(int-to-ascii (var-set size))"
-    },
-    {
-      "output": "\"64\""
-    }
+    [">", "(int-to-ascii 1)"],
+    ["<", "\"1\""],
+    [">", "(int-to-ascii u1)"],
+    ["<", "\"1\""],
+    [">", "(int-to-ascii -1)"],
+    ["<", "\"-1\""],
+    [">", "(define-data-var size uint 64)"],
+    [">", "(int-to-ascii (var-set size))"],
+    ["<", "\"64\""]
   ]
 }

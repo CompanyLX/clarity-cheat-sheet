@@ -6,20 +6,13 @@
     "Returns the current block height of the underlying burn blockchain as unsigned integer."
   ],
   "examples": [
-    {
-      "command": "burn-block-height"
-    },
-    {
-      "output": "u1453"
-    },
-    {
-      "comment": "Returns true if the current height of the underlying burn blockchain has passed 1000 blocks."
-    },
-    {
-      "command": "(> burn-block-height 1000)"
-    },
-    {
-      "output": "true"
-    }
+    [">", "burn-block-height"],
+    ["<", "u1453"],
+    [
+      ";",
+      "Returns true if the current height of the underlying burn blockchain has passed 1000 blocks."
+    ],
+    [">", "(> burn-block-height 1000)"],
+    ["<", "true"]
   ]
 }
