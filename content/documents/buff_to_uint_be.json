@@ -1,0 +1,22 @@
+{
+  "name": "buff-to-uint-be",
+  "input": "(buff 16)",
+  "output": "uint",
+  "snippet": "(buff-to-uint-be IN1)",
+  "since": 2.1,
+  "description": [
+    "Converts a byte buffer to an unsigned integer use a big-endian encoding. The byte buffer can be up to 16 bytes in length. If there are fewer than 16 bytes, as this function uses a big-endian encoding, the input behaves as if it is zero-padded on the <u>left</u>."
+  ],
+  "examples": [
+    [">", "(buff-to-uint-be 0x01)"],
+    ["<", "u1"],
+    [">", "(buff-to-uint-be 0x00000000000000000000000000000001)"],
+    ["<", "u1"],
+    [">", "(buff-to-uint-be 0xffffffffffffffffffffffffffffffff)"],
+    ["<", "u340282366920938463463374607431768211455"],
+    [">", "(buff-to-uint-be 0x)"],
+    ["<", "u0"],
+    [">", "(buff-to-uint-be 0xcafebebe)"],
+    ["<", "u3405692606"]
+  ]
+}

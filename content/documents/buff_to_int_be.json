@@ -1,0 +1,22 @@
+{
+  "name": "buff-to-int-be",
+  "input": "(buff 16)",
+  "output": "int",
+  "snippet": "(buff-to-int-be IN1)",
+  "since": 2.1,
+  "description": [
+    "Converts a byte buffer to a signed integer use a big-endian encoding. The byte buffer can be up to 16 bytes in length. If there are fewer than 16 bytes, as this function uses a big-endian encoding, the input behaves as if it is zero-padded on the <u>left</u>"
+  ],
+  "examples": [
+    [">", "(buff-to-int-be 0x01)"],
+    ["<", "1"],
+    [">", "(buff-to-int-be 0x00000000000000000000000000000001)"],
+    ["<", "1"],
+    [">", "(buff-to-int-be 0xffffffffffffffffffffffffffffffff)"],
+    ["<", "-1"],
+    [">", "(buff-to-int-be 0x)"],
+    ["<", "0"],
+    [">", "(buff-to-int-be 0xcafebebe)"],
+    ["<", "3405692606"]
+  ]
+}
