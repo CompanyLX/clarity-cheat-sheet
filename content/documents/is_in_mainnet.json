@@ -2,6 +2,7 @@
   "name": "is-in-mainnet",
   "output": "bool",
   "snippet": "is-in-mainnet",
+  "since": 2.1,
   "description": [
     "Returns a boolean indicating whether or not the code is running on the mainnet."
   ],

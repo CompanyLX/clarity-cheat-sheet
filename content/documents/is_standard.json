@@ -1,0 +1,16 @@
+{
+  "name": "is-standard",
+  "input": "principal",
+  "output": "bool",
+  "snippet": "(is-standard IN1)",
+  "since": 2.1,
+  "description": [
+    "Tests whether <strong>input principal</strong> <u>matches</u> the current network type, and therefore represents a principal that can spend tokens on the current network type. That is, the network is either of type <strong>mainnet</stront>, or <strong>testnet</strong>.",
+    "Only <strong>SPxxxx</strong> and <strong>SMxxxx</strong> <u>c32check form</u> addresses can spend tokens on a mainnet, whereas only <strong>STxxxx</strong> and <strong>SNxxxx</strong> <u>c32check forms</u> addresses can spend tokens on a testnet. All addresses can <u>receive</u> tokens, but only principal <u>c32check form</u> addresses that match the network type can <u>spend</u> tokens on the network.",
+    "This method will return <strong>true</strong> if and only if the principal matches the network type, and false otherwise."
+  ],
+  "examples": [
+    [">", "(is-standard 'ST000000000000000000002AMW42H)"],
+    ["<", "true"]
+  ]
+}
