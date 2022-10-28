@@ -1,0 +1,15 @@
+{
+  "name": "",
+  "byname": "",
+  "input": "",
+  "output": "",
+  "snippet": "",
+  "since": 2.1,
+  "description": [""],
+  "examples": [
+    [">", ""],
+    ["<", ""],
+    [";", ""],
+    ["!", ""]
+  ]
+}
