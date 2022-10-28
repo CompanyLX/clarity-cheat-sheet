@@ -3,7 +3,7 @@
   "byname": "divide",
   "input": "int, ... | uint, ...",
   "output": "int | uint",
-  "snippet": "(/ IN1 IN2 ...)",
+  "snippet": "(/ $1 $2 ...)",
   "description": [
     "Integer divides a variable number of integer inputs and returns the result. In the event of division by zero, throws a runtime error."
   ],
