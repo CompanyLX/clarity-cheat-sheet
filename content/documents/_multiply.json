@@ -3,7 +3,7 @@
   "byname": "multiply",
   "input": "int, ... | uint, ...",
   "output": "int | uint",
-  "snippet": "(* IN1 IN2 ...)",
+  "snippet": "(* $1 $2 ...)",
   "description": [
     "Multiplies a variable number of integer inputs and returns the result. In the event of an <u>overflow</u>, throws a runtime error."
   ],
