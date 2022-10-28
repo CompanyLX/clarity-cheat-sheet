@@ -3,7 +3,7 @@
   "byname": "add",
   "input": "int, ... | uint, ...",
   "output": "int | uint",
-  "snippet": "(+ IN1 IN2 ...)",
+  "snippet": "(+ $1 $2 ...)",
   "description": [
     "Adds a variable number of integer inputs and returns the result. In the event of an <b>overflow</b>, throws a runtime error."
   ],
