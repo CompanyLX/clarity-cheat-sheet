@@ -3,7 +3,7 @@
   "byname": "subtract",
   "input": "int, ... | uint, ...",
   "output": "int | uint",
-  "snippet": "(- IN1 IN2 ...)",
+  "snippet": "(- $1 $2 ...)",
   "description": [
     "Subtracts a variable number of integer inputs and returns the result. In the event of an <u>underflow</u>, throws a runtime error."
   ],
