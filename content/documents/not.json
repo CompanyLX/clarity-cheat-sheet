@@ -1,0 +1,25 @@
+{
+  "name": "not",
+  "input": "bool",
+  "output": "bool",
+  "snippet": "(not $1)",
+  "description": [
+    "Returns the inverse of the boolean input."
+  ],
+  "examples": [
+    [">", "(not true)"],
+    ["<", "false"],
+    [">", "(not false)"],
+    ["<", "true"],
+    [">", "(not (not true))"],
+    ["<", "true"],
+    [">", "(not (not false))"],
+    ["<", "false"],
+    [";", "NAND (NOT-AND)"],
+    [">", "(not (and true true))"],
+    ["<", "false"],
+    [";", "NOR (NOT-OR)"],
+    [">", "(not (or false false))"],
+    ["<", "true"]
+  ]
+}
