@@ -2,7 +2,7 @@
   "name": "principal-destruct",
   "input": "principal",
   "output": "(response (tuple (hash-bytes (buff 20)) (name (optional (string-ascii 40))) (version (buff 1))))",
-  "snippet": "(principal-destruct IN1)",
+  "snippet": "(principal-destruct $1)",
   "since": 2.1,
   "description": [
     "A principal value represents either a set of keys, or a smart contract. The former, called a <u>standard principal</u>, is encoded as a <strong>(buff 1)</strong> *version byte*, indicating the type of account and and a <strong>(buff 20)</strong> *public key hash*, characterizing the principal's unique identity. The latter, a <u>contract principal</u>, is encoded as a standard principal concatenated with a <strong> (string-ascii 40)</strong> *contract name* that identifies the code body.",
