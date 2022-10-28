@@ -2,7 +2,7 @@
   "name": "buff-to-int-le",
   "input": "(buff 16)",
   "output": "int",
-  "snippet": "(buff-to-int-le IN1)",
+  "snippet": "(buff-to-int-le $1)",
   "since": 2.1,
   "description": [
     "Converts a byte buffer to a signed integer use a little-endian encoding. The byte buffer can be up to 16 bytes in length. If there are fewer than 16 bytes, as this function uses a little-endian encoding, the input behaves as if it is zero-padded on the <u>right</u>."
