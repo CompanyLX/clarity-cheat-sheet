@@ -2,7 +2,7 @@
   "name": "string-to-uint",
   "input": "string-ascii | string-utf8",
   "output": "(optional int)",
-  "snippet": "(string-to-uint IN1)",
+  "snippet": "(string-to-uint $1)",
   "since": 2.1,
   "description": [
     "Converts a string, either <strong>string-ascii</strong> or <strong>string-utf8</stront>, to an optional-wrapped unsigned integer. If the input string does not represent a valid integer, then the function returns <strong>none</strong>. Otherwise it returns an unsigned integer wrapped in <strong>some</strong>"
