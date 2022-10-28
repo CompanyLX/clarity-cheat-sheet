@@ -1,0 +1,22 @@
+{
+  "name": "*",
+  "byname": "multiply",
+  "input": "int, ... | uint, ...",
+  "output": "int | uint",
+  "snippet": "(* IN1 IN2 ...)",
+  "description": [
+    "Multiplies a variable number of integer inputs and returns the result. In the event of an <u>overflow</u>, throws a runtime error."
+  ],
+  "examples": [
+    [">", "(* 2 3)"],
+    ["<", "6"],
+    [">", "(* 5 2)"],
+    ["<", "10"],
+    [">", "(* 2 2 2)"],
+    ["<", "8"],
+    [">", "(* 3 -2)"],
+    ["<", "-6"],
+    [">", "(* -1 -2)"],
+    ["<", "2"]
+  ]
+}
