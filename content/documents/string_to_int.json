@@ -1,0 +1,20 @@
+{
+  "name": "string-to-int",
+  "input": "string-ascii | string-utf8",
+  "output": "(optional int)",
+  "snippet": "(string-to-int IN1)",
+  "since": 2.1,
+  "description": [
+    "Converts a string, either <strong>string-ascii</strong> or <strong>string-utf8</stront>, to an optional-wrapped signed integer. If the input string does not represent a valid integer, then the function returns <strong>none</strong>. Otherwise it returns an integer wrapped in <strong>some</strong>."
+  ],
+  "examples": [
+    [">", "(string-to-int \"1\")"],
+    ["<", "(some 1)"],
+    [">", "(string-to-int u\"1\")"],
+    ["<", "(some 1)"],
+    [">", "(string-to-int u\"-1\")"],
+    ["<", "(some -1)"],
+    [">", "(string-to-int \"a\""],
+    ["<", "none"]
+  ]
+}
