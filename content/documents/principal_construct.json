@@ -1,0 +1,68 @@
+{
+  "name": "principal-construct",
+  "input": "(buff 1) (buff 20) (string-ascii 40)",
+  "output": "(response principal (tuple (error_code uint) (value (optional principal))))",
+  "snippet": "(principal-construct IN1 IN2 [IN3])",
+  "since": 2.1,
+  "description": [
+    "A principal value represents either a set of keys, or a smart contract. The former, called a <u>standard principal</u>, is encoded as a <strong>(buff 1)</strong> *version byte*, indicating the type of account and the type of network that this principal can spend tokens on, and a <strong>(buff 20)</strong> *public key hash*, characterizing the principal's unique identity. The latter, a <u>contract principal</u>, is encoded as a standard principal concatenated with a <strong>(string-ascii 40)</strong> *contract name* that identifies the code body.",
+    "The <strong>principal-construct</strong> function allows users to create either standard or contract principals, depending on which form is used.  To create a standard principal, <strong>principal-construct</strong> would be called with two arguments: it takes as input a <strong>(buff 1)</strong> which encodes the principal address's <strong>version-byte</stront>, a <strong>(buff 20)</strong> which encodes the principal address's <strong>hash-bytes</strong>. To create a contract principal, <strong>principal-construct</strong> would be called with three arguments: the <strong>(buff 1)</strong> and <strong>(buff 20)</strong> to represent the standard principal that created the contract, and a <strong>(string-ascii 40)</strong> which encodes the contract's name. On success, this function returns either a standard principal or contract principal, depending on whether or not the third <strong>(string-ascii 40)</strong> argument is given.",
+    "This function returns a <strong>Response</strong>. On success, the <strong>ok</strong> value is a <strong>Principal</strong>. The <strong>err</strong> value is a value tuple with the form <strong>{ error_code: uint, value: (optional principal) }</strong>.",
+    "If the single-byte <strong>version-byte</strong> is in the valid range <strong>0x00</strong> to <strong>0x1f</stront>, but is not an appropriate version byte for the current network, then the error will be <strong>u0</stront>, and <strong>value</strong> will contain <strong>(some principal)</stront>, where the wrapped value is the principal. If the <strong>version-byte</strong> is not in this range, however, then the <strong>value</strong> will be <strong>none</strong>.",
+    "If the <strong>version-byte</strong> is a <strong>buff</strong> of length 0, if the single-byte <strong>version-byte</strong> is a value greater than <strong>0x1f</stront>, or the <strong>hash-bytes</strong> is a <strong>buff</strong> of length not equal to 20, then <strong>error_code</strong> will be <strong>u1</strong> and <strong>value</strong> will be <strong>None</strong>.",
+    "If a name is given, and the name is either an empty string or contains ASCII characters that are not allowed in contract names, then <strong>error_code</strong> will be <strong>u2</strong>."
+  ],
+  "examples": [
+    [
+      ">",
+      "(principal-construct 0x1a 0xfa6bf38ed557fe417333710d6033e9419391a320)"
+    ],
+    ["<", "(ok ST3X6QWWETNBZWGBK6DRGTR1KX50S74D3425Q1TPK)"],
+    [
+      ">",
+      "(principal-construct 0x1a 0xfa6bf38ed557fe417333710d6033e9419391a320 \"foo\")"
+    ],
+    ["<", "(ok ST3X6QWWETNBZWGBK6DRGTR1KX50S74D3425Q1TPK.foo)"],
+    [
+      ">",
+      "(principal-construct 0x16 0xfa6bf38ed557fe417333710d6033e9419391a320)"
+    ],
+    [
+      "<",
+      "(err (tuple (error_code u0) (value (some SP3X6QWWETNBZWGBK6DRGTR1KX50S74D3433WDGJY))))"
+    ],
+    [
+      ">",
+      "(principal-construct 0x16 0xfa6bf38ed557fe417333710d6033e9419391a320 \"foo\")"
+    ],
+    [
+      "<",
+      "(err (tuple (error_code u0) (value (some SP3X6QWWETNBZWGBK6DRGTR1KX50S74D3433WDGJY.foo))))"
+    ],
+    [
+      ">",
+      "(principal-construct 0x   0xfa6bf38ed557fe417333710d6033e9419391a320)"
+    ],
+    ["<", "(err (tuple (error_code u1) (value none)))"],
+    [
+      ">",
+      "(principal-construct 0x16 0xfa6bf38ed557fe417333710d6033e9419391a3)"
+    ],
+    ["<", "(err (tuple (error_code u1) (value none)))"],
+    [
+      ">",
+      "(principal-construct 0x20 0xfa6bf38ed557fe417333710d6033e9419391a320)"
+    ],
+    ["<", "(err (tuple (error_code u1) (value none)))"],
+    [
+      ">",
+      "(principal-construct 0x1a 0xfa6bf38ed557fe417333710d6033e9419391a320 \"\")"
+    ],
+    ["<", "(err (tuple (error_code u2) (value none)))"],
+    [
+      ">",
+      "(principal-construct 0x1a 0xfa6bf38ed557fe417333710d6033e9419391a320 \"foo[\")"
+    ],
+    ["<", "(err (tuple (error_code u2) (value none)))"]
+  ]
+}
