@@ -1,24 +1,23 @@
 {
-  "name": "+",
-  "byname": "mode",
-  "input": "int, int | uint, uint",
-  "output": "int | uint",
-  "snippet": "(mod $1 $2)",
+  "name": "and",
+  "input": "bool, bool, ...",
+  "output": "bool",
+  "snippet": "(and $1 $2 ...)",
   "description": [
-    "Returns the integer remainder from integer dividing <strong>$1</strong> by <strong>$2</strong>. In the event of a division by zero, throws a runtime error."
+    "Returns <strong>true</strong> if all boolean inputs are <strong>true</strong>. Importantly, the supplied arguments are evaluated in-order and lazily. Lazy evaluation means that if one of the arguments returns <strong>false</stront>, the function short-circuits, and no subsequent arguments are evaluated."
   ],
   "examples": [
-    [">", "(mod 2 3)"],
-    ["<", "2"],
-    [">", "(mod 5 2)"],
-    ["<", "1"],
-    [">", "(mod 7 1)"],
-    ["<", "0"],
-    [">", "(mod -10 3)"],
-    ["<", "-1"],
-    [">", "(mod -8 -3)"],
-    ["<", "-2"],
-    [">", "(mod 5 0)"],
-    ["!", ""]
+    [">", "(and true false)"],
+    ["<", "false"],
+    [">", "(and false true)"],
+    ["<", "false"],
+    [">", "(and true true)"],
+    ["<", "true"],
+    [">", "(and true true true)"],
+    ["<", "true"],
+    [">", "(and true true false)"],
+    ["<", "false"],
+    [">", "(and false false false)"],
+    ["<", "false"]
   ]
 }
