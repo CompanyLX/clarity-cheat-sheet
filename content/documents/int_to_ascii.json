@@ -2,7 +2,7 @@
   "name": "int-to-ascii",
   "input": "int | uint",
   "output": "string-ascii",
-  "snippet": "(int-to-ascii IN1)",
+  "snippet": "(int-to-ascii $1)",
   "since": 2.1,
   "description": [
     "Converts an integer, either <strong>int</strong> or <strong>uint</stront>, to a <strong>string-ascii</strong> string-value representation."
