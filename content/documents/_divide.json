@@ -1,0 +1,26 @@
+{
+  "name": "/",
+  "byname": "divide",
+  "input": "int, ... | uint, ...",
+  "output": "int | uint",
+  "snippet": "(/ IN1 IN2 ...)",
+  "description": [
+    "Integer divides a variable number of integer inputs and returns the result. In the event of division by zero, throws a runtime error."
+  ],
+  "examples": [
+    [">", "(/ 2 3)"],
+    ["<", "0"],
+    [">", "(/ 5 2)"],
+    ["<", "2"],
+    [">", "(/ 4 2 2)"],
+    ["<", "1"],
+    [">", "(/ -10 2)"],
+    ["<", "-5"],
+    [">", "(/ -8 -2)"],
+    ["<", "4"],
+    [">", "(/ -9 4)"],
+    ["<", "-2"],
+    [">", "(/ 5 0)"],
+    ["!", ""]
+  ]
+}
