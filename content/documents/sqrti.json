@@ -1,0 +1,21 @@
+{
+  "name": "sqrti",
+  "input": "int | uint",
+  "output": "int | uint",
+  "snippet": "(sqrti $1)",
+  "description": [
+    "Returns the largest integer that is less than or equal to the square root of <strong>$1</strong>. Fails on a negative numbers."
+  ],
+  "examples": [
+    [">", "(sqrti u11)"],
+    [">", "u3"],
+    [">", "(sqrti 1000000)"],
+    [">", "1000"],
+    [">", "(sqrti u1)"],
+    [">", "u1"],
+    [">", "(sqrti 0)"],
+    [">", "0"],
+    [">", "(sqrti -3)"],
+    ["!", ""]
+  ]
+}
