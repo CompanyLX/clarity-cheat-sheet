@@ -1,11 +1,10 @@
 {
-  "name": "+",
-  "byname": "mode",
+  "name": "mod",
   "input": "int, int | uint, uint",
   "output": "int | uint",
-  "snippet": "(mod IN1 IN2)",
+  "snippet": "(mod $1 $2)",
   "description": [
-    "Returns the integer remainder from integer dividing <strong>IN1</strong> by <strong>IN2</strong>. In the event of a division by zero, throws a runtime error."
+    "Returns the integer remainder from integer dividing <strong>$1</strong> by <strong>$2</strong>. In the event of a division by zero, throws a runtime error."
   ],
   "examples": [
     [">", "(mod 2 3)"],
