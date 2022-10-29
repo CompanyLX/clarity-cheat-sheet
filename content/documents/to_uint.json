@@ -2,7 +2,7 @@
   "name": "to-uint",
   "input": "int",
   "output": "uint",
-  "snippet": "(to-uint IN1)",
+  "snippet": "(to-uint $1)",
   "description": [
     "Tries to convert the <strong>int</strong> argument to a <strong>uint</strong>. Will cause a runtime error and abort if the supplied argument is negative."
   ],
