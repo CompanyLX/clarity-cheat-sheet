@@ -2,7 +2,7 @@
   "name": "to-int",
   "input": "uint",
   "output": "int",
-  "snippet": "(to-int IN1)",
+  "snippet": "(to-int $1)",
   "description": [
     "Tries to convert the <strong>uint</strong> argument to an <strong>int</strong>. Will cause a runtime error and abort if the supplied argument is >= <strong>pow(2, 127)</strong>"
   ],
