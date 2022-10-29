@@ -2,7 +2,7 @@
   "name": "principal-construct",
   "input": "(buff 1) (buff 20) (string-ascii 40)",
   "output": "(response principal (tuple (error_code uint) (value (optional principal))))",
-  "snippet": "(principal-construct IN1 IN2 [IN3])",
+  "snippet": "(principal-construct $1 $2 [$3])",
   "since": 2.1,
   "description": [
     "A principal value represents either a set of keys, or a smart contract. The former, called a <u>standard principal</u>, is encoded as a <strong>(buff 1)</strong> *version byte*, indicating the type of account and the type of network that this principal can spend tokens on, and a <strong>(buff 20)</strong> *public key hash*, characterizing the principal's unique identity. The latter, a <u>contract principal</u>, is encoded as a standard principal concatenated with a <strong>(string-ascii 40)</strong> *contract name* that identifies the code body.",
