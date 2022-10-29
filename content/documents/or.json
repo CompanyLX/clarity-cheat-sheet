@@ -1,0 +1,25 @@
+{
+  "name": "or",
+  "input": "bool, bool, ...",
+  "output": "bool",
+  "snippet": "(or $1 $2 ...)",
+  "description": [
+    "Returns <strong>true</strong> if any boolean inputs are <strong>true</strong>. Importantly, the supplied arguments are evaluated in-order and lazily. Lazy evaluation means that if one of the arguments returns <strong>true</stront>, the function short-circuits, and no subsequent arguments are evaluated."
+  ],
+  "examples": [
+    [">", "(or true false)"],
+    ["<", "true"],
+    [">", "(or false true)"],
+    ["<", "true"],
+    [">", "(or true true)"],
+    ["<", "true"],
+    [">", "(or false false)"],
+    ["<", "false"],
+    [">", "(or true true true)"],
+    ["<", "true"],
+    [">", "(or true true false)"],
+    ["<", "true"],
+    [">", "(or false false false)"],
+    ["<", "false"]
+  ]
+}
