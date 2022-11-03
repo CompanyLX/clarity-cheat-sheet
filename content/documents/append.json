@@ -1,0 +1,25 @@
+{
+  "wip": true,
+  "id": "append",
+  "name": "append",
+  "byname": "",
+  "input": "list A, A",
+  "output": "list",
+  "snippet": "",
+  "since": 2.1,
+  "description": [
+    "The <i>append</i> function takes a list and another value with the same entry type, and outputs a list of the same type with max_len += 1."
+  ],
+  "examples": [],
+  "signature": "(append (list 1 2 3 4) 5)",
+  "example": [
+    [
+      ">",
+      "(append (list 1 2 3 4) 5)"
+    ],
+    [
+      "<",
+      "(1 2 3 4 5)"
+    ]
+  ]
+}
