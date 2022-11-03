@@ -1,0 +1,41 @@
+{
+  "wip": true,
+  "id": "div",
+  "name": "/",
+  "byname": "",
+  "input": "",
+  "output": "",
+  "snippet": "",
+  "since": 2.1,
+  "description": [
+    "Integer divides a variable number of integer inputs and returns the result. In the event of division by zero, throws a runtime error."
+  ],
+  "examples": [],
+  "signature": "(/ i1 i2...)",
+  "example": [
+    [
+      ">",
+      "(/ 2 3)"
+    ],
+    [
+      "<",
+      "0"
+    ],
+    [
+      ">",
+      "(/ 5 2)"
+    ],
+    [
+      "<",
+      "2"
+    ],
+    [
+      ">",
+      "(/ 4 2 2)"
+    ],
+    [
+      "<",
+      "1"
+    ]
+  ]
+}
