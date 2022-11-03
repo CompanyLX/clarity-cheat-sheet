@@ -1,0 +1,50 @@
+{
+  "wip": true,
+  "id": "buff_to_int_le",
+  "name": "buff-to-int-le",
+  "byname": "",
+  "input": "",
+  "output": "",
+  "snippet": "",
+  "since": 2.1,
+  "description": [
+    "Converts a byte buffer to a signed integer use a little-endian encoding. The byte buffer can be up to 16 bytes in length. If there are fewer than 16 bytes, as this function uses a little-endian encoding, the input behaves as if it is zero-padded on the <u>right</u>.",
+    "Note: This function is only available starting with Stacks 2.1."
+  ],
+  "examples": [],
+  "signature": "(buff-to-int-le (buff 16))",
+  "example": [
+    [
+      ">",
+      "(buff-to-int-le 0x01)"
+    ],
+    [
+      "<",
+      "1"
+    ],
+    [
+      ">",
+      "(buff-to-int-le 0x01000000000000000000000000000000)"
+    ],
+    [
+      "<",
+      "1"
+    ],
+    [
+      ">",
+      "(buff-to-int-le 0xffffffffffffffffffffffffffffffff)"
+    ],
+    [
+      "<",
+      "-1"
+    ],
+    [
+      ">",
+      "(buff-to-int-le 0x)"
+    ],
+    [
+      "<",
+      "0"
+    ]
+  ]
+}
