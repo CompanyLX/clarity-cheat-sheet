@@ -1,0 +1,30 @@
+{
+  "wip": true,
+  "id": "mint_token",
+  "name": "ft-mint?",
+  "byname": "",
+  "input": "TokenName, uint, principal",
+  "output": "(response bool uint)",
+  "snippet": "",
+  "since": 2.1,
+  "description": [
+    "<i>ft-mint?</i> is used to increase the token balance for the <i>recipient</i> principal for a token type defined using <i>define-fungible-token</i>. The increased token balance is <u>not</u> transfered from another principal, but rather minted.",
+    "If a non-positive amount is provided to mint, this function returns <i>(err 1)</i>. Otherwise, on successfuly mint, it returns <i>(ok true)</i>."
+  ],
+  "examples": [],
+  "signature": "(ft-mint? token-name amount recipient)",
+  "example": [
+    [
+      ">",
+      "(define-fungible-token stackaroo)"
+    ],
+    [
+      ">",
+      "(ft-mint? stackaroo u100 'SPAXYA5XS51713FDTQ8H94EJ4V579CXMTRNBZKSF)"
+    ],
+    [
+      "<",
+      "(ok true)"
+    ]
+  ]
+}
