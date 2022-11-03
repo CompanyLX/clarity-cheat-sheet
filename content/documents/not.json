@@ -1,0 +1,33 @@
+{
+  "wip": true,
+  "id": "not",
+  "name": "not",
+  "byname": "",
+  "input": "",
+  "output": "",
+  "snippet": "",
+  "since": 2.1,
+  "description": [
+    "Returns the inverse of the boolean input."
+  ],
+  "examples": [],
+  "signature": "(not b1)",
+  "example": [
+    [
+      ">",
+      "(not true)"
+    ],
+    [
+      "<",
+      "false"
+    ],
+    [
+      ">",
+      "(not (is-eq 1 2))"
+    ],
+    [
+      "<",
+      "true"
+    ]
+  ]
+}
