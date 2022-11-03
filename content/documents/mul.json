@@ -1,0 +1,41 @@
+{
+  "wip": true,
+  "id": "mul",
+  "name": "*",
+  "byname": "",
+  "input": "",
+  "output": "",
+  "snippet": "",
+  "since": 2.1,
+  "description": [
+    "Multiplies a variable number of integer inputs and returns the result. In the event of an <u>overflow</u>, throws a runtime error."
+  ],
+  "examples": [],
+  "signature": "(* i1 i2...)",
+  "example": [
+    [
+      ">",
+      "(* 2 3)"
+    ],
+    [
+      "<",
+      "6"
+    ],
+    [
+      ">",
+      "(* 5 2)"
+    ],
+    [
+      "<",
+      "10"
+    ],
+    [
+      ">",
+      "(* 2 2 2)"
+    ],
+    [
+      "<",
+      "8"
+    ]
+  ]
+}
