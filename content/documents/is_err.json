@@ -1,0 +1,33 @@
+{
+  "wip": true,
+  "id": "is_err",
+  "name": "is-err",
+  "byname": "",
+  "input": "(response A B)",
+  "output": "bool",
+  "snippet": "",
+  "since": 2.1,
+  "description": [
+    "<i>is-err</i> tests a supplied response value, returning <i>true</i> if the response was an <i>err</i>, and <i>false</i> if it was an <i>ok</i>."
+  ],
+  "examples": [],
+  "signature": "(is-err value)",
+  "example": [
+    [
+      ">",
+      "(is-err (ok 1))"
+    ],
+    [
+      "<",
+      "false"
+    ],
+    [
+      ">",
+      "(is-err (err 1))"
+    ],
+    [
+      "<",
+      "true"
+    ]
+  ]
+}
