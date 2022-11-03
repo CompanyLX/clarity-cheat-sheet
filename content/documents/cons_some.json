@@ -1,0 +1,33 @@
+{
+  "wip": true,
+  "id": "cons_some",
+  "name": "some",
+  "byname": "",
+  "input": "A",
+  "output": "(optional A)",
+  "snippet": "",
+  "since": 2.1,
+  "description": [
+    "The <i>some</i> function constructs a <i>optional</i> type from the input value."
+  ],
+  "examples": [],
+  "signature": "(some value)",
+  "example": [
+    [
+      ">",
+      "(some 1)"
+    ],
+    [
+      "<",
+      "(some 1)"
+    ],
+    [
+      ">",
+      "(is-none (some 2))"
+    ],
+    [
+      "<",
+      "false"
+    ]
+  ]
+}
