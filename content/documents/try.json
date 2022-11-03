@@ -1,0 +1,73 @@
+{
+  "wip": true,
+  "id": "try",
+  "name": "try!",
+  "byname": "",
+  "input": "(optional A) | (response A B)",
+  "output": "A",
+  "snippet": "",
+  "since": 2.1,
+  "description": [
+    "The <i>try!</i> function attempts to &quot;unpack&quot; the first argument: if the argument is an option type, and the argument is a <i>(some ...)</i> option, <i>try!</i> returns the inner value of the option. If the argument is a response type, and the argument is an <i>(ok ...)</i> response, <i>try!</i> returns the inner value of the <i>ok</i>. If the supplied argument is either an <i>(err ...)</i> or a <i>none</i> value, <i>try!</i> <u>returns</u> either <i>none</i> or the <i>(err ...)</i> value from the current function and exits the current control-flow."
+  ],
+  "examples": [],
+  "signature": "(try! option-input)",
+  "example": [
+    [
+      ">",
+      "(define-map names-map { name: (string-ascii 12) } { id: int })"
+    ],
+    [
+      ">",
+      "(map-set names-map { name: \"blockstack\" } { id: 1337 })"
+    ],
+    [
+      ">",
+      "(try! (map-get? names-map { name: \"blockstack\" }))"
+    ],
+    [
+      "<",
+      "(tuple (id 1337))"
+    ],
+    [
+      ">",
+      "(define-private (checked-even (x int))"
+    ],
+    [
+      ">",
+      "(if (is-eq (mod x 2) 0)"
+    ],
+    [
+      ">",
+      "(ok x)"
+    ],
+    [
+      ">",
+      "(err false)))"
+    ],
+    [
+      ">",
+      "(define-private (double-if-even (x int))"
+    ],
+    [
+      ">",
+      "(ok (* 2 (try! (checked-even x)))))"
+    ],
+    [
+      ">",
+      "(double-if-even 10)"
+    ],
+    [
+      "<",
+      "(ok 20)"
+    ],
+    [
+      ">",
+      "(double-if-even 3)"
+    ],
+    [
+      "<",
+      "(err false)"
+    ]
+  ]
+}
