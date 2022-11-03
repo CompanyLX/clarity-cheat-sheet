@@ -1,0 +1,90 @@
+{
+  "wip": true,
+  "id": "match",
+  "name": "match",
+  "byname": "",
+  "input": "",
+  "output": "C",
+  "snippet": "",
+  "since": 2.1,
+  "description": [
+    "The <i>match</i> function is used to test and destructure optional and response types.",
+    "If the <i>input</i> is an optional, it tests whether the provided <i>input</i> is a <i>some</i> or <i>none</i> option, and evaluates <i>some-branch</i> or <i>none-branch</i> in each respective case.",
+    "Within the <i>some-branch</i>, the <u>contained value</u> of the <i>input</i> argument is bound to the provided <i>some-binding-name</i> name.",
+    "Only <u>one</u> of the branches will be evaluated (similar to <i>if</i> statements).",
+    "If the <i>input</i> is a response, it tests whether the provided <i>input</i> is an <i>ok</i> or <i>err</i> response type, and evaluates <i>ok-branch</i> or <i>err-branch</i> in each respective case.",
+    "Within the <i>ok-branch</i>, the <u>contained ok value</u> of the <i>input</i> argument is bound to the provided <i>ok-binding-name</i> name.",
+    "Within the <i>err-branch</i>, the <u>contained err value</u> of the <i>input</i> argument is bound to the provided <i>err-binding-name</i> name.",
+    "Only <u>one</u> of the branches will be evaluated (similar to <i>if</i> statements).",
+    "Note: Type checking requires that the type of both the ok and err parts of the response object be determinable. For situations in which one of the parts of a response is untyped, you should use <i>unwrap-panic</i> or <i>unwrap-err-panic</i> instead of <i>match</i>."
+  ],
+  "examples": [],
+  "input_type": "(optional A) name expression expression | (response A B) name expression name expression",
+  "signature": "(match opt-input some-binding-name some-branch none-branch) | (match-resp input ok-binding-name ok-branch err-binding-name err-branch)",
+  "example": [
+    [
+      ">",
+      "(define-private (add-10 (x (optional int)))"
+    ],
+    [
+      ">",
+      "(match x"
+    ],
+    [
+      ">",
+      "value (+ 10 value)"
+    ],
+    [
+      ">",
+      "10))"
+    ],
+    [
+      ">",
+      "(add-10 (some 5))"
+    ],
+    [
+      "<",
+      "15"
+    ],
+    [
+      ">",
+      "(add-10 none)"
+    ],
+    [
+      "<",
+      "10"
+    ],
+    [
+      ">",
+      "(define-private (add-or-pass-err (x (response int (string-ascii 10))) (to-add int))"
+    ],
+    [
+      ">",
+      "(match x"
+    ],
+    [
+      ">",
+      "value (ok (+ to-add value))"
+    ],
+    [
+      ">",
+      "err-value (err err-value)))"
+    ],
+    [
+      ">",
+      "(add-or-pass-err (ok 5) 20)"
+    ],
+    [
+      "<",
+      "(ok 25)"
+    ],
+    [
+      ">",
+      "(add-or-pass-err (err \"ERROR\") 20)"
+    ],
+    [
+      "<",
+      "(err \"ERROR\")"
+    ]
+  ]
+}
