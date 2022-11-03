@@ -1,0 +1,41 @@
+{
+  "wip": true,
+  "id": "is_some",
+  "name": "is-some",
+  "byname": "",
+  "input": "(optional A)",
+  "output": "bool",
+  "snippet": "",
+  "since": 2.1,
+  "description": [
+    "<i>is-some</i> tests a supplied option value, returning <i>true</i> if the option value is <i>(some ...)</i>, and <i>false</i> if it is a <i>none</i>."
+  ],
+  "examples": [],
+  "signature": "(is-some value)",
+  "example": [
+    [
+      ">",
+      "(define-map names-map { name: (string-ascii 12) } { id: int })"
+    ],
+    [
+      ">",
+      "(map-set names-map { name: \"blockstack\" } { id: 1337 })"
+    ],
+    [
+      ">",
+      "(is-some (get id (map-get? names-map { name: \"blockstack\" })))"
+    ],
+    [
+      "<",
+      "true"
+    ],
+    [
+      ">",
+      "(is-some (get id (map-get? names-map { name: \"non-existant\" })))"
+    ],
+    [
+      "<",
+      "false"
+    ]
+  ]
+}
