@@ -1,0 +1,57 @@
+{
+  "wip": true,
+  "id": "index_of",
+  "name": "index-of",
+  "byname": "",
+  "input": "sequence_A, A",
+  "output": "(optional uint)",
+  "snippet": "",
+  "since": 2.1,
+  "description": [
+    "The <i>index-of</i> function returns the first index at which <i>item</i> can be found, using <i>is-eq</i> checks, in the provided sequence. Applicable sequence types are <i>(list A)</i>, <i>buff</i>, <i>string-ascii</i> and <i>string-utf8</i>, for which the corresponding element types are, respectively, <i>A</i>, <i>(buff 1)</i>, <i>(string-ascii 1)</i> and <i>(string-utf8 1)</i>. If the target item is not found in the sequence (or if an empty string or buffer is supplied), this function returns <i>none</i>."
+  ],
+  "examples": [],
+  "signature": "(index-of sequence item)",
+  "example": [
+    [
+      ">",
+      "(index-of \"blockstack\" \"b\")"
+    ],
+    [
+      "<",
+      "(some u0)"
+    ],
+    [
+      ">",
+      "(index-of \"blockstack\" \"k\")"
+    ],
+    [
+      "<",
+      "(some u4)"
+    ],
+    [
+      ">",
+      "(index-of \"blockstack\" \"\")"
+    ],
+    [
+      "<",
+      "none"
+    ],
+    [
+      ">",
+      "(index-of (list 1 2 3 4 5) 6)"
+    ],
+    [
+      "<",
+      "none"
+    ],
+    [
+      ">",
+      "(index-of 0xfb01 0x01)"
+    ],
+    [
+      "<",
+      "(some u1)"
+    ]
+  ]
+}
