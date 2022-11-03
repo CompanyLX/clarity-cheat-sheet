@@ -1,0 +1,32 @@
+{
+  "wip": true,
+  "id": "mint_asset",
+  "name": "nft-mint?",
+  "byname": "",
+  "input": "AssetName, A, principal",
+  "output": "(response bool uint)",
+  "snippet": "",
+  "since": 2.1,
+  "description": [
+    "<i>nft-mint?</i> is used to instantiate an asset and set that asset&quot;s owner to the <i>recipient</i> principal. The asset must have been defined using <i>define-non-fungible-token</i>, and the supplied <i>asset-identifier</i> must be of the same type specified in that definition.",
+    "If an asset identified by <i>asset-identifier</i> <u>already exists</u>, this function will return an error with the following error code:",
+    "<i>(err u1)</i>",
+    "Otherwise, on successfuly mint, it returns <i>(ok true)</i>."
+  ],
+  "examples": [],
+  "signature": "(nft-mint? asset-class asset-identifier recipient)",
+  "example": [
+    [
+      ">",
+      "(define-non-fungible-token stackaroo (string-ascii 40))"
+    ],
+    [
+      ">",
+      "(nft-mint? stackaroo \"Roo\" 'SPAXYA5XS51713FDTQ8H94EJ4V579CXMTRNBZKSF)"
+    ],
+    [
+      "<",
+      "(ok true)"
+    ]
+  ]
+}
