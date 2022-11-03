@@ -1,0 +1,49 @@
+{
+  "wip": true,
+  "id": "sqrti",
+  "name": "sqrti",
+  "byname": "",
+  "input": "",
+  "output": "",
+  "snippet": "",
+  "since": 2.1,
+  "description": [
+    "Returns the largest integer that is less than or equal to the square root of <i>n</i>.  Fails on a negative numbers."
+  ],
+  "examples": [],
+  "signature": "(sqrti n)",
+  "example": [
+    [
+      ">",
+      "(sqrti u11)"
+    ],
+    [
+      "<",
+      "u3"
+    ],
+    [
+      ">",
+      "(sqrti 1000000)"
+    ],
+    [
+      "<",
+      "1000"
+    ],
+    [
+      ">",
+      "(sqrti u1)"
+    ],
+    [
+      "<",
+      "u1"
+    ],
+    [
+      ">",
+      "(sqrti 0)"
+    ],
+    [
+      "<",
+      "0"
+    ]
+  ]
+}
