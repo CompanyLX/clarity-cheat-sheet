@@ -1,0 +1,49 @@
+{
+  "wip": true,
+  "id": "or",
+  "name": "or",
+  "byname": "",
+  "input": "",
+  "output": "",
+  "snippet": "",
+  "since": 2.1,
+  "description": [
+    "Returns <i>true</i> if any boolean inputs are <i>true</i>. Importantly, the supplied arguments are evaluated in-order and lazily. Lazy evaluation means that if one of the arguments returns <i>true</i>, the function short-circuits, and no subsequent arguments are evaluated."
+  ],
+  "examples": [],
+  "signature": "(or b1 b2 ...)",
+  "example": [
+    [
+      ">",
+      "(or true false)"
+    ],
+    [
+      "<",
+      "true"
+    ],
+    [
+      ">",
+      "(or (is-eq (+ 1 2) 1) (is-eq 4 4))"
+    ],
+    [
+      "<",
+      "true"
+    ],
+    [
+      ">",
+      "(or (is-eq (+ 1 2) 1) (is-eq 3 4))"
+    ],
+    [
+      "<",
+      "false"
+    ],
+    [
+      ">",
+      "(or (is-eq (+ 1 2) 3) (is-eq 4 4))"
+    ],
+    [
+      "<",
+      "true"
+    ]
+  ]
+}
