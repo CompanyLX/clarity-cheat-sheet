@@ -1,0 +1,37 @@
+{
+  "wip": true,
+  "id": "contract_of",
+  "name": "contract-of",
+  "byname": "",
+  "input": "Trait",
+  "output": "principal",
+  "snippet": "",
+  "since": 2.1,
+  "description": [
+    "The <i>contract-of</i> function returns the principal of the contract implementing the trait."
+  ],
+  "examples": [],
+  "signature": "(contract-of .contract-name)",
+  "example": [
+    [
+      ">",
+      "(use-trait token-a-trait 'SPAXYA5XS51713FDTQ8H94EJ4V579CXMTRNBZKSF.token-a.token-trait)"
+    ],
+    [
+      ">",
+      "(define-public (forward-get-balance (user principal) (contract <token-a-trait>))"
+    ],
+    [
+      ">",
+      "(begin"
+    ],
+    [
+      ">",
+      "(ok (contract-of contract))))"
+    ],
+    [
+      "<",
+      "the principal of the contract implementing <token-a-trait>"
+    ]
+  ]
+}
