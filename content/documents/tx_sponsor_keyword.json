@@ -1,0 +1,24 @@
+{
+  "wip": true,
+  "id": "tx_sponsor_keyword",
+  "name": "tx-sponsor?",
+  "byname": "",
+  "input": "",
+  "output": "optional principal",
+  "snippet": "",
+  "since": 2.1,
+  "description": [
+    "Returns the sponsor of the current transaction if there is a sponsor, otherwise returns None."
+  ],
+  "examples": [],
+  "example": [
+    [
+      ">",
+      "(print tx-sponsor?)"
+    ],
+    [
+      ";",
+      "Will print out an optional value containing the Stacks address of the transaction sponsor"
+    ]
+  ]
+}
