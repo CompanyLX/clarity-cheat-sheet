@@ -1,0 +1,25 @@
+{
+  "wip": true,
+  "id": "to_uint",
+  "name": "to-uint",
+  "byname": "",
+  "input": "",
+  "output": "",
+  "snippet": "",
+  "since": 2.1,
+  "description": [
+    "Tries to convert the <i>int</i> argument to a <i>uint</i>. Will cause a runtime error and abort if the supplied argument is negative."
+  ],
+  "examples": [],
+  "signature": "(to-uint i)",
+  "example": [
+    [
+      ">",
+      "(to-uint 238)"
+    ],
+    [
+      "<",
+      "u238"
+    ]
+  ]
+}
