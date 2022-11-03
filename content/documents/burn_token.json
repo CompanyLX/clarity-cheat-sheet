@@ -1,0 +1,39 @@
+{
+  "wip": true,
+  "id": "burn_token",
+  "name": "ft-burn?",
+  "byname": "",
+  "input": "TokenName, uint, principal",
+  "output": "(response bool uint)",
+  "snippet": "",
+  "since": 2.1,
+  "description": [
+    "<i>ft-burn?</i> is used to decrease the token balance for the <i>sender</i> principal for a token type defined using <i>define-fungible-token</i>. The decreased token balance is <u>not</u> transfered to another principal, but rather destroyed, reducing the circulating supply.",
+    "On a successful burn, it returns <i>(ok true)</i>. In the event of an unsuccessful burn it returns one of the following error codes:",
+    "<i>(err u1)</i> -- <i>sender</i> does not have enough balance to burn this amount or the amount specified is not positive"
+  ],
+  "examples": [],
+  "signature": "(ft-burn? token-name amount sender)",
+  "example": [
+    [
+      ">",
+      "(define-fungible-token stackaroo)"
+    ],
+    [
+      ">",
+      "(ft-mint? stackaroo u100 'SPAXYA5XS51713FDTQ8H94EJ4V579CXMTRNBZKSF)"
+    ],
+    [
+      "<",
+      "(ok true)"
+    ],
+    [
+      ">",
+      "(ft-burn? stackaroo u50 'SPAXYA5XS51713FDTQ8H94EJ4V579CXMTRNBZKSF)"
+    ],
+    [
+      "<",
+      "(ok true)"
+    ]
+  ]
+}
