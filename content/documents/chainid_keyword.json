@@ -1,0 +1,24 @@
+{
+  "wip": true,
+  "id": "chainid_keyword",
+  "name": "chain-id",
+  "byname": "",
+  "input": "",
+  "output": "uint",
+  "snippet": "",
+  "since": 2.1,
+  "description": [
+    "Returns the 32-bit chain ID of the blockchain running this transaction"
+  ],
+  "examples": [],
+  "example": [
+    [
+      ">",
+      "(print chain-id)"
+    ],
+    [
+      ";",
+      "Will print 'u1' if the code is running on mainnet, and 'u2147483648' on testnet, and other values on different chains."
+    ]
+  ]
+}
