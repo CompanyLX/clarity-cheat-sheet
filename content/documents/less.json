@@ -1,0 +1,65 @@
+{
+  "wip": true,
+  "id": "less",
+  "name": "<",
+  "byname": "",
+  "input": "",
+  "output": "",
+  "snippet": "",
+  "since": 2.1,
+  "description": [
+    "Compares two integers, returning <i>true</i> if <i>i1</i> is less than <i>i2</i> and <i>false</i> otherwise. i1 and i2 must be of the same type. Starting with Stacks 1.0, the <i>&lt;</i>-comparable types are <i>int</i> and <i>uint</i>. Starting with Stacks 2.1, the <i>&lt;</i>-comparable types are expanded to include <i>string-ascii</i>, <i>string-utf8</i> and <i>buff</i>."
+  ],
+  "examples": [],
+  "signature": "(< i1 i2)",
+  "example": [
+    [
+      ">",
+      "(< 1 2)"
+    ],
+    [
+      "<",
+      "true"
+    ],
+    [
+      ">",
+      "(< 5 2)"
+    ],
+    [
+      "<",
+      "false"
+    ],
+    [
+      ">",
+      "(< \"aaa\" \"baa\")"
+    ],
+    [
+      "<",
+      "true"
+    ],
+    [
+      ">",
+      "(< \"aa\" \"aaa\")"
+    ],
+    [
+      "<",
+      "true"
+    ],
+    [
+      ">",
+      "(< 0x01 0x02)"
+    ],
+    [
+      "<",
+      "true"
+    ],
+    [
+      ">",
+      "(< 5 u2)"
+    ],
+    [
+      ";",
+      "Throws type error"
+    ]
+  ]
+}
