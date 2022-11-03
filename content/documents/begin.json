@@ -1,0 +1,25 @@
+{
+  "wip": true,
+  "id": "begin",
+  "name": "begin",
+  "byname": "",
+  "input": "AnyType, ... A",
+  "output": "A",
+  "snippet": "",
+  "since": 2.1,
+  "description": [
+    "The <i>begin</i> function evaluates each of its input expressions, returning the return value of the last such expression. Note: intermediary statements returning a response type must be checked."
+  ],
+  "examples": [],
+  "signature": "(begin expr1 expr2 expr3 ... expr-last)",
+  "example": [
+    [
+      ">",
+      "(begin (+ 1 2) 4 5)"
+    ],
+    [
+      "<",
+      "5"
+    ]
+  ]
+}
