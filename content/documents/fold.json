@@ -1,0 +1,83 @@
+{
+  "wip": true,
+  "id": "fold",
+  "name": "fold",
+  "byname": "",
+  "input": "Function(A, B) -> B, sequence_A, B",
+  "output": "B",
+  "snippet": "",
+  "since": 2.1,
+  "description": [
+    "The <i>fold</i> function condenses <i>sequence_A</i> into a value of type <i>B</i> by recursively applies the function <i>func</i> to each element of the input sequence <u>and</u> the output of a previous application of <i>func</i>.",
+    "<i>fold</i> uses <i>initial_B</i> in the initial application of <i>func</i>, along with the first element of <i>sequence_A</i>. The resulting value of type <i>B</i> is used for the next application of <i>func</i>, along with the next element of <i>sequence_A</i> and so on. <i>fold</i> returns the last value of type <i>B</i> returned by these successive applications <i>func</i>.",
+    "Applicable sequence types are <i>(list A)</i>, <i>buff</i>, <i>string-ascii</i> and <i>string-utf8</i>, for which the corresponding element types are, respectively, <i>A</i>, <i>(buff 1)</i>, <i>(string-ascii 1)</i> and <i>(string-utf8 1)</i>. The <i>func</i> argument must be a literal function name."
+  ],
+  "examples": [],
+  "signature": "(fold func sequence_A initial_B)",
+  "example": [
+    [
+      ">",
+      "(fold * (list 2 2 2) 1)"
+    ],
+    [
+      "<",
+      "8"
+    ],
+    [
+      ">",
+      "(fold * (list 2 2 2) 0)"
+    ],
+    [
+      "<",
+      "0"
+    ],
+    [
+      ">",
+      ""
+    ],
+    [
+      ";",
+      "calculates (- 11 (- 7 (- 3 2)))"
+    ],
+    [
+      ">",
+      "(fold - (list 3 7 11) 2)"
+    ],
+    [
+      "<",
+      "5"
+    ],
+    [
+      ">",
+      "(define-private (concat-string (a (string-ascii 20)) (b (string-ascii 20))) (unwrap-panic (as-max-len? (concat a b) u20)))"
+    ],
+    [
+      ">",
+      "(fold concat-string \"cdef\" \"ab\")"
+    ],
+    [
+      "<",
+      "\"fedcab"
+    ],
+    [
+      ">",
+      "(fold concat-string (list \"cd\" \"ef\") \"ab\")"
+    ],
+    [
+      "<",
+      "\"efcdab"
+    ],
+    [
+      ">",
+      "(define-private (concat-buff (a (buff 20)) (b (buff 20))) (unwrap-panic (as-max-len? (concat a b) u20)))"
+    ],
+    [
+      ">",
+      "(fold concat-buff 0x03040506 0x0102)"
+    ],
+    [
+      "<",
+      "0x060504030102"
+    ]
+  ]
+}
