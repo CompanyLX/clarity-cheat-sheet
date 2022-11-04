@@ -1,0 +1,26 @@
+{
+  "wip": true,
+  "id": "define_read_only",
+  "name": "define-read-only",
+  "byname": "",
+  "input": "MethodSignature, MethodBody",
+  "output": "Not Applicable",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "<i>define-read-only</i> is used to define a <u>public read-only</u> function for a smart contract. Such functions are callable from other smart contracts.",
+    "Like other kinds of definition statements, <i>define-read-only</i> may only be used at the top level of a smart contract definition (i.e., you cannot put a define statement in the middle of a function body).",
+    "Read-only functions may return any type. However, read-only functions may not perform any datamap modifications, or call any functions which perform such modifications. This is enforced both during type checks and during the execution of the function. Public read-only functions may be invoked by other contracts via <i>contract-call?</i>."
+  ],
+  "signature": "(define-read-only (function-name (arg-name-0 arg-type-0) (arg-name-1 arg-type-1) ...) function-body)",
+  "examples": [
+    [
+      ">",
+      "(define-read-only (just-return-one-hundred)"
+    ],
+    [
+      ">",
+      "(* 10 10))\""
+    ]
+  ]
+}
