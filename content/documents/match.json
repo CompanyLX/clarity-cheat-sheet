@@ -5,7 +5,7 @@
   "byname": "",
   "input": "",
   "output": "C",
-  "snippet": "",
+  "signature": "",
   "since": 2.1,
   "description": [
     "The <i>match</i> function is used to test and destructure optional and response types.",
@@ -18,10 +18,9 @@
     "Only <u>one</u> of the branches will be evaluated (similar to <i>if</i> statements).",
     "Note: Type checking requires that the type of both the ok and err parts of the response object be determinable. For situations in which one of the parts of a response is untyped, you should use <i>unwrap-panic</i> or <i>unwrap-err-panic</i> instead of <i>match</i>."
   ],
-  "examples": [],
   "input_type": "(optional A) name expression expression | (response A B) name expression name expression",
   "signature": "(match opt-input some-binding-name some-branch none-branch) | (match-resp input ok-binding-name ok-branch err-binding-name err-branch)",
-  "example": [
+  "examples": [
     [
       ">",
       "(define-private (add-10 (x (optional int)))"
