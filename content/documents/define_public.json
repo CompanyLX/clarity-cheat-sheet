@@ -1,0 +1,30 @@
+{
+  "wip": true,
+  "id": "define_public",
+  "name": "define-public",
+  "byname": "",
+  "input": "MethodSignature, MethodBody",
+  "output": "Not Applicable",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "<i>define-public</i> is used to define a <u>public</u> function and transaction for a smart contract. Public functions are callable from other smart contracts and may be invoked directly by users by submitting a transaction to the Stacks blockchain.",
+    "Like other kinds of definition statements, <i>define-public</i> may only be used at the top level of a smart contract definition (i.e., you cannot put a define statement in the middle of a function body).",
+    "Public functions <u>must</u> return a ResponseType (using either <i>ok</i> or <i>err</i>). Any datamap modifications performed by a public function is aborted if the function returns an <i>err</i> type. Public functions may be invoked by other contracts via <i>contract-call?</i>."
+  ],
+  "signature": "(define-public (function-name (arg-name-0 arg-type-0) (arg-name-1 arg-type-1) ...) function-body)",
+  "examples": [
+    [
+      ">",
+      "(define-public (hello-world (input int))"
+    ],
+    [
+      ">",
+      "(begin (print (+ 2 input))"
+    ],
+    [
+      ">",
+      "(ok input)))"
+    ]
+  ]
+}
