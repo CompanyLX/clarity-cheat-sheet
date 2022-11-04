@@ -5,14 +5,13 @@
   "byname": "",
   "input": "",
   "output": "",
-  "snippet": "",
+  "signature": "",
   "since": 2.1,
   "description": [
     "Integer divides a variable number of integer inputs and returns the result. In the event of division by zero, throws a runtime error."
   ],
-  "examples": [],
   "signature": "(/ i1 i2...)",
-  "example": [
+  "examples": [
     [
       ">",
       "(/ 2 3)"
