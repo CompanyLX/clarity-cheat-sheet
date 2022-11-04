@@ -1,0 +1,40 @@
+{
+  "wip": true,
+  "id": "concat",
+  "name": "concat",
+  "byname": "",
+  "input": "sequence_A, sequence_A",
+  "output": "sequence_A",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "The <i>concat</i> function takes two sequences of the same type, and returns a concatenated sequence of the same type, with the resulting sequence<u>len = sequence1</u>len + sequence2_len. Applicable sequence types are <i>(list A)</i>, <i>buff</i>, <i>string-ascii</i> and <i>string-utf8</i>."
+  ],
+  "signature": "(concat sequence1 sequence2)",
+  "examples": [
+    [
+      ">",
+      "(concat (list 1 2) (list 3 4))"
+    ],
+    [
+      "<",
+      "(1 2 3 4)"
+    ],
+    [
+      ">",
+      "(concat \"hello \" \"world\")"
+    ],
+    [
+      "<",
+      "\"hello world"
+    ],
+    [
+      ">",
+      "(concat 0x0102 0x0304)"
+    ],
+    [
+      "<",
+      "0x01020304"
+    ]
+  ]
+}
