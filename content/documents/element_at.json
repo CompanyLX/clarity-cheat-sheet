@@ -5,14 +5,13 @@
   "byname": "",
   "input": "sequence_A, uint",
   "output": "(optional A)",
-  "snippet": "",
+  "signature": "",
   "since": 2.1,
   "description": [
     "The <i>element-at</i> function returns the element at <i>index</i> in the provided sequence. Applicable sequence types are <i>(list A)</i>, <i>buff</i>, <i>string-ascii</i> and <i>string-utf8</i>, for which the corresponding element types are, respectively, <i>A</i>, <i>(buff 1)</i>, <i>(string-ascii 1)</i> and <i>(string-utf8 1)</i>."
   ],
-  "examples": [],
   "signature": "(element-at sequence index)",
-  "example": [
+  "examples": [
     [
       ">",
       "(element-at \"blockstack\" u5)"
