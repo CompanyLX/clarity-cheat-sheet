@@ -1,0 +1,40 @@
+{
+  "wip": true,
+  "id": "mod",
+  "name": "mod",
+  "byname": "",
+  "input": "",
+  "output": "",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "Returns the integer remainder from integer dividing <i>i1</i> by <i>i2</i>. In the event of a division by zero, throws a runtime error."
+  ],
+  "signature": "(mod i1 i2)",
+  "examples": [
+    [
+      ">",
+      "(mod 2 3)"
+    ],
+    [
+      "<",
+      "2"
+    ],
+    [
+      ">",
+      "(mod 5 2)"
+    ],
+    [
+      "<",
+      "1"
+    ],
+    [
+      ">",
+      "(mod 7 1)"
+    ],
+    [
+      "<",
+      "0"
+    ]
+  ]
+}
