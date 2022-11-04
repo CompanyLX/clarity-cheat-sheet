@@ -1,0 +1,49 @@
+{
+  "wip": true,
+  "id": "get_block_info",
+  "name": "get-block-info?",
+  "byname": "",
+  "input": "BlockInfoPropertyName, uint",
+  "output": "(optional buff) | (optional uint)",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "The <i>get-block-info?</i> function fetches data for a block of the given <b>Stacks</b> block height. The value and type returned are determined by the specified <i>BlockInfoPropertyName</i>. If the provided <i>block-height</i> does not correspond to an existing block prior to the current block, the function returns <i>none</i>. The currently available property names are as follows:",
+    "<i>burnchain-header-hash</i>: This property returns a <i>(buff 32)</i> value containing the header hash of the burnchain (Bitcoin) block that selected the Stacks block at the given Stacks chain height.",
+    "<i>id-header-hash</i>: This property returns a <i>(buff 32)</i> value containing the <u>index block hash</u> of a Stacks block.   This hash is globally unique, and is derived from the block hash and the history of accepted PoX operations.  This is also the block hash value you would pass into <i>(at-block)</i>.",
+    "<i>header-hash</i>: This property returns a <i>(buff 32)</i> value containing the header hash of a Stacks block, given a Stacks chain height.  <b></b>WARNING* this hash is not guaranteed to be globally unique, since the same Stacks block can be mined in different PoX forks.  If you need global uniqueness, you should use <i>id-header-hash</i>.",
+    "<i>miner-address</i>: This property returns a <i>principal</i> value corresponding to the miner of the given block.  <b></b>WARNING<b></b> In Stacks 2.1, this is not guaranteed to be the same <i>principal</i> that received the block reward, since Stacks 2.1 supports coinbase transactions that pay the reward to a contract address.  This is merely the address of the <i>principal</i> that produced the block.",
+    "<i>time</i>: This property returns a <i>uint</i> value of the block header time field. This is a Unix epoch timestamp in seconds which roughly corresponds to when the block was mined. <b></b>Note<b></b>: this does not increase monotonically with each block and block times are accurate only to within two hours. See [BIP113](https://github.com/bitcoin/bips/blob/master/bip-0113.mediawiki) for more information.",
+    "New in Stacks 2.1:",
+    "<i>block-reward</i>: This property returns a <i>uint</i> value for the total block reward of the indicated Stacks block.  This value is only available once the reward for the block matures.  That is, the latest <i>block-reward</i> value available is at least 101 Stacks blocks in the past (on mainnet).  The reward includes the coinbase, the anchored block&quot;s transaction fees, and the shares of the confirmed and produced microblock transaction fees earned by this block&quot;s miner.  Note that this value may be smaller than the Stacks coinbase at this height, because the miner may have been punished with a valid <i>PoisonMicroblock</i> transaction in the event that the miner published two or more microblock stream forks.",
+    "<i>miner-spend-total</i>: This property returns a <i>uint</i> value for the total number of burnchain tokens (i.e. satoshis) spent by all miners trying to win this block.",
+    "<i>miner-spend-winner</i>: This property returns a <i>uint</i> value for the number of burnchain tokens (i.e. satoshis) spent by the winning miner for this Stacks block.  Note that this value is less than or equal to the value for <i>miner-spend-total</i> at the same block height."
+  ],
+  "signature": "(get-block-info? prop-name block-height)",
+  "examples": [
+    [
+      ">",
+      "(get-block-info? time u0)"
+    ],
+    [
+      "<",
+      "(some u1557860301)"
+    ],
+    [
+      ">",
+      "(get-block-info? header-hash u0)"
+    ],
+    [
+      "<",
+      "(some 0x374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb)"
+    ],
+    [
+      ">",
+      "(get-block-info? vrf-seed u0)"
+    ],
+    [
+      "<",
+      "(some 0xf490de2920c8a35fabeb13208852aa28c76f9be9b03a4dd2b3c075f7a26923b4)"
+    ]
+  ]
+}
