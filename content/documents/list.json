@@ -1,0 +1,24 @@
+{
+  "wip": true,
+  "id": "list",
+  "name": "list",
+  "byname": "",
+  "input": "A, ...",
+  "output": "(list A)",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "The <i>list</i> function constructs a list composed of the inputted values. Each supplied value must be of the same type."
+  ],
+  "signature": "(list expr1 expr2 expr3 ...)",
+  "examples": [
+    [
+      ">",
+      "(list (+ 1 2) 4 5)"
+    ],
+    [
+      "<",
+      "(3 4 5)"
+    ]
+  ]
+}
