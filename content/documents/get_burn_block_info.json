@@ -1,0 +1,36 @@
+{
+  "wip": true,
+  "id": "get_burn_block_info",
+  "name": "get-burn-block-info?",
+  "byname": "",
+  "input": "BurnBlockInfoPropertyName, uint",
+  "output": "(optional buff) | (optional (tuple (addrs (list 2 (tuple (hashbytes (buff 20)) (version (buff 1))))) (payout uint)))",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "The <i>get-burn-block-info?</i> function fetches data for a block of the given <b>burnchain</b> block height. The value and type returned are determined by the specified <i>BlockInfoPropertyName</i>.  Valid values for <i>block-height</i> only include heights between the burnchain height at the time the Stacks chain was launched, and the last-processed burnchain block.  If the <i>block-height</i> argument falls outside of this range, then <i>none</i> shall be returned.",
+    "The following <i>BlockInfoPropertyName</i> values are defined:",
+    "* The <i>header-hash</i> property returns a 32-byte buffer representing the header hash of the burnchain block at burnchain height <i>block-height</i>.",
+    "* The <i>pox-addrs</i> property returns a tuple with two items: a list of up to two PoX addresses that received a PoX payout at that block height, and the amount of burnchain tokens paid to each address (note that per the blockchain consensus rules, each PoX payout will be the same for each address in the block-commit transaction). The list will include burn addresses -- that is, the unspendable addresses that miners pay to when there are no PoX addresses left to be paid.  During the prepare phase, there will be exactly one burn address reported. During the reward phase, up to two burn addresses may be reported in the event that some PoX reward slots are not claimed.",
+    "The <i>addrs</i> list contains the same PoX address values passed into the PoX smart contract: <b> They each have type signature `(tuple (hashbytes (buff 20)) (version (buff 1)))` </b> The <i>version</i> field can be any of the following: <b> `0x00` means this is a p2pkh address, and `hashbytes` is the hash160 of a single public key </b> <i>0x01</i> means this is a p2sh address, and <i>hashbytes</i> is the hash160 of a redeemScript script <b> `0x02` means this is a p2wpkh-p2sh address, and `hashbytes` is the hash160 of a p2wpkh witness script </b> <i>0x03</i> means this is a p2wsh-p2sh address, and <i>hashbytes</i> is the hash160 of a p2wsh witness script"
+  ],
+  "signature": "(get-burn-block-info? prop-name block-height)",
+  "examples": [
+    [
+      ">",
+      "(get-burn-block-info? header-hash u677050)"
+    ],
+    [
+      "<",
+      "(some 0xe67141016c88a7f1203eca0b4312f2ed141531f59303a1c267d7d83ab6b977d8)"
+    ],
+    [
+      ">",
+      "(get-burn-block-info? pox-addrs u677050)"
+    ],
+    [
+      "<",
+      "(some (tuple (addrs ((tuple (hashbytes 0x395f3643cea07ec4eec73b4d9a973dcce56b9bf1) (version 0x00)) (tuple (hashbytes 0x7c6775e20e3e938d2d7e9d79ac310108ba501ddb) (version 0x01)))) (payout u123)))"
+    ]
+  ]
+}
