@@ -1,0 +1,40 @@
+{
+  "wip": true,
+  "id": "and",
+  "name": "and",
+  "byname": "",
+  "input": "",
+  "output": "",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "Returns <i>true</i> if all boolean inputs are <i>true</i>. Importantly, the supplied arguments are evaluated in-order and lazily. Lazy evaluation means that if one of the arguments returns <i>false</i>, the function short-circuits, and no subsequent arguments are evaluated."
+  ],
+  "signature": "(and b1 b2 ...)",
+  "examples": [
+    [
+      ">",
+      "(and true false)"
+    ],
+    [
+      "<",
+      "false"
+    ],
+    [
+      ">",
+      "(and (is-eq (+ 1 2) 1) (is-eq 4 4))"
+    ],
+    [
+      "<",
+      "false"
+    ],
+    [
+      ">",
+      "(and (is-eq (+ 1 2) 3) (is-eq 4 4))"
+    ],
+    [
+      "<",
+      "true"
+    ]
+  ]
+}
