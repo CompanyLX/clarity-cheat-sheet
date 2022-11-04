@@ -5,14 +5,13 @@
   "byname": "",
   "input": "",
   "output": "",
-  "snippet": "",
+  "signature": "",
   "since": 2.1,
   "description": [
     "Returns <i>true</i> if any boolean inputs are <i>true</i>. Importantly, the supplied arguments are evaluated in-order and lazily. Lazy evaluation means that if one of the arguments returns <i>true</i>, the function short-circuits, and no subsequent arguments are evaluated."
   ],
-  "examples": [],
   "signature": "(or b1 b2 ...)",
-  "example": [
+  "examples": [
     [
       ">",
       "(or true false)"
