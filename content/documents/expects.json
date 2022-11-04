@@ -1,0 +1,52 @@
+{
+  "wip": true,
+  "id": "expects",
+  "name": "unwrap!",
+  "byname": "",
+  "input": "(optional A) | (response A B), C",
+  "output": "A",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "The <i>unwrap!</i> function attempts to &quot;unpack&quot; the first argument: if the argument is an option type, and the argument is a <i>(some ...)</i> option, <i>unwrap!</i> returns the inner value of the option. If the argument is a response type, and the argument is an <i>(ok ...)</i> response, <i>unwrap!</i> returns the inner value of the <i>ok</i>. If the supplied argument is either an <i>(err ...)</i> or a <i>(none)</i> value, <i>unwrap!</i> <u>returns</u> <i>thrown-value</i> from the current function and exits the current control-flow."
+  ],
+  "signature": "(unwrap! option-input thrown-value)",
+  "examples": [
+    [
+      ">",
+      "(define-map names-map { name: (string-ascii 12) } { id: int })"
+    ],
+    [
+      ">",
+      "(map-set names-map { name: \"blockstack\" } { id: 1337 })"
+    ],
+    [
+      ">",
+      "(define-private (get-name-or-err (name (string-ascii 12)))"
+    ],
+    [
+      ">",
+      "(let ((raw-name (unwrap! (map-get? names-map { name: name }) (err 1))))"
+    ],
+    [
+      ">",
+      "(ok raw-name)))"
+    ],
+    [
+      ">",
+      "(get-name-or-err \"blockstack\")"
+    ],
+    [
+      "<",
+      "(ok (tuple (id 1337)))"
+    ],
+    [
+      ">",
+      "(get-name-or-err \"non-existant\")"
+    ],
+    [
+      "<",
+      "(err 1)"
+    ]
+  ]
+}
