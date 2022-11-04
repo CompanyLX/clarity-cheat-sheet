@@ -1,0 +1,24 @@
+{
+  "wip": true,
+  "id": "to_int",
+  "name": "to-int",
+  "byname": "",
+  "input": "",
+  "output": "",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "Tries to convert the <i>uint</i> argument to an <i>int</i>. Will cause a runtime error and abort if the supplied argument is &gt;= <i>pow(2, 127)</i>"
+  ],
+  "signature": "(to-int u)",
+  "examples": [
+    [
+      ">",
+      "(to-int u238)"
+    ],
+    [
+      "<",
+      "238"
+    ]
+  ]
+}
