@@ -1,0 +1,27 @@
+{
+  "wip": true,
+  "id": "define_token",
+  "name": "define-fungible-token",
+  "byname": "",
+  "input": "TokenName, <uint>",
+  "output": "Not Applicable",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "<i>define-fungible-token</i> is used to define a new fungible token class for use in the current contract.",
+    "The second argument, if supplied, defines the total supply of the fungible token. This ensures that all calls to the <i>ft-mint?</i> function will never be able to create more than <i>total-supply</i> tokens. If any such call were to increase the total supply of tokens passed that amount, that invocation of <i>ft-mint?</i> will result in a runtime error and abort.",
+    "Like other kinds of definition statements, <i>define-fungible-token</i> may only be used at the top level of a smart contract definition (i.e., you cannot put a define statement in the middle of a function body).",
+    "Tokens defined using <i>define-fungible-token</i> may be used in <i>ft-transfer?</i>, <i>ft-mint?</i>, and <i>ft-get-balance</i> functions"
+  ],
+  "signature": "(define-fungible-token token-name <total-supply>)",
+  "examples": [
+    [
+      ">",
+      "(define-fungible-token stacks)"
+    ],
+    [
+      ">",
+      "(define-fungible-token limited-supply-stacks u100)"
+    ]
+  ]
+}
