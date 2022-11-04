@@ -5,14 +5,13 @@
   "byname": "",
   "input": "A",
   "output": "(response A B)",
-  "snippet": "",
+  "signature": "",
   "since": 2.1,
   "description": [
     "The <i>err</i> function constructs a response type from the input value. Use <i>err</i> for creating return values in public functions. An <u>err</u> value indicates that any database changes during the processing of the function should be rolled back."
   ],
-  "examples": [],
   "signature": "(err value)",
-  "example": [
+  "examples": [
     [
       ">",
       "(err true)"
