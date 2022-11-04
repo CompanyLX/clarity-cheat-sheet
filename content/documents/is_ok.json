@@ -1,0 +1,32 @@
+{
+  "wip": true,
+  "id": "is_ok",
+  "name": "is-ok",
+  "byname": "",
+  "input": "(response A B)",
+  "output": "bool",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "<i>is-ok</i> tests a supplied response value, returning <i>true</i> if the response was <i>ok</i>, and <i>false</i> if it was an <i>err</i>."
+  ],
+  "signature": "(is-ok value)",
+  "examples": [
+    [
+      ">",
+      "(is-ok (ok 1))"
+    ],
+    [
+      "<",
+      "true"
+    ],
+    [
+      ">",
+      "(is-ok (err 1))"
+    ],
+    [
+      "<",
+      "false"
+    ]
+  ]
+}
