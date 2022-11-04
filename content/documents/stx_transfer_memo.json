@@ -1,0 +1,33 @@
+{
+  "wip": true,
+  "id": "stx_transfer_memo",
+  "name": "stx-transfer-memo?",
+  "byname": "",
+  "input": "uint, principal, principal, buff",
+  "output": "(response bool uint)",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "<i>stx-transfer-memo?</i> is similar to <i>stx-transfer?</i>, except that it adds a <i>memo</i> field.",
+    "This function returns (ok true) if the transfer is successful, or, on an error, returns the same codes as <i>stx-transfer?</i>."
+  ],
+  "signature": "(stx-transfer-memo? amount sender recipient memo)",
+  "examples": [
+    [
+      ">",
+      "(as-contract"
+    ],
+    [
+      ">",
+      "(stx-transfer-memo? u60 tx-sender 'SZ2J6ZY48GV1EZ5V2V5RB9MP66SW86PYKKQ9H6DPR 0x010203))"
+    ],
+    [
+      "<",
+      "(ok true)"
+    ],
+    [
+      ">",
+      "#"
+    ]
+  ]
+}
