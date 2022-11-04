@@ -1,0 +1,23 @@
+{
+  "wip": true,
+  "id": "burn_block_height",
+  "name": "burn-block-height",
+  "byname": "",
+  "input": "",
+  "output": "uint",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "Returns the current block height of the underlying burn blockchain as a uint"
+  ],
+  "examples": [
+    [
+      ">",
+      "(> burn-block-height 1000)"
+    ],
+    [
+      "<",
+      "true if the current height of the underlying burn blockchain has passed 1000 blocks."
+    ]
+  ]
+}
