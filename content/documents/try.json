@@ -5,14 +5,13 @@
   "byname": "",
   "input": "(optional A) | (response A B)",
   "output": "A",
-  "snippet": "",
+  "signature": "",
   "since": 2.1,
   "description": [
     "The <i>try!</i> function attempts to &quot;unpack&quot; the first argument: if the argument is an option type, and the argument is a <i>(some ...)</i> option, <i>try!</i> returns the inner value of the option. If the argument is a response type, and the argument is an <i>(ok ...)</i> response, <i>try!</i> returns the inner value of the <i>ok</i>. If the supplied argument is either an <i>(err ...)</i> or a <i>none</i> value, <i>try!</i> <u>returns</u> either <i>none</i> or the <i>(err ...)</i> value from the current function and exits the current control-flow."
   ],
-  "examples": [],
   "signature": "(try! option-input)",
-  "example": [
+  "examples": [
     [
       ">",
       "(define-map names-map { name: (string-ascii 12) } { id: int })"
