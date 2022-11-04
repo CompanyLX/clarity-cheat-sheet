@@ -1,0 +1,18 @@
+{
+  "id": "principal",
+  "name": "principal",
+  "description": [
+    "A <i>principal</i> is a special type in Clarity and and represents an address on the blockchain.",
+    "Clarity admits two different kinds of principals: <b>standard</b> principals and <b>contract</b> principals. Standard principals are backed by a corresponding private key whilst contract principals point to a smart contract.",
+    "Principals follow a specific structure; and always start with the characters. For example, they starts with <b>SP</b> on Stacks blockchain mainnet and start with <b>ST</b> on the testnet and mocknet.",
+    "Contract principals are a compound of the standard principal that deployed the contract and the contract name, delimited by a dot",
+    "A literal principal value is prefixed by a single quote (<b>'</b>) in Clarity. Notice there is no closing single quote."
+  ],
+  "examples": [
+    [">", "tx-sender"],
+    ["<", "'ST000000000000000000002AMW42H"],
+    [">", "'ST2CY5V39NHDPWSXMW9QDT3HC3GD6Q6XX4CFRK9AG"],
+    [">", "'ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.my-awesome-contract"],
+    [">", "'SP1SJ3DTE5DN7X54YDH5D64R3BCB6A2AG2ZQ8YPD5.smart-contract-test"]
+  ]
+}
