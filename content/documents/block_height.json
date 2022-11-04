@@ -1,0 +1,23 @@
+{
+  "wip": true,
+  "id": "block_height",
+  "name": "block-height",
+  "byname": "",
+  "input": "",
+  "output": "uint",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "Returns the current block height of the Stacks blockchain as an uint"
+  ],
+  "examples": [
+    [
+      ">",
+      "(> block-height 1000)"
+    ],
+    [
+      "<",
+      "true if the current block-height has passed 1000 blocks."
+    ]
+  ]
+}
