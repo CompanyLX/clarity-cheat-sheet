@@ -1,0 +1,64 @@
+{
+  "wip": true,
+  "id": "slice",
+  "name": "slice",
+  "byname": "",
+  "input": "sequence_A, uint, uint",
+  "output": "(optional sequence_A)",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "The <i>slice</i> function attempts to return a sub-sequence of that starts at <i>left-position</i> (inclusive), and ends at <i>right-position</i> (non-inclusive). If <i>left_position</i>==<i>right_position</i>, the function returns an empty sequence. If either <i>left_position</i> or <i>right_position</i> are out of bounds OR if <i>right_position</i> is less than <i>left_position</i>, the function returns <i>none</i>."
+  ],
+  "signature": "(slice sequence left-position right-position)",
+  "examples": [
+    [
+      ">",
+      "(slice \"blockstack\" u5 u10)"
+    ],
+    [
+      "<",
+      "(some \"stack\")"
+    ],
+    [
+      ">",
+      "(slice (list 1 2 3 4 5) u5 u9)"
+    ],
+    [
+      "<",
+      "none"
+    ],
+    [
+      ">",
+      "(slice (list 1 2 3 4 5) u3 u4)"
+    ],
+    [
+      "<",
+      "(some (4))"
+    ],
+    [
+      ">",
+      "(slice \"abcd\" u1 u3)"
+    ],
+    [
+      "<",
+      "(some \"bc\")"
+    ],
+    [
+      ">",
+      "(slice \"abcd\" u2 u2)"
+    ],
+    [
+      "<",
+      "(some \"\")"
+    ],
+    [
+      ">",
+      "(slice \"abcd\" u3 u1)"
+    ],
+    [
+      "<",
+      "none"
+    ]
+  ]
+}
