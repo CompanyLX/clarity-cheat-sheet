@@ -5,16 +5,15 @@
   "byname": "",
   "input": "TokenName, uint, principal, principal",
   "output": "(response bool uint)",
-  "snippet": "",
+  "signature": "",
   "since": 2.1,
   "description": [
     "<i>ft-transfer?</i> is used to increase the token balance for the <i>recipient</i> principal for a token type defined using <i>define-fungible-token</i> by debiting the <i>sender</i> principal. In contrast to <i>stx-transfer?</i>, any user can transfer the assets. When used, relevant guards need to be added.",
     "This function returns (ok true) if the transfer is successful. In the event of an unsuccessful transfer it returns one of the following error codes:",
     "<i>(err u1)</i> -- <i>sender</i> does not have enough balance to transfer <i>(err u2)</i> -- <i>sender</i> and <i>recipient</i> are the same principal <i>(err u3)</i> -- amount to send is non-positive"
   ],
-  "examples": [],
   "signature": "(ft-transfer? token-name amount sender recipient)",
-  "example": [
+  "examples": [
     [
       ">",
       "(define-fungible-token stackaroo)"
