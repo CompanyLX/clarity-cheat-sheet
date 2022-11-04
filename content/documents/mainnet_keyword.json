@@ -1,0 +1,23 @@
+{
+  "wip": true,
+  "id": "mainnet_keyword",
+  "name": "is-in-mainnet",
+  "byname": "",
+  "input": "",
+  "output": "bool",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "Returns a boolean indicating whether or not the code is running on the mainnet"
+  ],
+  "examples": [
+    [
+      ">",
+      "(print is-in-mainnet)"
+    ],
+    [
+      ";",
+      "Will print 'true' if the code is running on the mainnet"
+    ]
+  ]
+}

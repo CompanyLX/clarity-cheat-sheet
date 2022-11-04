@@ -1,0 +1,45 @@
+{
+  "wip": true,
+  "id": "insert_entry",
+  "name": "map-insert",
+  "byname": "",
+  "input": "MapName, tuple_A, tuple_B",
+  "output": "bool",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "The <i>map-insert</i> function sets the value associated with the input key to the inputted value if and only if there is not already a value associated with the key in the map. If an insert occurs, the function returns <i>true</i>. If a value already existed for this key in the data map, the function returns <i>false</i>.",
+    "Note: the <i>value-tuple</i> requires 1 additional byte for storage in the materialized blockchain state, and therefore the maximum size of a value that may be inserted into a map is MAX<u>CLARITY</u>VALUE - 1."
+  ],
+  "signature": "(map-insert map-name key-tuple value-tuple)",
+  "examples": [
+    [
+      ">",
+      "(define-map names-map { name: (string-ascii 10) } { id: int })"
+    ],
+    [
+      ">",
+      "(map-insert names-map { name: \"blockstack\" } { id: 1337 })"
+    ],
+    [
+      "<",
+      "true"
+    ],
+    [
+      ">",
+      "(map-insert names-map { name: \"blockstack\" } { id: 1337 })"
+    ],
+    [
+      "<",
+      "false"
+    ],
+    [
+      ">",
+      "(map-insert names-map (tuple (name \"blockstack\")) (tuple (id 1337)))"
+    ],
+    [
+      ";",
+      "Same command, using a shorthand for constructing the tuple"
+    ]
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "wip": true,
+  "id": "unwrap_err",
+  "name": "unwrap-err-panic",
+  "byname": "",
+  "input": "(response A B)",
+  "output": "B",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "The <i>unwrap-err</i> function attempts to &quot;unpack&quot; the first argument: if the argument is an <i>(err ...)</i> response, <i>unwrap</i> returns the inner value of the <i>err</i>. If the supplied argument is an <i>(ok ...)</i> value, <i>unwrap-err</i> throws a runtime error, aborting any further processing of the current transaction."
+  ],
+  "signature": "(unwrap-err-panic response-input)",
+  "examples": [
+    [
+      ">",
+      "(unwrap-err-panic (err 1))"
+    ],
+    [
+      "<",
+      "1"
+    ],
+    [
+      ">",
+      "(unwrap-err-panic (ok 1))"
+    ],
+    [
+      ";",
+      "Throws a runtime exception"
+    ]
+  ]
+}

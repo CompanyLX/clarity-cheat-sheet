@@ -1,0 +1,38 @@
+{
+  "wip": true,
+  "id": "impl_trait",
+  "name": "impl-trait",
+  "byname": "",
+  "input": "TraitIdentifier",
+  "output": "Not Applicable",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "<i>impl-trait</i> can be use for asserting that a contract is fully implementing a given trait. Additional checks are being performed when the contract is being published, rejecting the deployment if the contract is violating the trait specification.",
+    "Trait identifiers can either be using the sugared syntax (.token-a.token-trait), or be fully qualified (&quot;SPAXYA5XS51713FDTQ8H94EJ4V579CXMTRNBZKSF.token-a.token-trait).",
+    "Like other kinds of definition statements, <i>impl-trait</i> may only be used at the top level of a smart contract definition (i.e., you cannot put such a statement in the middle of a function body)."
+  ],
+  "signature": "(impl-trait trait-identifier)",
+  "examples": [
+    [
+      ">",
+      "(impl-trait 'SPAXYA5XS51713FDTQ8H94EJ4V579CXMTRNBZKSF.token-a.token-trait)"
+    ],
+    [
+      ">",
+      "(define-public (get-balance (account principal))"
+    ],
+    [
+      ">",
+      "(ok u0))"
+    ],
+    [
+      ">",
+      "(define-public (transfer? (from principal) (to principal) (amount uint))"
+    ],
+    [
+      ">",
+      "(ok u0))"
+    ]
+  ]
+}

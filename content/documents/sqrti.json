@@ -5,14 +5,13 @@
   "byname": "",
   "input": "",
   "output": "",
-  "snippet": "",
+  "signature": "",
   "since": 2.1,
   "description": [
     "Returns the largest integer that is less than or equal to the square root of <i>n</i>.  Fails on a negative numbers."
   ],
-  "examples": [],
   "signature": "(sqrti n)",
-  "example": [
+  "examples": [
     [
       ">",
       "(sqrti u11)"

@@ -1,0 +1,42 @@
+{
+  "wip": true,
+  "id": "define_private",
+  "name": "define-private",
+  "byname": "",
+  "input": "MethodSignature, MethodBody",
+  "output": "Not Applicable",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "<i>define-private</i> is used to define <u>private</u> functions for a smart contract. Private functions may not be called from other smart contracts, nor may they be invoked directly by users. Instead, these functions may only be invoked by other functions defined in the same smart contract.",
+    "Like other kinds of definition statements, <i>define-private</i> may only be used at the top level of a smart contract definition (i.e., you cannot put a define statement in the middle of a function body).",
+    "Private functions may return any type."
+  ],
+  "signature": "(define-private (function-name (arg-name-0 arg-type-0) (arg-name-1 arg-type-1) ...) function-body)",
+  "examples": [
+    [
+      ">",
+      "(define-private (max-of (i1 int) (i2 int))"
+    ],
+    [
+      ">",
+      "(if (> i1 i2)"
+    ],
+    [
+      ">",
+      "i1"
+    ],
+    [
+      ">",
+      "i2))"
+    ],
+    [
+      ">",
+      "(max-of 4 6)"
+    ],
+    [
+      "<",
+      "6"
+    ]
+  ]
+}

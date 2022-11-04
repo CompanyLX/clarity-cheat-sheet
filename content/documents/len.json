@@ -1,0 +1,40 @@
+{
+  "wip": true,
+  "id": "len",
+  "name": "len",
+  "byname": "",
+  "input": "sequence_A",
+  "output": "uint",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "The <i>len</i> function returns the length of a given sequence. Applicable sequence types are <i>(list A)</i>, <i>buff</i>, <i>string-ascii</i> and <i>string-utf8</i>."
+  ],
+  "signature": "(len sequence)",
+  "examples": [
+    [
+      ">",
+      "(len \"blockstack\")"
+    ],
+    [
+      "<",
+      "u10"
+    ],
+    [
+      ">",
+      "(len (list 1 2 3 4 5))"
+    ],
+    [
+      "<",
+      "u5"
+    ],
+    [
+      ">",
+      "(len 0x010203)"
+    ],
+    [
+      "<",
+      "u3"
+    ]
+  ]
+}

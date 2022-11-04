@@ -1,0 +1,18 @@
+{
+  "id": "int",
+  "name": "int",
+  "byname": "Signed Integer",
+  "description": [
+    "<i>int</i>, short for (<b>signed</b>) integer, is a primitive data type represents whole <b>128 bits numbers</b> that range from <wbr>-170,</wbr><wbr>141,</wbr><wbr>183,</wbr><wbr>460,</wbr><wbr>469,</wbr><wbr>231,</wbr><wbr>731,</wbr><wbr>687,</wbr><wbr>303,</wbr><wbr>715,</wbr><wbr>884,</wbr><wbr>105,</wbr><wbr>728</wbr> (-2<sup>127</sup>) to <wbr>170,</wbr><wbr>141,</wbr><wbr>183,</wbr><wbr>460,</wbr><wbr>469,</wbr><wbr>231,</wbr><wbr>731,</wbr><wbr>687,</wbr><wbr>303,</wbr><wbr>715,</wbr><wbr>884,</wbr><wbr>105,</wbr><wbr>727</wbr> (2<sup>127</sup> - 1)."
+  ],
+  "examples": [
+    [">", "0"],
+    ["<", "0"],
+    [">", "8738374837209"],
+    ["<", "8738374837209"],
+    [">", "-31"],
+    ["<", "-31"],
+    [">", "-724542508"],
+    ["<", "-724542508"]
+  ]
+}

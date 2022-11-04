@@ -5,16 +5,15 @@
   "byname": "",
   "input": "VarName, TraitIdentifier",
   "output": "Not Applicable",
-  "snippet": "",
+  "signature": "",
   "since": 2.1,
   "description": [
     "<i>use-trait</i> is used to bring a trait, defined in another contract, to the current contract. Subsequent references to an imported trait are signaled with the syntax <i>&lt;trait-alias&gt;</i>.",
     "Traits import are defined with a name, used as an alias, and a trait identifier. Trait identifiers can either be using the sugared syntax (.token-a.token-trait), or be fully qualified (&quot;SPAXYA5XS51713FDTQ8H94EJ4V579CXMTRNBZKSF.token-a.token-trait).",
     "Like other kinds of definition statements, <i>use-trait</i> may only be used at the top level of a smart contract definition (i.e., you cannot put such a statement in the middle of a function body)."
   ],
-  "examples": [],
   "signature": "(use-trait trait-alias trait-identifier)",
-  "example": [
+  "examples": [
     [
       ">",
       "(use-trait token-a-trait 'SPAXYA5XS51713FDTQ8H94EJ4V579CXMTRNBZKSF.token-a.token-trait)"

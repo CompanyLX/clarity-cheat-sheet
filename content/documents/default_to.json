@@ -1,0 +1,40 @@
+{
+  "wip": true,
+  "id": "default_to",
+  "name": "default-to",
+  "byname": "",
+  "input": "A, (optional A)",
+  "output": "A",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "The <i>default-to</i> function attempts to &quot;unpack&quot; the second argument: if the argument is a <i>(some ...)</i> option, it returns the inner value of the option. If the second argument is a <i>(none)</i> value, <i>default-to</i> it returns the value of <i>default-value</i>."
+  ],
+  "signature": "(default-to default-value option-value)",
+  "examples": [
+    [
+      ">",
+      "(define-map names-map { name: (string-ascii 12) } { id: int })"
+    ],
+    [
+      ">",
+      "(map-set names-map { name: \"blockstack\" } { id: 1337 })"
+    ],
+    [
+      ">",
+      "(default-to 0 (get id (map-get? names-map (tuple (name \"blockstack\")))))"
+    ],
+    [
+      "<",
+      "1337"
+    ],
+    [
+      ">",
+      "(default-to 0 (get id (map-get? names-map (tuple (name \"non-existant\")))))"
+    ],
+    [
+      "<",
+      "0"
+    ]
+  ]
+}

@@ -5,14 +5,13 @@
   "byname": "",
   "input": "sequence_A, A",
   "output": "(optional uint)",
-  "snippet": "",
+  "signature": "",
   "since": 2.1,
   "description": [
     "The <i>index-of</i> function returns the first index at which <i>item</i> can be found, using <i>is-eq</i> checks, in the provided sequence. Applicable sequence types are <i>(list A)</i>, <i>buff</i>, <i>string-ascii</i> and <i>string-utf8</i>, for which the corresponding element types are, respectively, <i>A</i>, <i>(buff 1)</i>, <i>(string-ascii 1)</i> and <i>(string-utf8 1)</i>. If the target item is not found in the sequence (or if an empty string or buffer is supplied), this function returns <i>none</i>."
   ],
-  "examples": [],
   "signature": "(index-of sequence item)",
-  "example": [
+  "examples": [
     [
       ">",
       "(index-of \"blockstack\" \"b\")"

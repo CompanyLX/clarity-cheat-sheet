@@ -5,14 +5,13 @@
   "byname": "",
   "input": "Trait",
   "output": "principal",
-  "snippet": "",
+  "signature": "",
   "since": 2.1,
   "description": [
     "The <i>contract-of</i> function returns the principal of the contract implementing the trait."
   ],
-  "examples": [],
   "signature": "(contract-of .contract-name)",
-  "example": [
+  "examples": [
     [
       ">",
       "(use-trait token-a-trait 'SPAXYA5XS51713FDTQ8H94EJ4V579CXMTRNBZKSF.token-a.token-trait)"

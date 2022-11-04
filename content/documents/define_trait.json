@@ -1,0 +1,30 @@
+{
+  "wip": true,
+  "id": "define_trait",
+  "name": "define-trait",
+  "byname": "",
+  "input": "VarName, [MethodSignature]",
+  "output": "Not Applicable",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "<i>define-trait</i> is used to define a new trait definition for use in a smart contract. Other contracts can implement a given trait and then have their contract identifier being passed as function arguments in order to be called dynamically with <i>contract-call?</i>.",
+    "Traits are defined with a name, and a list functions defined with a name, a list of argument types, and return type.",
+    "Like other kinds of definition statements, <i>define-trait</i> may only be used at the top level of a smart contract definition (i.e., you cannot put a define statement in the middle of a function body)."
+  ],
+  "signature": "(define-trait trait-name ((func1-name (arg1-type arg2-type ...) (return-type))))",
+  "examples": [
+    [
+      ">",
+      "(define-trait token-trait"
+    ],
+    [
+      ">",
+      "((transfer? (principal principal uint) (response uint uint))"
+    ],
+    [
+      ">",
+      "(get-balance (principal) (response uint uint))))"
+    ]
+  ]
+}

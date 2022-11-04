@@ -1,0 +1,56 @@
+{
+  "wip": true,
+  "id": "equals",
+  "name": "is-eq",
+  "byname": "",
+  "input": "A, A, ...",
+  "output": "bool",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "Compares the inputted values, returning <i>true</i> if they are all equal. Note that <u>unlike</u> the <i>(and ...)</i> function, <i>(is-eq ...)</i> will <u>not</u> short-circuit. All values supplied to is-eq <u>must</u> be the same type."
+  ],
+  "signature": "(is-eq v1 v2...)",
+  "examples": [
+    [
+      ">",
+      "(is-eq 1 1)"
+    ],
+    [
+      "<",
+      "true"
+    ],
+    [
+      ">",
+      "(is-eq true false)"
+    ],
+    [
+      "<",
+      "false"
+    ],
+    [
+      ">",
+      "(is-eq \"abc\" 234 234)"
+    ],
+    [
+      ";",
+      "Throws type error"
+    ],
+    [
+      ">",
+      "(is-eq \"abc\" \"abc\")"
+    ],
+    [
+      "<",
+      "true"
+    ],
+    [
+      ">",
+      "(is-eq 0x0102 0x0102)"
+    ],
+    [
+      "<",
+      "true"
+    ]
+  ]
+}

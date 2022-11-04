@@ -5,13 +5,12 @@
   "byname": "",
   "input": "",
   "output": "uint",
-  "snippet": "",
+  "signature": "",
   "since": 2.1,
   "description": [
     "Returns the 32-bit chain ID of the blockchain running this transaction"
   ],
-  "examples": [],
-  "example": [
+  "examples": [
     [
       ">",
       "(print chain-id)"

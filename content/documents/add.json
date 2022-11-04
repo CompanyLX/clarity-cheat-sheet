@@ -1,0 +1,22 @@
+{
+  "wip": true,
+  "id": "add",
+  "name": "+",
+  "byname": "add",
+  "input": "int, ... | uint, ...",
+  "output": "int | uint",
+  "signature": "(+ $1 $2 ...)",
+  "description": [
+    "Adds a variable number of integer inputs and returns the result. In the event of an <u>overflow</u>, throws a runtime error."
+  ],
+  "examples": [
+    [
+      ">",
+      "(+ 1 2 3)"
+    ],
+    [
+      "<",
+      "6"
+    ]
+  ]
+}

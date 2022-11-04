@@ -1,0 +1,52 @@
+{
+  "wip": true,
+  "id": "tuple_get",
+  "name": "get",
+  "byname": "",
+  "input": "KeyName, (tuple) | (optional (tuple))",
+  "output": "A",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "The <i>get</i> function fetches the value associated with a given key from the supplied typed tuple. If an <i>Optional</i> value is supplied as the inputted tuple, <i>get</i> returns an <i>Optional</i> type of the specified key in the tuple. If the supplied option is a <i>(none)</i> option, get returns <i>(none)</i>."
+  ],
+  "signature": "(get key-name tuple)",
+  "examples": [
+    [
+      ">",
+      "(define-map names-map { name: (string-ascii 12) } { id: int })"
+    ],
+    [
+      ">",
+      "(map-insert names-map { name: \"blockstack\" } { id: 1337 })"
+    ],
+    [
+      "<",
+      "true"
+    ],
+    [
+      ">",
+      "(get id (tuple (name \"blockstack\") (id 1337)))"
+    ],
+    [
+      "<",
+      "1337"
+    ],
+    [
+      ">",
+      "(get id (map-get? names-map (tuple (name \"blockstack\"))))"
+    ],
+    [
+      "<",
+      "(some 1337)"
+    ],
+    [
+      ">",
+      "(get id (map-get? names-map (tuple (name \"non-existent\"))))"
+    ],
+    [
+      "<",
+      "none"
+    ]
+  ]
+}

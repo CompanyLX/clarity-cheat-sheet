@@ -1,0 +1,32 @@
+{
+  "wip": true,
+  "id": "xor",
+  "name": "xor",
+  "byname": "",
+  "input": "",
+  "output": "",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "Returns the result of bitwise exclusive or&quot;ing <i>i1</i> with <i>i2</i>."
+  ],
+  "signature": "(xor i1 i2)",
+  "examples": [
+    [
+      ">",
+      "(xor 1 2)"
+    ],
+    [
+      "<",
+      "3"
+    ],
+    [
+      ">",
+      "(xor 120 280)"
+    ],
+    [
+      "<",
+      "352"
+    ]
+  ]
+}

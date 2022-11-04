@@ -1,25 +1,24 @@
 {
-  "wip": true,
   "id": "append",
   "name": "append",
-  "byname": "",
-  "input": "list A, A",
-  "output": "list",
-  "snippet": "",
-  "since": 2.1,
+  "input": "(list $ANY), $ANY",
+  "output": "(list $ANY)",
+  "signature": "(append $1 $2)",
   "description": [
-    "The <i>append</i> function takes a list and another value with the same entry type, and outputs a list of the same type with max_len += 1."
+    "The <i>append</i> function takes a list (<b>$1</b>), another value (<b>$2</b>) with the same entry type, adds that value to the end of the list and returns a list of the same type."
   ],
-  "examples": [],
-  "signature": "(append (list 1 2 3 4) 5)",
-  "example": [
-    [
-      ">",
-      "(append (list 1 2 3 4) 5)"
-    ],
-    [
-      "<",
-      "(1 2 3 4 5)"
-    ]
+  "examples": [
+    [">", "(append (list 1 2 3 4) 5)"],
+    ["<", "[1, 2, 3, 4, 5]"],
+    [">", "(append (list (some 1) (some 3) (some 5)) none)"],
+    ["<", "[(some 1), (some 3), (some 5), none]"],
+    [">", "(append (list true true true false true) false)"],
+    ["<", "[true, true, true, false, true, false]"],
+    [">", "(append (list \"Hello\" \"World\" ) \"!\")"],
+    ["<", "[\"Hello\", \"World\", \"!\"]"],
+    [">", "(append (list u\"A smiley face emoji\" u\" \" ) \"\\u{1F600}\")"],
+    ["<", "[\"A smiley face emoji\", \" \", \"😀\"]"],
+    [">", "(append (list \"orange\" \"apple\") 31)"],
+    ["!", ""]
   ]
 }

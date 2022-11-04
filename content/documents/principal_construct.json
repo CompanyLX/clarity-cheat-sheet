@@ -5,7 +5,7 @@
   "byname": "",
   "input": "",
   "output": "",
-  "snippet": "",
+  "signature": "",
   "since": 2.1,
   "description": [
     "A principal value represents either a set of keys, or a smart contract. The former, called a <u>standard principal</u>, is encoded as a <i>(buff 1)</i> <b>version byte</b>, indicating the type of account and the type of network that this principal can spend tokens on, and a <i>(buff 20)</i> <b>public key hash</b>, characterizing the principal&quot;s unique identity. The latter, a <u>contract principal</u>, is encoded as a standard principal concatenated with a <i>(string-ascii 40)</i> <b>contract name</b> that identifies the code body.",
@@ -16,9 +16,8 @@
     "If a name is given, and the name is either an empty string or contains ASCII characters that are not allowed in contract names, then <i>error_code</i> will be <i>u2</i>.",
     "Note: This function is only available starting with Stacks 2.1."
   ],
-  "examples": [],
   "signature": "(principal-construct (buff 1) (buff 20) [(string-ascii 40)])",
-  "example": [
+  "examples": [
     [
       ">",
       "(principal-construct 0x1a 0xfa6bf38ed557fe417333710d6033e9419391a320)"

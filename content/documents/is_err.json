@@ -5,14 +5,13 @@
   "byname": "",
   "input": "(response A B)",
   "output": "bool",
-  "snippet": "",
+  "signature": "",
   "since": 2.1,
   "description": [
     "<i>is-err</i> tests a supplied response value, returning <i>true</i> if the response was an <i>err</i>, and <i>false</i> if it was an <i>ok</i>."
   ],
-  "examples": [],
   "signature": "(is-err value)",
-  "example": [
+  "examples": [
     [
       ">",
       "(is-err (ok 1))"

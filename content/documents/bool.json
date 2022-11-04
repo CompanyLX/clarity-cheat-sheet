@@ -1,0 +1,14 @@
+{
+  "id": "bool",
+  "name": "bool",
+  "byname": "Boolean",
+  "description": [
+    "<i>bool</i>, short for boolean. A boolean value is either <b>true</b> or <b>false</b>. They are used to check if a certain condition is met or unmet (true or false)."
+  ],
+  "examples": [
+    [">", "true"],
+    ["<", "true"],
+    [">", "false"],
+    ["<", "false"]
+  ]
+}

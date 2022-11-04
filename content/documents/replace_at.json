@@ -1,0 +1,65 @@
+{
+  "wip": true,
+  "id": "replace_at",
+  "name": "replace-at",
+  "byname": "",
+  "input": "sequence_A, uint, A",
+  "output": "(optional sequence_A)",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "The <i>replace-at</i> function takes in a sequence, an index, and an element, and returns a new sequence with the data at the index position replaced with the given element. The given element&quot;s type must match the type of the sequence, and must correspond to a single index of the input sequence. The return type on success is the same type as the input sequence.",
+    "If the provided index is out of bounds, this functions returns <i>none</i>."
+  ],
+  "signature": "(replace-at sequence index element)",
+  "examples": [
+    [
+      ">",
+      "(replace-at u\"ab\" u1 u\"c\")"
+    ],
+    [
+      "<",
+      "(some u\"ac\")"
+    ],
+    [
+      ">",
+      "(replace-at 0x00112233 u2 0x44)"
+    ],
+    [
+      "<",
+      "(some 0x00114433)"
+    ],
+    [
+      ">",
+      "(replace-at \"abcd\" u3 \"e\")"
+    ],
+    [
+      "<",
+      "(some \"abce\")"
+    ],
+    [
+      ">",
+      "(replace-at (list 1) u0 10)"
+    ],
+    [
+      "<",
+      "(some (10))"
+    ],
+    [
+      ">",
+      "(replace-at (list (list 1) (list 2)) u0 (list 33))"
+    ],
+    [
+      "<",
+      "(some ((33) (2)))"
+    ],
+    [
+      ">",
+      "(replace-at (list 1 2) u3 4)"
+    ],
+    [
+      "<",
+      "none"
+    ]
+  ]
+}

@@ -5,16 +5,15 @@
   "byname": "",
   "input": "MapName, TypeDefinition, TypeDefinition",
   "output": "Not Applicable",
-  "snippet": "",
+  "signature": "",
   "since": 2.1,
   "description": [
     "<i>define-map</i> is used to define a new datamap for use in a smart contract. Such maps are only modifiable by the current smart contract.",
     "Maps are defined with a key type and value type, often these types are tuple types.",
     "Like other kinds of definition statements, <i>define-map</i> may only be used at the top level of a smart contract definition (i.e., you cannot put a define statement in the middle of a function body)."
   ],
-  "examples": [],
   "signature": "(define-map map-name key-type value-type)",
-  "example": [
+  "examples": [
     [
       ">",
       "(define-map squares { x: int } { square: int })"

@@ -1,0 +1,48 @@
+{
+  "wip": true,
+  "id": "asserts_max_len",
+  "name": "as-max-len?",
+  "byname": "",
+  "input": "sequence_A, uint",
+  "output": "(optional sequence_A)",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "The <i>as-max-len?</i> function takes a sequence argument and a uint-valued, literal length argument. The function returns an optional type. If the input sequence length is less than or equal to the supplied max_length, this returns <i>(some sequence)</i>, otherwise it returns <i>none</i>. Applicable sequence types are <i>(list A)</i>, <i>buff</i>, <i>string-ascii</i> and <i>string-utf8</i>."
+  ],
+  "signature": "(as-max-len? sequence max_length)",
+  "examples": [
+    [
+      ">",
+      "(as-max-len? (list 2 2 2) u3)"
+    ],
+    [
+      "<",
+      "(some (2 2 2))"
+    ],
+    [
+      ">",
+      "(as-max-len? (list 1 2 3) u2)"
+    ],
+    [
+      "<",
+      "none"
+    ],
+    [
+      ">",
+      "(as-max-len? \"hello\" u10)"
+    ],
+    [
+      "<",
+      "(some \"hello\")"
+    ],
+    [
+      ">",
+      "(as-max-len? 0x010203 u10)"
+    ],
+    [
+      "<",
+      "(some 0x010203)"
+    ]
+  ]
+}

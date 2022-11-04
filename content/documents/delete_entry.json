@@ -1,0 +1,52 @@
+{
+  "wip": true,
+  "id": "delete_entry",
+  "name": "map-delete",
+  "byname": "",
+  "input": "MapName, tuple",
+  "output": "bool",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "The <i>map-delete</i> function removes the value associated with the input key for the given map. If an item exists and is removed, the function returns <i>true</i>. If a value did not exist for this key in the data map, the function returns <i>false</i>."
+  ],
+  "signature": "(map-delete map-name key-tuple)",
+  "examples": [
+    [
+      ">",
+      "(define-map names-map { name: (string-ascii 10) } { id: int })"
+    ],
+    [
+      ">",
+      "(map-insert names-map { name: \"blockstack\" } { id: 1337 })"
+    ],
+    [
+      "<",
+      "true"
+    ],
+    [
+      ">",
+      "(map-delete names-map { name: \"blockstack\" })"
+    ],
+    [
+      "<",
+      "true"
+    ],
+    [
+      ">",
+      "(map-delete names-map { name: \"blockstack\" })"
+    ],
+    [
+      "<",
+      "false"
+    ],
+    [
+      ">",
+      "(map-delete names-map (tuple (name \"blockstack\")))"
+    ],
+    [
+      ";",
+      "Same command, using a shorthand for constructing the tuple"
+    ]
+  ]
+}

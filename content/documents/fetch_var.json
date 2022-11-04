@@ -1,0 +1,28 @@
+{
+  "wip": true,
+  "id": "fetch_var",
+  "name": "var-get",
+  "byname": "",
+  "input": "VarName",
+  "output": "A",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "The <i>var-get</i> function looks up and returns an entry from a contract&quot;s data map. The value is looked up using <i>var-name</i>."
+  ],
+  "signature": "(var-get var-name)",
+  "examples": [
+    [
+      ">",
+      "(define-data-var cursor int 6)"
+    ],
+    [
+      ">",
+      "(var-get cursor)"
+    ],
+    [
+      "<",
+      "6"
+    ]
+  ]
+}

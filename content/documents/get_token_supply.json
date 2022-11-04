@@ -1,0 +1,32 @@
+{
+  "wip": true,
+  "id": "get_token_supply",
+  "name": "ft-get-supply",
+  "byname": "",
+  "input": "TokenName",
+  "output": "uint",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "<i>ft-get-balance</i> returns <i>token-name</i> circulating supply. The token type must have been defined using <i>define-fungible-token</i>."
+  ],
+  "signature": "(ft-get-supply token-name)",
+  "examples": [
+    [
+      ">",
+      "(define-fungible-token stackaroo)"
+    ],
+    [
+      ">",
+      "(ft-mint? stackaroo u100 'SZ2J6ZY48GV1EZ5V2V5RB9MP66SW86PYKKQ9H6DPR)"
+    ],
+    [
+      ">",
+      "(ft-get-supply stackaroo)"
+    ],
+    [
+      "<",
+      "u100"
+    ]
+  ]
+}

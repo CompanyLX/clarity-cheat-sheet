@@ -1,0 +1,12 @@
+{
+  "id": "true",
+  "name": "true",
+  "output": "bool",
+  "description": ["Boolean true constant."],
+  "examples": [
+    [">", "true"],
+    ["<", "true"],
+    [">", "(or false true)"],
+    ["<", "true"]
+  ]
+}

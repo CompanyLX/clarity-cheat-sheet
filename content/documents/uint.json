@@ -1,0 +1,19 @@
+{
+  "id": "uint",
+  "name": "uint",
+  "byname": "Unsigned Integer",
+  "description": [
+    "<i>uint</i>, short for (<b>unsigned</b>) integer, is a primitive data type represents whole <mark>128 bits numbers</mark> that range from 0 to <wbr>340</wbr><wbr>282</wbr><wbr>366</wbr><wbr>920</wbr><wbr>938</wbr><wbr>463</wbr><wbr>463</wbr><wbr>374</wbr><wbr>607</wbr><wbr>431</wbr><wbr>768</wbr><wbr>211</wbr><wbr>455</wbr> (2<sup>128</sup> - 1)",
+    "Unsigned integers are <u>always prefixed by the character <b>u</b>.</u>"
+  ],
+  "examples": [
+    [">", "u0"],
+    ["<", "u0"],
+    [">", "u66"],
+    ["<", "u66"],
+    [">", "u40935094534"],
+    ["<", "u40935094534"],
+    [">", "u-31"],
+    ["!", ""]
+  ]
+}
