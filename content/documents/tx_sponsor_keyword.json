@@ -5,13 +5,12 @@
   "byname": "",
   "input": "",
   "output": "optional principal",
-  "snippet": "",
+  "signature": "",
   "since": 2.1,
   "description": [
     "Returns the sponsor of the current transaction if there is a sponsor, otherwise returns None."
   ],
-  "examples": [],
-  "example": [
+  "examples": [
     [
       ">",
       "(print tx-sponsor?)"
