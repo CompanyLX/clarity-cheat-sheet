@@ -1,0 +1,44 @@
+{
+  "wip": true,
+  "id": "set_var",
+  "name": "var-set",
+  "byname": "",
+  "input": "VarName, AnyType",
+  "output": "bool",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "The <i>var-set</i> function sets the value associated with the input variable to the inputted value. The function always returns <i>true</i>."
+  ],
+  "signature": "(var-set var-name expr1)",
+  "examples": [
+    [
+      ">",
+      "(define-data-var cursor int 6)"
+    ],
+    [
+      ">",
+      "(var-get cursor)"
+    ],
+    [
+      "<",
+      "6"
+    ],
+    [
+      ">",
+      "(var-set cursor (+ (var-get cursor) 1))"
+    ],
+    [
+      "<",
+      "true"
+    ],
+    [
+      ">",
+      "(var-get cursor)"
+    ],
+    [
+      "<",
+      "7"
+    ]
+  ]
+}
