@@ -1,0 +1,40 @@
+{
+  "wip": true,
+  "id": "unwrap",
+  "name": "unwrap-panic",
+  "byname": "",
+  "input": "(optional A) | (response A B)",
+  "output": "A",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "The <i>unwrap</i> function attempts to &quot;unpack&quot; its argument: if the argument is an option type, and the argument is a <i>(some ...)</i> option, this function returns the inner value of the option. If the argument is a response type, and the argument is an <i>(ok ...)</i> response, it returns the inner value of the <i>ok</i>. If the supplied argument is either an <i>(err ...)</i> or a <i>(none)</i> value, <i>unwrap</i> throws a runtime error, aborting any further processing of the current transaction."
+  ],
+  "signature": "(unwrap-panic option-input)",
+  "examples": [
+    [
+      ">",
+      "(define-map names-map { name: (string-ascii 12) } { id: int })"
+    ],
+    [
+      ">",
+      "(map-set names-map { name: \"blockstack\" } { id: 1337 })"
+    ],
+    [
+      ">",
+      "(unwrap-panic (map-get? names-map { name: \"blockstack\" }))"
+    ],
+    [
+      "<",
+      "(tuple (id 1337))"
+    ],
+    [
+      ">",
+      "(unwrap-panic (map-get? names-map { name: \"non-existant\" }))"
+    ],
+    [
+      ";",
+      "Throws a runtime exception"
+    ]
+  ]
+}
