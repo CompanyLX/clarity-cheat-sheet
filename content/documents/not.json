@@ -5,14 +5,13 @@
   "byname": "",
   "input": "",
   "output": "",
-  "snippet": "",
+  "signature": "",
   "since": 2.1,
   "description": [
     "Returns the inverse of the boolean input."
   ],
-  "examples": [],
   "signature": "(not b1)",
-  "example": [
+  "examples": [
     [
       ">",
       "(not true)"
