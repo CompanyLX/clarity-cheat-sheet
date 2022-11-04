@@ -5,16 +5,15 @@
   "byname": "",
   "input": "Function(A, B) -> B, sequence_A, B",
   "output": "B",
-  "snippet": "",
+  "signature": "",
   "since": 2.1,
   "description": [
     "The <i>fold</i> function condenses <i>sequence_A</i> into a value of type <i>B</i> by recursively applies the function <i>func</i> to each element of the input sequence <u>and</u> the output of a previous application of <i>func</i>.",
     "<i>fold</i> uses <i>initial_B</i> in the initial application of <i>func</i>, along with the first element of <i>sequence_A</i>. The resulting value of type <i>B</i> is used for the next application of <i>func</i>, along with the next element of <i>sequence_A</i> and so on. <i>fold</i> returns the last value of type <i>B</i> returned by these successive applications <i>func</i>.",
     "Applicable sequence types are <i>(list A)</i>, <i>buff</i>, <i>string-ascii</i> and <i>string-utf8</i>, for which the corresponding element types are, respectively, <i>A</i>, <i>(buff 1)</i>, <i>(string-ascii 1)</i> and <i>(string-utf8 1)</i>. The <i>func</i> argument must be a literal function name."
   ],
-  "examples": [],
   "signature": "(fold func sequence_A initial_B)",
-  "example": [
+  "examples": [
     [
       ">",
       "(fold * (list 2 2 2) 1)"
