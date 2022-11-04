@@ -1,0 +1,12 @@
+{
+  "id": "false",
+  "name": "false",
+  "output": "bool",
+  "description": ["Boolean false constant."],
+  "examples": [
+    [">", "false"],
+    ["<", "false"],
+    [">", "(and false true)"],
+    ["<", "false"]
+  ]
+}
