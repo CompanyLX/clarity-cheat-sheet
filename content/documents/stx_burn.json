@@ -5,16 +5,15 @@
   "byname": "",
   "input": "",
   "output": "",
-  "snippet": "",
+  "signature": "",
   "since": 2.1,
   "description": [
     "<i>stx-burn?</i> decreases the <i>sender</i> principal&quot;s STX holdings by <i>amount</i>, specified in microstacks, by destroying the STX. The <i>sender</i> principal <u>must</u> be equal to the current context&quot;s <i>tx-sender</i>.",
     "This function returns (ok true) if the transfer is successful. In the event of an unsuccessful transfer it returns one of the following error codes:",
     "<i>(err u1)</i> -- <i>sender</i> does not have enough balance to transfer <i>(err u3)</i> -- amount to send is non-positive <i>(err u4)</i> -- the <i>sender</i> principal is not the current <i>tx-sender</i>"
   ],
-  "examples": [],
   "signature": "(stx-burn? amount sender)",
-  "example": [
+  "examples": [
     [
       ">",
       "(as-contract"
