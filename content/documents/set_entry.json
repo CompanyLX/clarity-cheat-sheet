@@ -1,0 +1,37 @@
+{
+  "wip": true,
+  "id": "set_entry",
+  "name": "map-set",
+  "byname": "",
+  "input": "MapName, tuple_A, tuple_B",
+  "output": "bool",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "The <i>map-set</i> function sets the value associated with the input key to the inputted value. This function performs a <u>blind</u> update; whether or not a value is already associated with the key, the function overwrites that existing association.",
+    "Note: the <i>value-tuple</i> requires 1 additional byte for storage in the materialized blockchain state, and therefore the maximum size of a value that may be inserted into a map is MAX<u>CLARITY</u>VALUE - 1."
+  ],
+  "signature": "(map-set map-name key-tuple value-tuple)",
+  "examples": [
+    [
+      ">",
+      "(define-map names-map { name: (string-ascii 10) } { id: int })"
+    ],
+    [
+      ">",
+      "(map-set names-map { name: \"blockstack\" } { id: 1337 })"
+    ],
+    [
+      "<",
+      "true"
+    ],
+    [
+      ">",
+      "(map-set names-map (tuple (name \"blockstack\")) (tuple (id 1337)))"
+    ],
+    [
+      ";",
+      "Same command, using a shorthand for constructing the tuple"
+    ]
+  ]
+}
