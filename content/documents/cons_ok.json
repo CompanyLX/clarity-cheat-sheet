@@ -5,14 +5,13 @@
   "byname": "",
   "input": "A",
   "output": "(response A B)",
-  "snippet": "",
+  "signature": "",
   "since": 2.1,
   "description": [
     "The <i>ok</i> function constructs a response type from the input value. Use <i>ok</i> for creating return values in public functions. An <u>ok</u> value indicates that any database changes during the processing of the function should materialize."
   ],
-  "examples": [],
   "signature": "(ok value)",
-  "example": [
+  "examples": [
     [
       ">",
       "(ok 1)"
