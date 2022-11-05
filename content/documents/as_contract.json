@@ -1,24 +1,18 @@
 {
-  "wip": true,
   "id": "as_contract",
   "name": "as-contract",
-  "byname": "",
-  "input": "A",
-  "output": "A",
-  "signature": "",
-  "since": 2.1,
+  "input": "ANY-EXPRESSION",
+  "output": "ANY-TYPE",
+  "signature": "(as-contract INPUT-1)",
   "description": [
-    "The <i>as-contract</i> function switches the current context&quot;s <i>tx-sender</i> value to the <u>contract&quot;s</u> principal and executes <i>expr</i> with that context. It returns the resulting value of <i>expr</i>."
+    "The <i>as-contract</i> function switches the current context&quot;s <i>tx-sender</i> value to the <u>contract&quot;s</u> principal and executes <b>INPUT-1</b> expression with that context. It returns the resulting value of <b>INPUT-1</b> expression."
   ],
-  "signature": "(as-contract expr)",
   "examples": [
-    [
-      ">",
-      "(as-contract tx-sender)"
-    ],
-    [
-      "<",
-      "S1G2081040G2081040G2081040G208105NK8PE5.docs-test"
-    ]
+    [">", "(as-contract tx-sender)"],
+    ["<", "ST2CY5V39NHDPWSXMW9QDT3HC3GD6Q6XX4CFRK9AG.docs-test"],
+    [">", "(as-contract tx-sender)"],
+    [">", "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM.my-awesome-contract"],
+    [">", "(as-contract tx-sender)"],
+    [">", "SP1SJ3DTE5DN7X54YDH5D64R3BCB6A2AG2ZQ8YPD5.smart-contract-test"]
   ]
 }
