@@ -1,11 +1,11 @@
 {
   "id": "append",
   "name": "append",
-  "input": "(list $ANY), $ANY",
-  "output": "(list $ANY)",
-  "signature": "(append $1 $2)",
+  "input": "(list ANY-TYPES), ANY-TYPES",
+  "output": "(list ANY-TYPES)",
+  "signature": "(append INPUT-1 INPUT-2)",
   "description": [
-    "The <i>append</i> function takes a list (<b>$1</b>), another value (<b>$2</b>) with the same entry type, adds that value to the end of the list and returns a list of the same type."
+    "The <i>append</i> function takes a list (<b>INPUT-1</b>), another value (<b>INPUT-2</b>) with the same entry type, adds that value to the end of the list and returns a list of the same type."
   ],
   "examples": [
     [">", "(append (list 1 2 3 4) 5)"],
@@ -18,6 +18,7 @@
     ["<", "[\"Hello\", \"World\", \"!\"]"],
     [">", "(append (list u\"A smiley face emoji\" u\" \" ) \"\\u{1F600}\")"],
     ["<", "[\"A smiley face emoji\", \" \", \"😀\"]"],
+    [";", "Attempt to append diffent type value"],
     [">", "(append (list \"orange\" \"apple\") 31)"],
     ["!", ""]
   ]
