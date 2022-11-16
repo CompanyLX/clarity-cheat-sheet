@@ -1,20 +1,20 @@
 {
   "wip": true,
   "id": "element_at",
-  "name": "element-at",
+  "name": "element-at?",
   "byname": "",
   "input": "sequence_A, uint",
   "output": "(optional A)",
   "signature": "",
   "since": 2.1,
   "description": [
-    "The <i>element-at</i> function returns the element at <i>index</i> in the provided sequence. Applicable sequence types are <i>(list A)</i>, <i>buff</i>, <i>string-ascii</i> and <i>string-utf8</i>, for which the corresponding element types are, respectively, <i>A</i>, <i>(buff 1)</i>, <i>(string-ascii 1)</i> and <i>(string-utf8 1)</i>."
+    "The <i>element-at?</i> function returns the element at <i>index</i> in the provided sequence. Applicable sequence types are <i>(list A)</i>, <i>buff</i>, <i>string-ascii</i> and <i>string-utf8</i>, for which the corresponding element types are, respectively, <i>A</i>, <i>(buff 1)</i>, <i>(string-ascii 1)</i> and <i>(string-utf8 1)</i>."
   ],
-  "signature": "(element-at sequence index)",
+  "signature": "(element-at? sequence index)",
   "examples": [
     [
       ">",
-      "(element-at \"blockstack\" u5)"
+      "(element-at? \"blockstack\" u5)"
     ],
     [
       "<",
@@ -22,7 +22,7 @@
     ],
     [
       ">",
-      "(element-at (list 1 2 3 4 5) u5)"
+      "(element-at? (list 1 2 3 4 5) u5)"
     ],
     [
       "<",
@@ -30,7 +30,7 @@
     ],
     [
       ">",
-      "(element-at (list 1 2 3 4 5) (+ u1 u2))"
+      "(element-at? (list 1 2 3 4 5) (+ u1 u2))"
     ],
     [
       "<",
@@ -38,7 +38,7 @@
     ],
     [
       ">",
-      "(element-at \"abcd\" u1)"
+      "(element-at? \"abcd\" u1)"
     ],
     [
       "<",
@@ -46,7 +46,7 @@
     ],
     [
       ">",
-      "(element-at 0xfb01 u1)"
+      "(element-at? 0xfb01 u1)"
     ],
     [
       "<",
