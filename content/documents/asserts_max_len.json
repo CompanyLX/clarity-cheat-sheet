@@ -2,7 +2,6 @@
   "wip": true,
   "id": "asserts_max_len",
   "name": "as-max-len?",
-  "byname": "",
   "input": "sequence_A, uint",
   "output": "(optional sequence_A)",
   "signature": "(as-max-len? sequence max_length)",
