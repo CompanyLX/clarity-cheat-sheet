@@ -1,7 +1,7 @@
 {
   "wip": true,
   "id": "principal_destruct",
-  "name": "principal-destruct",
+  "name": "principal-destruct?",
   "byname": "",
   "input": "",
   "output": "",
@@ -9,18 +9,18 @@
   "since": 2.1,
   "description": [
     "A principal value represents either a set of keys, or a smart contract. The former, called a <u>standard principal</u>, is encoded as a <i>(buff 1)</i> <b>version byte</b>, indicating the type of account and the type of network that this principal can spend tokens on, and a <i>(buff 20)</i> <b>public key hash</b>, characterizing the principal&quot;s unique identity. The latter, a <u>contract principal</u>, is encoded as a standard principal concatenated with a <i>(string-ascii 40)</i> <b>contract name</b> that identifies the code body.",
-    "<i>principal-destruct</i> will decompose a principal into its component parts: either<i>{version-byte, hash-bytes}</i> for standard principals, or <i>{version-byte, hash-bytes, name}</i> for contract principals.",
+    "<i>principal-destruct?</i> will decompose a principal into its component parts: either<i>{version-byte, hash-bytes}</i> for standard principals, or <i>{version-byte, hash-bytes, name}</i> for contract principals.",
     "This method returns a <i>Response</i> that wraps this data as a tuple.",
     "If the version byte of <i>principal-address</i> matches the network (see <i>is-standard</i>), then this method returns the pair as its <i>ok</i> value.",
     "If the version byte of <i>principal-address</i> does not match the network, then this method returns the pair as its <i>err</i> value.",
     "In both cases, the value itself is a tuple containing three fields: a <i>version</i> value as a <i>(buff 1)</i>, a <i>hash-bytes</i> value as a <i>(buff 20)</i>, and a <i>name</i> value as an <i>(optional (string-ascii 40))</i>.  The <i>name</i> field will only be <i>(some ..)</i> if the principal is a contract principal.",
     "Note: This function is only available starting with Stacks 2.1."
   ],
-  "signature": "(principal-destruct principal-address)",
+  "signature": "(principal-destruct? principal-address)",
   "examples": [
     [
       ">",
-      "(principal-destruct 'STB44HYPYAT2BB2QE513NSP81HTMYWBJP02HPGK6)"
+      "(principal-destruct? 'STB44HYPYAT2BB2QE513NSP81HTMYWBJP02HPGK6)"
     ],
     [
       "<",
@@ -28,7 +28,7 @@
     ],
     [
       ">",
-      "(principal-destruct 'STB44HYPYAT2BB2QE513NSP81HTMYWBJP02HPGK6.foo)"
+      "(principal-destruct? 'STB44HYPYAT2BB2QE513NSP81HTMYWBJP02HPGK6.foo)"
     ],
     [
       "<",
@@ -36,7 +36,7 @@
     ],
     [
       ">",
-      "(principal-destruct 'SP3X6QWWETNBZWGBK6DRGTR1KX50S74D3433WDGJY)"
+      "(principal-destruct? 'SP3X6QWWETNBZWGBK6DRGTR1KX50S74D3433WDGJY)"
     ],
     [
       "<",
@@ -44,7 +44,7 @@
     ],
     [
       ">",
-      "(principal-destruct 'SP3X6QWWETNBZWGBK6DRGTR1KX50S74D3433WDGJY.foo)"
+      "(principal-destruct? 'SP3X6QWWETNBZWGBK6DRGTR1KX50S74D3433WDGJY.foo)"
     ],
     [
       "<",

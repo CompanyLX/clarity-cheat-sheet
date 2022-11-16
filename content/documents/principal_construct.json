@@ -1,7 +1,7 @@
 {
   "wip": true,
   "id": "principal_construct",
-  "name": "principal-construct",
+  "name": "principal-construct?",
   "byname": "",
   "input": "",
   "output": "",
@@ -9,18 +9,18 @@
   "since": 2.1,
   "description": [
     "A principal value represents either a set of keys, or a smart contract. The former, called a <u>standard principal</u>, is encoded as a <i>(buff 1)</i> <b>version byte</b>, indicating the type of account and the type of network that this principal can spend tokens on, and a <i>(buff 20)</i> <b>public key hash</b>, characterizing the principal&quot;s unique identity. The latter, a <u>contract principal</u>, is encoded as a standard principal concatenated with a <i>(string-ascii 40)</i> <b>contract name</b> that identifies the code body.",
-    "The <i>principal-construct</i> function allows users to create either standard or contract principals, depending on which form is used.  To create a standard principal, <i>principal-construct</i> would be called with two arguments: it takes as input a <i>(buff 1)</i> which encodes the principal address&quot;s <i>version-byte</i>, a <i>(buff 20)</i> which encodes the principal address&quot;s <i>hash-bytes</i>. To create a contract principal, <i>principal-construct</i> would be called with three arguments: the <i>(buff 1)</i> and <i>(buff 20)</i> to represent the standard principal that created the contract, and a <i>(string-ascii 40)</i> which encodes the contract&quot;s name. On success, this function returns either a standard principal or contract principal, depending on whether or not the third <i>(string-ascii 40)</i> argument is given.",
+    "The <i>principal-construct?</i> function allows users to create either standard or contract principals, depending on which form is used.  To create a standard principal, <i>principal-construct?</i> would be called with two arguments: it takes as input a <i>(buff 1)</i> which encodes the principal address&quot;s <i>version-byte</i>, a <i>(buff 20)</i> which encodes the principal address&quot;s <i>hash-bytes</i>. To create a contract principal, <i>principal-construct?</i> would be called with three arguments: the <i>(buff 1)</i> and <i>(buff 20)</i> to represent the standard principal that created the contract, and a <i>(string-ascii 40)</i> which encodes the contract&quot;s name. On success, this function returns either a standard principal or contract principal, depending on whether or not the third <i>(string-ascii 40)</i> argument is given.",
     "This function returns a <i>Response</i>. On success, the <i>ok</i> value is a <i>Principal</i>. The <i>err</i> value is a value tuple with the form <i>{ error_code: uint, value: (optional principal) }</i>.",
     "If the single-byte <i>version-byte</i> is in the valid range <i>0x00</i> to <i>0x1f</i>, but is not an appropriate version byte for the current network, then the error will be <i>u0</i>, and <i>value</i> will contain <i>(some principal)</i>, where the wrapped value is the principal.  If the <i>version-byte</i> is not in this range, however, then the <i>value</i> will be <i>none</i>.",
     "If the <i>version-byte</i> is a <i>buff</i> of length 0, if the single-byte <i>version-byte</i> is a value greater than <i>0x1f</i>, or the <i>hash-bytes</i> is a <i>buff</i> of length not equal to 20, then <i>error_code</i> will be <i>u1</i> and <i>value</i> will be <i>None</i>.",
     "If a name is given, and the name is either an empty string or contains ASCII characters that are not allowed in contract names, then <i>error_code</i> will be <i>u2</i>.",
     "Note: This function is only available starting with Stacks 2.1."
   ],
-  "signature": "(principal-construct (buff 1) (buff 20) [(string-ascii 40)])",
+  "signature": "(principal-construct? (buff 1) (buff 20) [(string-ascii 40)])",
   "examples": [
     [
       ">",
-      "(principal-construct 0x1a 0xfa6bf38ed557fe417333710d6033e9419391a320)"
+      "(principal-construct? 0x1a 0xfa6bf38ed557fe417333710d6033e9419391a320)"
     ],
     [
       "<",
@@ -28,7 +28,7 @@
     ],
     [
       ">",
-      "(principal-construct 0x1a 0xfa6bf38ed557fe417333710d6033e9419391a320 \"foo\")"
+      "(principal-construct? 0x1a 0xfa6bf38ed557fe417333710d6033e9419391a320 \"foo\")"
     ],
     [
       "<",
@@ -36,7 +36,7 @@
     ],
     [
       ">",
-      "(principal-construct 0x16 0xfa6bf38ed557fe417333710d6033e9419391a320)"
+      "(principal-construct? 0x16 0xfa6bf38ed557fe417333710d6033e9419391a320)"
     ],
     [
       "<",
@@ -44,7 +44,7 @@
     ],
     [
       ">",
-      "(principal-construct 0x16 0xfa6bf38ed557fe417333710d6033e9419391a320 \"foo\")"
+      "(principal-construct? 0x16 0xfa6bf38ed557fe417333710d6033e9419391a320 \"foo\")"
     ],
     [
       "<",
@@ -52,7 +52,7 @@
     ],
     [
       ">",
-      "(principal-construct 0x   0xfa6bf38ed557fe417333710d6033e9419391a320)"
+      "(principal-construct? 0x   0xfa6bf38ed557fe417333710d6033e9419391a320)"
     ],
     [
       "<",
@@ -60,7 +60,7 @@
     ],
     [
       ">",
-      "(principal-construct 0x16 0xfa6bf38ed557fe417333710d6033e9419391a3)"
+      "(principal-construct? 0x16 0xfa6bf38ed557fe417333710d6033e9419391a3)"
     ],
     [
       "<",
@@ -68,7 +68,7 @@
     ],
     [
       ">",
-      "(principal-construct 0x20 0xfa6bf38ed557fe417333710d6033e9419391a320)"
+      "(principal-construct? 0x20 0xfa6bf38ed557fe417333710d6033e9419391a320)"
     ],
     [
       "<",
@@ -76,7 +76,7 @@
     ],
     [
       ">",
-      "(principal-construct 0x1a 0xfa6bf38ed557fe417333710d6033e9419391a320 \"\")"
+      "(principal-construct? 0x1a 0xfa6bf38ed557fe417333710d6033e9419391a320 \"\")"
     ],
     [
       "<",
@@ -84,7 +84,7 @@
     ],
     [
       ">",
-      "(principal-construct 0x1a 0xfa6bf38ed557fe417333710d6033e9419391a320 \"foo[\")"
+      "(principal-construct? 0x1a 0xfa6bf38ed557fe417333710d6033e9419391a320 \"foo[\")"
     ],
     [
       "<",
