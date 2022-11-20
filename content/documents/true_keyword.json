@@ -1,0 +1,32 @@
+{
+  "wip": true,
+  "id": "true_keyword",
+  "name": "true",
+  "byname": "",
+  "input": "",
+  "output": "bool",
+  "signature": "",
+  "since": 2.1,
+  "description": [
+    "Boolean true constant."
+  ],
+  "examples": [],
+  "example": [
+    [
+      ">",
+      "(and true false)"
+    ],
+    [
+      ";",
+      "Evaluates to false"
+    ],
+    [
+      ">",
+      "(or false true)"
+    ],
+    [
+      ";",
+      "Evaluates to true"
+    ]
+  ]
+}

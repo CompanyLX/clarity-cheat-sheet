@@ -1,0 +1,48 @@
+{
+  "wip": true,
+  "id": "bitwise_or",
+  "name": "bit-or",
+  "byname": "",
+  "input": "",
+  "output": "",
+  "signature": "(bit-or i1 i2...)",
+  "since": 2.1,
+  "description": [
+    "Returns the result of bitwise inclusive or&quot;ing a variable number of integer inputs."
+  ],
+  "examples": [],
+  "example": [
+    [
+      ">",
+      "(bit-or 4 8)"
+    ],
+    [
+      "<",
+      "12"
+    ],
+    [
+      ">",
+      "(bit-or 1 2 4)"
+    ],
+    [
+      "<",
+      "7"
+    ],
+    [
+      ">",
+      "(bit-or 64 -32 -16)"
+    ],
+    [
+      "<",
+      "-16"
+    ],
+    [
+      ">",
+      "(bit-or u2 u4 u32)"
+    ],
+    [
+      "<",
+      "u38"
+    ]
+  ]
+}

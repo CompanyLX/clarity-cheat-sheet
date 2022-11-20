@@ -1,0 +1,56 @@
+{
+  "wip": true,
+  "id": "bitwise_and",
+  "name": "bit-and",
+  "byname": "",
+  "input": "",
+  "output": "",
+  "signature": "(bit-and i1 i2...)",
+  "since": 2.1,
+  "description": [
+    "Returns the result of bitwise and&quot;ing a variable number of integer inputs."
+  ],
+  "examples": [],
+  "example": [
+    [
+      ">",
+      "(bit-and 24 16)"
+    ],
+    [
+      "<",
+      "16"
+    ],
+    [
+      ">",
+      "(bit-and 28 24 -1)"
+    ],
+    [
+      "<",
+      "24"
+    ],
+    [
+      ">",
+      "(bit-and u24 u16)"
+    ],
+    [
+      "<",
+      "u16"
+    ],
+    [
+      ">",
+      "(bit-and -128 -64)"
+    ],
+    [
+      "<",
+      "-128"
+    ],
+    [
+      ">",
+      "(bit-and 28 24 -1)"
+    ],
+    [
+      "<",
+      "24"
+    ]
+  ]
+}

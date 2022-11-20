@@ -1,0 +1,48 @@
+{
+  "wip": true,
+  "id": "bitwise_not",
+  "name": "bit-not",
+  "byname": "",
+  "input": "",
+  "output": "",
+  "signature": "(bit-not i1)",
+  "since": 2.1,
+  "description": [
+    "Returns the one&quot;s compliement (sometimes also called the bitwise compliment or not operator) of <i>i1</i>, effectively reversing the bits in <i>i1</i>. In other words, every bit that is <i>1</i> in ì1<i> will be </i>0<i> in the result.  Conversely, every bit that is </i>0<i> in </i>i1<i> will be </i>1` in the result."
+  ],
+  "examples": [],
+  "example": [
+    [
+      ">",
+      "(bit-not 3)"
+    ],
+    [
+      "<",
+      "-4"
+    ],
+    [
+      ">",
+      "(bit-not u128)"
+    ],
+    [
+      "<",
+      "u340282366920938463463374607431768211327"
+    ],
+    [
+      ">",
+      "(bit-not 128)"
+    ],
+    [
+      "<",
+      "-129"
+    ],
+    [
+      ">",
+      "(bit-not -128)"
+    ],
+    [
+      "<",
+      "127"
+    ]
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "wip": true,
+  "id": "bitwise_xor",
+  "name": "bit-xor",
+  "byname": "",
+  "input": "",
+  "output": "",
+  "signature": "(bit-xor i1 i2...)",
+  "since": 2.1,
+  "description": [
+    "Returns the result of bitwise exclusive or&quot;ing a variable number of integer inputs."
+  ],
+  "examples": [],
+  "example": [
+    [
+      ">",
+      "(bit-xor 1 2)"
+    ],
+    [
+      "<",
+      "3"
+    ],
+    [
+      ">",
+      "(bit-xor 120 280)"
+    ],
+    [
+      "<",
+      "352"
+    ],
+    [
+      ">",
+      "(bit-xor -128 64)"
+    ],
+    [
+      "<",
+      "-64"
+    ],
+    [
+      ">",
+      "(bit-xor u24 u4)"
+    ],
+    [
+      "<",
+      "u28"
+    ],
+    [
+      ">",
+      "(bit-xor 1 2 4 -1)"
+    ],
+    [
+      "<",
+      "-8"
+    ]
+  ]
+}
