@@ -1,81 +1,30 @@
 {
-  "wip": true,
   "id": "bitwise_left_shift",
   "name": "bit-shift-left",
-  "byname": "",
-  "input": "",
-  "output": "",
-  "signature": "(bit-shift-left i1 shamt)",
+  "input": "int | uint, uint",
+  "output": "int | uint",
+  "signature": "(bit-shift-left INPUT-1 INPUT-2)",
   "since": 2.1,
   "description": [
-    "Shifts all the bits in <i>i1</i> to the left by the number of places specified in <i>shamt</i> modulo 128 (the bit width of Clarity integers).",
+    "Shifts all the bits in <i>INPUT-1</i> to the left by the number of places specified in <i>INPUT-2</i> modulo 128 (the bit width of Clarity integers).",
     "Note that there is a deliberate choice made to ignore arithmetic overflow for this operation.  In use cases where overflow should be detected, developers should use <i>*</i>, <i>/</i>, and <i>pow</i> instead of the shift operators."
   ],
-  "examples": [],
   "example": [
-    [
-      ">",
-      "(bit-shift-left 2 u1)"
-    ],
-    [
-      "<",
-      "4"
-    ],
-    [
-      ">",
-      "(bit-shift-left 16 u2)"
-    ],
-    [
-      "<",
-      "64"
-    ],
-    [
-      ">",
-      "(bit-shift-left -64 u1)"
-    ],
-    [
-      "<",
-      "-128"
-    ],
-    [
-      ">",
-      "(bit-shift-left u4 u2)"
-    ],
-    [
-      "<",
-      "u16"
-    ],
-    [
-      ">",
-      "(bit-shift-left 123 u9999999999)"
-    ],
-    [
-      "<",
-      "-170141183460469231731687303715884105728"
-    ],
-    [
-      ">",
-      "(bit-shift-left u123 u9999999999)"
-    ],
-    [
-      "<",
-      "u170141183460469231731687303715884105728"
-    ],
-    [
-      ">",
-      "(bit-shift-left -1 u7)"
-    ],
-    [
-      "<",
-      "-128"
-    ],
-    [
-      ">",
-      "(bit-shift-left -1 u128)"
-    ],
-    [
-      "<",
-      "-1"
-    ]
+    [">", "(bit-shift-left 2 u1)"],
+    ["<", "4"],
+    [">", "(bit-shift-left 16 u2)"],
+    ["<", "64"],
+    [">", "(bit-shift-left -64 u1)"],
+    ["<", "-128"],
+    [">", "(bit-shift-left u4 u2)"],
+    ["<", "u16"],
+    [">", "(bit-shift-left 123 u9999999999)"],
+    ["<", "-170141183460469231731687303715884105728"],
+    [">", "(bit-shift-left u123 u9999999999)"],
+    ["<", "u170141183460469231731687303715884105728"],
+    [">", "(bit-shift-left -1 u7)"],
+    ["<", "-128"],
+    [">", "(bit-shift-left -1 u128)"],
+    ["<", "-1"]
   ]
 }

@@ -1,97 +1,34 @@
 {
-  "wip": true,
   "id": "bitwise_right_shift",
   "name": "bit-shift-right",
-  "byname": "",
-  "input": "",
-  "output": "",
-  "signature": "(bit-shift-right i1 shamt)",
+  "input": "int | uint, uint",
+  "output": "int | uint",
+  "signature": "(bit-shift-right INPUT-1 INPUT-2)",
   "since": 2.1,
   "description": [
-    "Shifts all the bits in <i>i1</i> to the right by the number of places specified in <i>shamt</i> modulo 128 (the bit width of Clarity integers). When <i>i1</i> is a <i>uint</i> (unsigned), new bits are filled with zeros. When <i>i1</i> is an <i>int</i> (signed), the sign is preserved, meaning that new bits are filled with the value of the previous sign-bit.",
+    "Shifts all the bits in <i>INPUT-1</i> to the right by the number of places specified in <i>INPUT-2</i> modulo 128 (the bit width of Clarity integers). When <i>INPUT-1</i> is a <i>uint</i> (unsigned integer), new bits are filled with zeros. When <i>INPUT-1</i> is an <i>int</i> (signed integer), the sign is preserved, meaning that new bits are filled with the value of the previous sign-bit.",
     "Note that there is a deliberate choice made to ignore arithmetic overflow for this operation. In use cases where overflow should be detected, developers should use <i>*</i>, <i>/</i>, and <i>pow</i> instead of the shift operators."
   ],
-  "examples": [],
   "example": [
-    [
-      ">",
-      "(bit-shift-right 2 u1)"
-    ],
-    [
-      "<",
-      "1"
-    ],
-    [
-      ">",
-      "(bit-shift-right 128 u2)"
-    ],
-    [
-      "<",
-      "32"
-    ],
-    [
-      ">",
-      "(bit-shift-right -64 u1)"
-    ],
-    [
-      "<",
-      "-32"
-    ],
-    [
-      ">",
-      "(bit-shift-right u128 u2)"
-    ],
-    [
-      "<",
-      "u32"
-    ],
-    [
-      ">",
-      "(bit-shift-right 123 u9999999999)"
-    ],
-    [
-      "<",
-      "0"
-    ],
-    [
-      ">",
-      "(bit-shift-right u123 u9999999999)"
-    ],
-    [
-      "<",
-      "u0"
-    ],
-    [
-      ">",
-      "(bit-shift-right -128 u7)"
-    ],
-    [
-      "<",
-      "-1"
-    ],
-    [
-      ">",
-      "(bit-shift-right -256 u1)"
-    ],
-    [
-      "<",
-      "-128"
-    ],
-    [
-      ">",
-      "(bit-shift-right 5 u2)"
-    ],
-    [
-      "<",
-      "1"
-    ],
-    [
-      ">",
-      "(bit-shift-right -5 u2)"
-    ],
-    [
-      "<",
-      "-2"
-    ]
+    [">", "(bit-shift-right 2 u1)"],
+    ["<", "1"],
+    [">", "(bit-shift-right 128 u2)"],
+    ["<", "32"],
+    [">", "(bit-shift-right -64 u1)"],
+    ["<", "-32"],
+    [">", "(bit-shift-right u128 u2)"],
+    ["<", "u32"],
+    [">", "(bit-shift-right 123 u9999999999)"],
+    ["<", "0"],
+    [">", "(bit-shift-right u123 u9999999999)"],
+    ["<", "u0"],
+    [">", "(bit-shift-right -128 u7)"],
+    ["<", "-1"],
+    [">", "(bit-shift-right -256 u1)"],
+    ["<", "-128"],
+    [">", "(bit-shift-right 5 u2)"],
+    ["<", "1"],
+    [">", "(bit-shift-right -5 u2)"],
+    ["<", "-2"]
   ]
 }
