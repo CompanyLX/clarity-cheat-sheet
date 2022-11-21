@@ -6,9 +6,8 @@
   "signature": "(bit-and INPUT-1 INPUT-2 ...)",
   "since": 2.1,
   "description": [
-    "<i>bit-and</i> is a binary operation, performs the logical AND operation on each pair of the corresponding bits of the integer inputs and return resulting integer."
+    "<i>bit-and</i> is a binary operation, performs the <b>logical AND</b> operation on each pair of the corresponding bits of the integer inputs and return resulting integer."
   ],
-  "examples": [],
   "example": [
     [">", "(bit-and 24 16)"],
     ["<", "16"],
