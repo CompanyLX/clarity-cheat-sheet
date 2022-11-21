@@ -1,7 +1,7 @@
 {
   "wip": true,
   "id": "string_to_int",
-  "name": "string-to-int",
+  "name": "string-to-int?",
   "byname": "",
   "input": "",
   "output": "",
@@ -11,11 +11,11 @@
     "Converts a string, either <i>string-ascii</i> or <i>string-utf8</i>, to an optional-wrapped signed integer. If the input string does not represent a valid integer, then the function returns <i>none</i>. Otherwise it returns an integer wrapped in <i>some</i>.",
     "Note: This function is only available starting with Stacks 2.1."
   ],
-  "signature": "(string-to-int (string-ascii|string-utf8))",
+  "signature": "(string-to-int? (string-ascii|string-utf8))",
   "examples": [
     [
       ">",
-      "(string-to-int \"1\")"
+      "(string-to-int? \"1\")"
     ],
     [
       "<",
@@ -23,7 +23,7 @@
     ],
     [
       ">",
-      "(string-to-int u\"-1\")"
+      "(string-to-int? u\"-1\")"
     ],
     [
       "<",
@@ -31,7 +31,7 @@
     ],
     [
       ">",
-      "(string-to-int \"a\")"
+      "(string-to-int? \"a\")"
     ],
     [
       "<",
