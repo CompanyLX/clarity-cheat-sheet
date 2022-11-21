@@ -1,21 +1,21 @@
 {
   "wip": true,
   "id": "to_consensus_buff",
-  "name": "to-consensus-buff",
+  "name": "to-consensus-buff?",
   "byname": "",
   "input": "any",
   "output": "(optional buff)",
   "signature": "",
   "since": 2.1,
   "description": [
-    "<i>to-consensus-buff</i> is a special function that will serialize any Clarity value into a buffer, using the SIP-005 serialization of the Clarity value. Not all values can be serialized: some value&quot;s consensus serialization is too large to fit in a Clarity buffer (this is because of the type prefix in the consensus serialization).",
+    "<i>to-consensus-buff?</i> is a special function that will serialize any Clarity value into a buffer, using the SIP-005 serialization of the Clarity value. Not all values can be serialized: some value&quot;s consensus serialization is too large to fit in a Clarity buffer (this is because of the type prefix in the consensus serialization).",
     "If the value cannot fit as serialized into the maximum buffer size, this returns <i>none</i>, otherwise, it will be <i>(some consensus-serialized-buffer)</i>. During type checking, the analyzed type of the result of this method will be the maximum possible consensus buffer length based on the inferred type of the supplied value."
   ],
-  "signature": "(to-consensus-buff value)",
+  "signature": "(to-consensus-buff? value)",
   "examples": [
     [
       ">",
-      "(to-consensus-buff 1)"
+      "(to-consensus-buff? 1)"
     ],
     [
       "<",
@@ -23,7 +23,7 @@
     ],
     [
       ">",
-      "(to-consensus-buff u1)"
+      "(to-consensus-buff? u1)"
     ],
     [
       "<",
@@ -31,7 +31,7 @@
     ],
     [
       ">",
-      "(to-consensus-buff true)"
+      "(to-consensus-buff? true)"
     ],
     [
       "<",
@@ -39,7 +39,7 @@
     ],
     [
       ">",
-      "(to-consensus-buff false)"
+      "(to-consensus-buff? false)"
     ],
     [
       "<",
@@ -47,7 +47,7 @@
     ],
     [
       ">",
-      "(to-consensus-buff none)"
+      "(to-consensus-buff? none)"
     ],
     [
       "<",
@@ -55,7 +55,7 @@
     ],
     [
       ">",
-      "(to-consensus-buff 'SZ2J6ZY48GV1EZ5V2V5RB9MP66SW86PYKKQ9H6DPR)"
+      "(to-consensus-buff? 'SZ2J6ZY48GV1EZ5V2V5RB9MP66SW86PYKKQ9H6DPR)"
     ],
     [
       "<",
@@ -63,7 +63,7 @@
     ],
     [
       ">",
-      "(to-consensus-buff { abc: 3, def: 4 })"
+      "(to-consensus-buff? { abc: 3, def: 4 })"
     ],
     [
       "<",

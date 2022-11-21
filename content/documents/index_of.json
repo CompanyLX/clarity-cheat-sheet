@@ -5,13 +5,13 @@
   "byname": "",
   "input": "sequence_A, A",
   "output": "(optional uint)",
-  "signature": "",
+  "signature": "(index-of sequence item)",
   "since": 2.1,
   "description": [
-    "The <i>index-of</i> function returns the first index at which <i>item</i> can be found, using <i>is-eq</i> checks, in the provided sequence. Applicable sequence types are <i>(list A)</i>, <i>buff</i>, <i>string-ascii</i> and <i>string-utf8</i>, for which the corresponding element types are, respectively, <i>A</i>, <i>(buff 1)</i>, <i>(string-ascii 1)</i> and <i>(string-utf8 1)</i>. If the target item is not found in the sequence (or if an empty string or buffer is supplied), this function returns <i>none</i>."
+    "The <i>index-of</i> function returns the first index at which <i>item</i> can be found, using <i>is-eq</i> checks, in the provided sequence. Applicable sequence types are <i>(list A)</i>, <i>buff</i>, <i>string-ascii</i> and <i>string-utf8</i>, for which the corresponding element types are, respectively, <i>A</i>, <i>(buff 1)</i>, <i>(string-ascii 1)</i> and <i>(string-utf8 1)</i>. If the target item is not found in the sequence (or if an empty string or buffer is supplied), this function returns <i>none</i>. In Clarity1, <i>index-of</i> must be used (without the <i>?</i>). The <i>?</i> is added in Clarity2 for consistency -- built-ins that return responses or optionals end in <i>?</i>. The Clarity1 spelling is left as an alias in Clarity2 for backwards compatibility."
   ],
-  "signature": "(index-of sequence item)",
-  "examples": [
+  "examples": [],
+  "example": [
     [
       ">",
       "(index-of \"blockstack\" \"b\")"
