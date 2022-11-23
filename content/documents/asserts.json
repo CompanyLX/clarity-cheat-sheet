@@ -1,24 +1,16 @@
 {
-  "wip": true,
   "id": "asserts",
   "name": "asserts!",
-  "byname": "",
-  "input": "bool, C",
+  "input": "bool, ANY-TYPE",
   "output": "bool",
-  "signature": "",
-  "since": 2.1,
+  "signature": "(asserts! INPUT-1 INPUT-2)",
   "description": [
-    "The <i>asserts!</i> function admits a boolean argument and asserts its evaluation: if bool-expr is <i>true</i>, <i>asserts!</i> returns <i>true</i> and proceeds in the program execution. If the supplied argument is returning a false value, <i>asserts!</i> <u>returns</u> <i>thrown-value</i> and exits the current control-flow."
+    "The <i>asserts!</i> function admits a boolean argument and asserts its evaluation: if bool expression is <b>true</b>, <i>asserts!</i> returns <b>true</b> and proceeds in the program execution. If the supplied argument is returning a false value, <i>asserts!</i> <u>throws</u> <b>INPUT-2</b> and exits the current control-flow."
   ],
-  "signature": "(asserts! bool-expr thrown-value)",
   "examples": [
-    [
-      ">",
-      "(asserts! (is-eq 1 1) (err 1))"
-    ],
-    [
-      "<",
-      "true"
-    ]
+    [">", "(asserts! (is-eq 1 1) (err 1))"],
+    ["<", "true"],
+    [">", "(asserts! (> 1 2) (err 1))"],
+    ["!", "(err 1)"]
   ]
 }

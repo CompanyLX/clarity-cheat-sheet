@@ -1,5 +1,4 @@
 {
-  "wip": true,
   "id": "asserts_max_len",
   "name": "as-max-len?",
   "input": "(buff | string-ascii | string-utf8 | list), uint",
