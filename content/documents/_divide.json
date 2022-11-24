@@ -6,18 +6,23 @@
   "output": "[int | uint]",
   "signature": "(/ INPUT-1 INPUT-2 ...)",
   "description": [
-    "Integer divides a variable number of integer inputs and returns the result. In the event of division by zero, throws a runtime error."
+    "Divides a variable number of integer inputs and returns the whole integer of the result. In the event of a <u>division by zero</u>, throws a runtime error."
   ],
   "examples": [
     [">", "(/ 2 3)"],
     ["<", "0"],
     [">", "(/ 5 2)"],
     ["<", "2"],
+    [">", "(/ u10 u3)"],
+    ["<", "u3"],
     [">", "(/ 4 2 2)"],
     ["<", "1"],
     [">", "(/ 0 9)"],
     ["<", "0"],
     [">", "(/ 9 0)"],
+    ["!", ""],
+    [";", "Attempt to divide diffent types"],
+    [">", "(/ u16 4)"],
     ["!", ""]
   ]
 }
