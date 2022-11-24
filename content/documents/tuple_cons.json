@@ -13,21 +13,9 @@
   ],
   "signature": "(tuple (key0 expr0) (key1 expr1) ...)",
   "examples": [
-    [
-      ">",
-      "(tuple (name \"blockstack\") (id 1337))"
-    ],
-    [
-      ";",
-      "using tuple"
-    ],
-    [
-      ">",
-      "{name: \"blockstack\", id: 1337}"
-    ],
-    [
-      ";",
-      "using curly brackets"
-    ]
+    [">", "(tuple (name \"blockstack\") (id 1337))"],
+    [";", "using tuple"],
+    [">", "{name: \"blockstack\", id: 1337}"],
+    [";", "using curly brackets"]
   ]
 }

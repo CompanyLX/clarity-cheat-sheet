@@ -7,26 +7,12 @@
   "output": "bool",
   "signature": "",
   "since": 2.1,
-  "description": [
-    "Boolean false constant."
-  ],
+  "description": ["Boolean false constant."],
   "examples": [],
   "example": [
-    [
-      ">",
-      "(and true false)"
-    ],
-    [
-      ";",
-      "Evaluates to false"
-    ],
-    [
-      ">",
-      "(or false true)"
-    ],
-    [
-      ";",
-      "Evaluates to true"
-    ]
+    [">", "(and true false)"],
+    [";", "Evaluates to false"],
+    [">", "(or false true)"],
+    [";", "Evaluates to true"]
   ]
 }

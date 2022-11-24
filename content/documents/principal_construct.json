@@ -22,18 +22,12 @@
       ">",
       "(principal-construct? 0x1a 0xfa6bf38ed557fe417333710d6033e9419391a320)"
     ],
-    [
-      "<",
-      "(ok ST3X6QWWETNBZWGBK6DRGTR1KX50S74D3425Q1TPK)"
-    ],
+    ["<", "(ok ST3X6QWWETNBZWGBK6DRGTR1KX50S74D3425Q1TPK)"],
     [
       ">",
       "(principal-construct? 0x1a 0xfa6bf38ed557fe417333710d6033e9419391a320 \"foo\")"
     ],
-    [
-      "<",
-      "(ok ST3X6QWWETNBZWGBK6DRGTR1KX50S74D3425Q1TPK.foo)"
-    ],
+    ["<", "(ok ST3X6QWWETNBZWGBK6DRGTR1KX50S74D3425Q1TPK.foo)"],
     [
       ">",
       "(principal-construct? 0x16 0xfa6bf38ed557fe417333710d6033e9419391a320)"
@@ -54,41 +48,26 @@
       ">",
       "(principal-construct? 0x   0xfa6bf38ed557fe417333710d6033e9419391a320)"
     ],
-    [
-      "<",
-      "(err (tuple (error_code u1) (value none)))"
-    ],
+    ["<", "(err (tuple (error_code u1) (value none)))"],
     [
       ">",
       "(principal-construct? 0x16 0xfa6bf38ed557fe417333710d6033e9419391a3)"
     ],
-    [
-      "<",
-      "(err (tuple (error_code u1) (value none)))"
-    ],
+    ["<", "(err (tuple (error_code u1) (value none)))"],
     [
       ">",
       "(principal-construct? 0x20 0xfa6bf38ed557fe417333710d6033e9419391a320)"
     ],
-    [
-      "<",
-      "(err (tuple (error_code u1) (value none)))"
-    ],
+    ["<", "(err (tuple (error_code u1) (value none)))"],
     [
       ">",
       "(principal-construct? 0x1a 0xfa6bf38ed557fe417333710d6033e9419391a320 \"\")"
     ],
-    [
-      "<",
-      "(err (tuple (error_code u2) (value none)))"
-    ],
+    ["<", "(err (tuple (error_code u2) (value none)))"],
     [
       ">",
       "(principal-construct? 0x1a 0xfa6bf38ed557fe417333710d6033e9419391a320 \"foo[\")"
     ],
-    [
-      "<",
-      "(err (tuple (error_code u2) (value none)))"
-    ]
+    ["<", "(err (tuple (error_code u2) (value none)))"]
   ]
 }

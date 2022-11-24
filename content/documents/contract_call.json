@@ -12,21 +12,9 @@
   ],
   "signature": "(contract-call? .contract-name function-name arg0 arg1 ...)",
   "examples": [
-    [
-      ">",
-      ""
-    ],
-    [
-      ";",
-      "instantiate the sample-contracts/tokens.clar contract first!"
-    ],
-    [
-      ">",
-      "(as-contract (contract-call? .tokens mint! u19))"
-    ],
-    [
-      "<",
-      "(ok u19)"
-    ]
+    [">", ""],
+    [";", "instantiate the sample-contracts/tokens.clar contract first!"],
+    [">", "(as-contract (contract-call? .tokens mint! u19))"],
+    ["<", "(ok u19)"]
   ]
 }

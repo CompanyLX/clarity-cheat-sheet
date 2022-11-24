@@ -12,21 +12,9 @@
   ],
   "signature": "(is-ok value)",
   "examples": [
-    [
-      ">",
-      "(is-ok (ok 1))"
-    ],
-    [
-      "<",
-      "true"
-    ],
-    [
-      ">",
-      "(is-ok (err 1))"
-    ],
-    [
-      "<",
-      "false"
-    ]
+    [">", "(is-ok (ok 1))"],
+    ["<", "true"],
+    [">", "(is-ok (err 1))"],
+    ["<", "false"]
   ]
 }

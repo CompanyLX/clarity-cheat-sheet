@@ -13,17 +13,8 @@
   ],
   "signature": "(define-constant name expression)",
   "examples": [
-    [
-      ">",
-      "(define-constant four (+ 2 2))"
-    ],
-    [
-      ">",
-      "(+ 4 four)"
-    ],
-    [
-      "<",
-      "8"
-    ]
+    [">", "(define-constant four (+ 2 2))"],
+    [">", "(+ 4 four)"],
+    ["<", "8"]
   ]
 }

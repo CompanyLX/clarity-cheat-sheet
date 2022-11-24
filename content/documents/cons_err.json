@@ -12,13 +12,7 @@
   ],
   "signature": "(err value)",
   "examples": [
-    [
-      ">",
-      "(err true)"
-    ],
-    [
-      "<",
-      "(err true)"
-    ]
+    [">", "(err true)"],
+    ["<", "(err true)"]
   ]
 }

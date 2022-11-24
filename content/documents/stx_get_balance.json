@@ -13,21 +13,9 @@
   ],
   "signature": "(stx-get-balance owner)",
   "examples": [
-    [
-      ">",
-      "(stx-get-balance 'SZ2J6ZY48GV1EZ5V2V5RB9MP66SW86PYKKQ9H6DPR)"
-    ],
-    [
-      "<",
-      "u0"
-    ],
-    [
-      ">",
-      "(stx-get-balance (as-contract tx-sender))"
-    ],
-    [
-      "<",
-      "u1000"
-    ]
+    [">", "(stx-get-balance 'SZ2J6ZY48GV1EZ5V2V5RB9MP66SW86PYKKQ9H6DPR)"],
+    ["<", "u0"],
+    [">", "(stx-get-balance (as-contract tx-sender))"],
+    ["<", "u1000"]
   ]
 }

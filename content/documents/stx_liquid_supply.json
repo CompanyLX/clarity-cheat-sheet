@@ -1,6 +1,6 @@
 {
   "wip": true,
-  "id": "total_liquid_ustx_keyword",
+  "id": "stx_liquid_supply",
   "name": "stx-liquid-supply",
   "byname": "",
   "input": "",
@@ -11,13 +11,7 @@
     "Returns the total number of micro-STX (uSTX) that are liquid in the system as of this block."
   ],
   "examples": [
-    [
-      ">",
-      "(print stx-liquid-supply)"
-    ],
-    [
-      ";",
-      "Will print out the total number of liquid uSTX"
-    ]
+    [">", "(print stx-liquid-supply)"],
+    [";", "Will print out the total number of liquid uSTX"]
   ]
 }

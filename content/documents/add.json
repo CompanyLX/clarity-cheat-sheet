@@ -2,8 +2,8 @@
   "id": "add",
   "name": "+",
   "byname": "add",
-  "input": "int, ... | uint, ...",
-  "output": "int | uint",
+  "input": "[int, ... | uint, ...]",
+  "output": "[int | uint]",
   "signature": "(+ INPUT-1 INPUT-2 ...)",
   "description": [
     "Adds a variable number of integer inputs and returns the result. In the event of an <u>overflow</u> or <u>underflow</u>, throws a runtime error."

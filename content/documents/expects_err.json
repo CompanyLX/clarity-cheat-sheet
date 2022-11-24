@@ -12,13 +12,7 @@
   ],
   "signature": "(unwrap-err! response-input thrown-value)",
   "examples": [
-    [
-      ">",
-      "(unwrap-err! (err 1) false)"
-    ],
-    [
-      "<",
-      "1"
-    ]
+    [">", "(unwrap-err! (err 1) false)"],
+    ["<", "1"]
   ]
 }

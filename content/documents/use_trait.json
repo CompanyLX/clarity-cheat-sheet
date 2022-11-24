@@ -22,13 +22,7 @@
       ">",
       "(define-public (forward-get-balance (user principal) (contract <token-a-trait>))"
     ],
-    [
-      ">",
-      "(begin"
-    ],
-    [
-      ">",
-      "(ok 1)))"
-    ]
+    [">", "(begin"],
+    [">", "(ok 1)))"]
   ]
 }

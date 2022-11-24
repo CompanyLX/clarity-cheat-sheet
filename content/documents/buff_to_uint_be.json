@@ -13,37 +13,13 @@
   ],
   "signature": "(buff-to-uint-be (buff 16))",
   "examples": [
-    [
-      ">",
-      "(buff-to-uint-be 0x01)"
-    ],
-    [
-      "<",
-      "u1"
-    ],
-    [
-      ">",
-      "(buff-to-uint-be 0x00000000000000000000000000000001)"
-    ],
-    [
-      "<",
-      "u1"
-    ],
-    [
-      ">",
-      "(buff-to-uint-be 0xffffffffffffffffffffffffffffffff)"
-    ],
-    [
-      "<",
-      "u340282366920938463463374607431768211455"
-    ],
-    [
-      ">",
-      "(buff-to-uint-be 0x)"
-    ],
-    [
-      "<",
-      "u0"
-    ]
+    [">", "(buff-to-uint-be 0x01)"],
+    ["<", "u1"],
+    [">", "(buff-to-uint-be 0x00000000000000000000000000000001)"],
+    ["<", "u1"],
+    [">", "(buff-to-uint-be 0xffffffffffffffffffffffffffffffff)"],
+    ["<", "u340282366920938463463374607431768211455"],
+    [">", "(buff-to-uint-be 0x)"],
+    ["<", "u0"]
   ]
 }

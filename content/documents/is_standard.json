@@ -13,45 +13,15 @@
   ],
   "signature": "(is-standard standard-or-contract-principal)",
   "examples": [
-    [
-      ">",
-      "(is-standard 'STB44HYPYAT2BB2QE513NSP81HTMYWBJP02HPGK6)"
-    ],
-    [
-      "<",
-      "true on testnet and false on mainnet"
-    ],
-    [
-      ">",
-      "(is-standard 'STB44HYPYAT2BB2QE513NSP81HTMYWBJP02HPGK6.foo)"
-    ],
-    [
-      "<",
-      "true on testnet and false on mainnet"
-    ],
-    [
-      ">",
-      "(is-standard 'SP3X6QWWETNBZWGBK6DRGTR1KX50S74D3433WDGJY)"
-    ],
-    [
-      "<",
-      "true on mainnet and false on testnet"
-    ],
-    [
-      ">",
-      "(is-standard 'SP3X6QWWETNBZWGBK6DRGTR1KX50S74D3433WDGJY.foo)"
-    ],
-    [
-      "<",
-      "true on mainnet and false on testnet"
-    ],
-    [
-      ">",
-      "(is-standard 'SZ2J6ZY48GV1EZ5V2V5RB9MP66SW86PYKKQ9H6DPR)"
-    ],
-    [
-      "<",
-      "false on both mainnet and testnet"
-    ]
+    [">", "(is-standard 'STB44HYPYAT2BB2QE513NSP81HTMYWBJP02HPGK6)"],
+    ["<", "true on testnet and false on mainnet"],
+    [">", "(is-standard 'STB44HYPYAT2BB2QE513NSP81HTMYWBJP02HPGK6.foo)"],
+    ["<", "true on testnet and false on mainnet"],
+    [">", "(is-standard 'SP3X6QWWETNBZWGBK6DRGTR1KX50S74D3433WDGJY)"],
+    ["<", "true on mainnet and false on testnet"],
+    [">", "(is-standard 'SP3X6QWWETNBZWGBK6DRGTR1KX50S74D3433WDGJY.foo)"],
+    ["<", "true on mainnet and false on testnet"],
+    [">", "(is-standard 'SZ2J6ZY48GV1EZ5V2V5RB9MP66SW86PYKKQ9H6DPR)"],
+    ["<", "false on both mainnet and testnet"]
   ]
 }

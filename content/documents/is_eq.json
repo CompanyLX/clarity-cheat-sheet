@@ -12,45 +12,15 @@
   ],
   "signature": "(is-eq v1 v2...)",
   "examples": [
-    [
-      ">",
-      "(is-eq 1 1)"
-    ],
-    [
-      "<",
-      "true"
-    ],
-    [
-      ">",
-      "(is-eq true false)"
-    ],
-    [
-      "<",
-      "false"
-    ],
-    [
-      ">",
-      "(is-eq \"abc\" 234 234)"
-    ],
-    [
-      ";",
-      "Throws type error"
-    ],
-    [
-      ">",
-      "(is-eq \"abc\" \"abc\")"
-    ],
-    [
-      "<",
-      "true"
-    ],
-    [
-      ">",
-      "(is-eq 0x0102 0x0102)"
-    ],
-    [
-      "<",
-      "true"
-    ]
+    [">", "(is-eq 1 1)"],
+    ["<", "true"],
+    [">", "(is-eq true false)"],
+    ["<", "false"],
+    [">", "(is-eq \"abc\" 234 234)"],
+    [";", "Throws type error"],
+    [">", "(is-eq \"abc\" \"abc\")"],
+    ["<", "true"],
+    [">", "(is-eq 0x0102 0x0102)"],
+    ["<", "true"]
   ]
 }

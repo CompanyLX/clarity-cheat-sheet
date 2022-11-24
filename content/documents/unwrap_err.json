@@ -12,21 +12,9 @@
   ],
   "signature": "(unwrap-err-panic response-input)",
   "examples": [
-    [
-      ">",
-      "(unwrap-err-panic (err 1))"
-    ],
-    [
-      "<",
-      "1"
-    ],
-    [
-      ">",
-      "(unwrap-err-panic (ok 1))"
-    ],
-    [
-      ";",
-      "Throws a runtime exception"
-    ]
+    [">", "(unwrap-err-panic (err 1))"],
+    ["<", "1"],
+    [">", "(unwrap-err-panic (ok 1))"],
+    [";", "Throws a runtime exception"]
   ]
 }

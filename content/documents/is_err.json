@@ -12,21 +12,9 @@
   ],
   "signature": "(is-err value)",
   "examples": [
-    [
-      ">",
-      "(is-err (ok 1))"
-    ],
-    [
-      "<",
-      "false"
-    ],
-    [
-      ">",
-      "(is-err (err 1))"
-    ],
-    [
-      "<",
-      "true"
-    ]
+    [">", "(is-err (ok 1))"],
+    ["<", "false"],
+    [">", "(is-err (err 1))"],
+    ["<", "true"]
   ]
 }

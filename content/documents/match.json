@@ -21,69 +21,24 @@
   "input_type": "(optional A) name expression expression | (response A B) name expression name expression",
   "signature": "(match opt-input some-binding-name some-branch none-branch) | (match-resp input ok-binding-name ok-branch err-binding-name err-branch)",
   "examples": [
-    [
-      ">",
-      "(define-private (add-10 (x (optional int)))"
-    ],
-    [
-      ">",
-      "(match x"
-    ],
-    [
-      ">",
-      "value (+ 10 value)"
-    ],
-    [
-      ">",
-      "10))"
-    ],
-    [
-      ">",
-      "(add-10 (some 5))"
-    ],
-    [
-      "<",
-      "15"
-    ],
-    [
-      ">",
-      "(add-10 none)"
-    ],
-    [
-      "<",
-      "10"
-    ],
+    [">", "(define-private (add-10 (x (optional int)))"],
+    [">", "(match x"],
+    [">", "value (+ 10 value)"],
+    [">", "10))"],
+    [">", "(add-10 (some 5))"],
+    ["<", "15"],
+    [">", "(add-10 none)"],
+    ["<", "10"],
     [
       ">",
       "(define-private (add-or-pass-err (x (response int (string-ascii 10))) (to-add int))"
     ],
-    [
-      ">",
-      "(match x"
-    ],
-    [
-      ">",
-      "value (ok (+ to-add value))"
-    ],
-    [
-      ">",
-      "err-value (err err-value)))"
-    ],
-    [
-      ">",
-      "(add-or-pass-err (ok 5) 20)"
-    ],
-    [
-      "<",
-      "(ok 25)"
-    ],
-    [
-      ">",
-      "(add-or-pass-err (err \"ERROR\") 20)"
-    ],
-    [
-      "<",
-      "(err \"ERROR\")"
-    ]
+    [">", "(match x"],
+    [">", "value (ok (+ to-add value))"],
+    [">", "err-value (err err-value)))"],
+    [">", "(add-or-pass-err (ok 5) 20)"],
+    ["<", "(ok 25)"],
+    [">", "(add-or-pass-err (err \"ERROR\") 20)"],
+    ["<", "(err \"ERROR\")"]
   ]
 }

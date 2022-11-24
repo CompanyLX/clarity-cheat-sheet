@@ -14,17 +14,8 @@
   ],
   "signature": "(define-public (function-name (arg-name-0 arg-type-0) (arg-name-1 arg-type-1) ...) function-body)",
   "examples": [
-    [
-      ">",
-      "(define-public (hello-world (input int))"
-    ],
-    [
-      ">",
-      "(begin (print (+ 2 input))"
-    ],
-    [
-      ">",
-      "(ok input)))"
-    ]
+    [">", "(define-public (hello-world (input int))"],
+    [">", "(begin (print (+ 2 input))"],
+    [">", "(ok input)))"]
   ]
 }

@@ -12,17 +12,8 @@
   ],
   "signature": "(var-get var-name)",
   "examples": [
-    [
-      ">",
-      "(define-data-var cursor int 6)"
-    ],
-    [
-      ">",
-      "(var-get cursor)"
-    ],
-    [
-      "<",
-      "6"
-    ]
+    [">", "(define-data-var cursor int 6)"],
+    [">", "(var-get cursor)"],
+    ["<", "6"]
   ]
 }

@@ -12,29 +12,11 @@
   ],
   "signature": "(is-none value)",
   "examples": [
-    [
-      ">",
-      "(define-map names-map { name: (string-ascii 12) } { id: int })"
-    ],
-    [
-      ">",
-      "(map-set names-map { name: \"blockstack\" } { id: 1337 })"
-    ],
-    [
-      ">",
-      "(is-none (get id (map-get? names-map { name: \"blockstack\" })))"
-    ],
-    [
-      "<",
-      "false"
-    ],
-    [
-      ">",
-      "(is-none (get id (map-get? names-map { name: \"non-existant\" })))"
-    ],
-    [
-      "<",
-      "true"
-    ]
+    [">", "(define-map names-map { name: (string-ascii 12) } { id: int })"],
+    [">", "(map-set names-map { name: \"blockstack\" } { id: 1337 })"],
+    [">", "(is-none (get id (map-get? names-map { name: \"blockstack\" })))"],
+    ["<", "false"],
+    [">", "(is-none (get id (map-get? names-map { name: \"non-existant\" })))"],
+    ["<", "true"]
   ]
 }

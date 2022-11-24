@@ -11,37 +11,13 @@
     "Represents the <u>none</u> option indicating no value for a given optional (analogous to a null value)."
   ],
   "examples": [
-    [
-      ">",
-      "(define-public (only-if-positive (a int))"
-    ],
-    [
-      ">",
-      "(if (> a 0)"
-    ],
-    [
-      ">",
-      "(some a)"
-    ],
-    [
-      ">",
-      "none))"
-    ],
-    [
-      ">",
-      "(only-if-positive 4)"
-    ],
-    [
-      "<",
-      "(some 4)"
-    ],
-    [
-      ">",
-      "(only-if-positive (- 3))"
-    ],
-    [
-      "<",
-      "none"
-    ]
+    [">", "(define-public (only-if-positive (a int))"],
+    [">", "(if (> a 0)"],
+    [">", "(some a)"],
+    [">", "none))"],
+    [">", "(only-if-positive 4)"],
+    ["<", "(some 4)"],
+    [">", "(only-if-positive (- 3))"],
+    ["<", "none"]
   ]
 }

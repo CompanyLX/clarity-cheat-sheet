@@ -14,25 +14,13 @@
   ],
   "signature": "(ft-burn? token-name amount sender)",
   "examples": [
-    [
-      ">",
-      "(define-fungible-token stackaroo)"
-    ],
+    [">", "(define-fungible-token stackaroo)"],
     [
       ">",
       "(ft-mint? stackaroo u100 'SPAXYA5XS51713FDTQ8H94EJ4V579CXMTRNBZKSF)"
     ],
-    [
-      "<",
-      "(ok true)"
-    ],
-    [
-      ">",
-      "(ft-burn? stackaroo u50 'SPAXYA5XS51713FDTQ8H94EJ4V579CXMTRNBZKSF)"
-    ],
-    [
-      "<",
-      "(ok true)"
-    ]
+    ["<", "(ok true)"],
+    [">", "(ft-burn? stackaroo u50 'SPAXYA5XS51713FDTQ8H94EJ4V579CXMTRNBZKSF)"],
+    ["<", "(ok true)"]
   ]
 }

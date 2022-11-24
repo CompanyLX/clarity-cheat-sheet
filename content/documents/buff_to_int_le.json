@@ -13,37 +13,13 @@
   ],
   "signature": "(buff-to-int-le (buff 16))",
   "examples": [
-    [
-      ">",
-      "(buff-to-int-le 0x01)"
-    ],
-    [
-      "<",
-      "1"
-    ],
-    [
-      ">",
-      "(buff-to-int-le 0x01000000000000000000000000000000)"
-    ],
-    [
-      "<",
-      "1"
-    ],
-    [
-      ">",
-      "(buff-to-int-le 0xffffffffffffffffffffffffffffffff)"
-    ],
-    [
-      "<",
-      "-1"
-    ],
-    [
-      ">",
-      "(buff-to-int-le 0x)"
-    ],
-    [
-      "<",
-      "0"
-    ]
+    [">", "(buff-to-int-le 0x01)"],
+    ["<", "1"],
+    [">", "(buff-to-int-le 0x01000000000000000000000000000000)"],
+    ["<", "1"],
+    [">", "(buff-to-int-le 0xffffffffffffffffffffffffffffffff)"],
+    ["<", "-1"],
+    [">", "(buff-to-int-le 0x)"],
+    ["<", "0"]
   ]
 }

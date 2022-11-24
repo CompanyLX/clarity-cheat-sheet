@@ -1,6 +1,6 @@
 {
   "wip": true,
-  "id": "tx_sender_keyword",
+  "id": "tx_sender",
   "name": "tx-sender",
   "byname": "",
   "input": "",
@@ -11,13 +11,7 @@
     "Returns the original sender of the current transaction, or if <i>as-contract</i> was called to modify the sending context, it returns that contract principal."
   ],
   "examples": [
-    [
-      ">",
-      "(print tx-sender)"
-    ],
-    [
-      ";",
-      "Will print out a Stacks address of the transaction sender"
-    ]
+    [">", "(print tx-sender)"],
+    [";", "Will print out a Stacks address of the transaction sender"]
   ]
 }

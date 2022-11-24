@@ -12,29 +12,11 @@
   ],
   "signature": "(map-get? map-name key-tuple)",
   "examples": [
-    [
-      ">",
-      "(define-map names-map { name: (string-ascii 10) } { id: int })"
-    ],
-    [
-      ">",
-      "(map-set names-map { name: \"blockstack\" } { id: 1337 })"
-    ],
-    [
-      ">",
-      "(map-get? names-map (tuple (name \"blockstack\")))"
-    ],
-    [
-      "<",
-      "(some (tuple (id 1337)))"
-    ],
-    [
-      ">",
-      "(map-get? names-map { name: \"blockstack\" })"
-    ],
-    [
-      ";",
-      "Same command, using a shorthand for constructing the tuple"
-    ]
+    [">", "(define-map names-map { name: (string-ascii 10) } { id: int })"],
+    [">", "(map-set names-map { name: \"blockstack\" } { id: 1337 })"],
+    [">", "(map-get? names-map (tuple (name \"blockstack\")))"],
+    ["<", "(some (tuple (id 1337)))"],
+    [">", "(map-get? names-map { name: \"blockstack\" })"],
+    [";", "Same command, using a shorthand for constructing the tuple"]
   ]
 }

@@ -15,13 +15,7 @@
   ],
   "signature": "(define-fungible-token token-name <total-supply>)",
   "examples": [
-    [
-      ">",
-      "(define-fungible-token stacks)"
-    ],
-    [
-      ">",
-      "(define-fungible-token limited-supply-stacks u100)"
-    ]
+    [">", "(define-fungible-token stacks)"],
+    [">", "(define-fungible-token limited-supply-stacks u100)"]
   ]
 }

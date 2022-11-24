@@ -4,7 +4,8 @@
   "description": "Clarity Smart Contract Language Cheat Sheet",
   "main": "index.js",
   "scripts": {
-    "build": "node index.js"
+    "build": "node index.js",
+    "pretty": "prettier --write \"./content/**/*.json\""
   },
   "repository": {
     "type": "git",
@@ -31,5 +32,8 @@
   "dependencies": {
     "handlebars": "^4.7.7",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.0"
   }
 }

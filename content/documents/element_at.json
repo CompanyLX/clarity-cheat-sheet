@@ -12,45 +12,15 @@
   ],
   "signature": "(element-at? sequence index)",
   "examples": [
-    [
-      ">",
-      "(element-at? \"blockstack\" u5)"
-    ],
-    [
-      "<",
-      "(some \"s\")"
-    ],
-    [
-      ">",
-      "(element-at? (list 1 2 3 4 5) u5)"
-    ],
-    [
-      "<",
-      "none"
-    ],
-    [
-      ">",
-      "(element-at? (list 1 2 3 4 5) (+ u1 u2))"
-    ],
-    [
-      "<",
-      "(some 4)"
-    ],
-    [
-      ">",
-      "(element-at? \"abcd\" u1)"
-    ],
-    [
-      "<",
-      "(some \"b\")"
-    ],
-    [
-      ">",
-      "(element-at? 0xfb01 u1)"
-    ],
-    [
-      "<",
-      "(some 0x01)"
-    ]
+    [">", "(element-at? \"blockstack\" u5)"],
+    ["<", "(some \"s\")"],
+    [">", "(element-at? (list 1 2 3 4 5) u5)"],
+    ["<", "none"],
+    [">", "(element-at? (list 1 2 3 4 5) (+ u1 u2))"],
+    ["<", "(some 4)"],
+    [">", "(element-at? \"abcd\" u1)"],
+    ["<", "(some \"b\")"],
+    [">", "(element-at? 0xfb01 u1)"],
+    ["<", "(some 0x01)"]
   ]
 }

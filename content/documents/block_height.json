@@ -11,13 +11,7 @@
     "Returns the current block height of the Stacks blockchain as an uint"
   ],
   "examples": [
-    [
-      ">",
-      "(> block-height 1000)"
-    ],
-    [
-      "<",
-      "true if the current block-height has passed 1000 blocks."
-    ]
+    [">", "(> block-height 1000)"],
+    ["<", "true if the current block-height has passed 1000 blocks."]
   ]
 }

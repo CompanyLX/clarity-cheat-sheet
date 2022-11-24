@@ -12,33 +12,12 @@
   ],
   "signature": "(var-set var-name expr1)",
   "examples": [
-    [
-      ">",
-      "(define-data-var cursor int 6)"
-    ],
-    [
-      ">",
-      "(var-get cursor)"
-    ],
-    [
-      "<",
-      "6"
-    ],
-    [
-      ">",
-      "(var-set cursor (+ (var-get cursor) 1))"
-    ],
-    [
-      "<",
-      "true"
-    ],
-    [
-      ">",
-      "(var-get cursor)"
-    ],
-    [
-      "<",
-      "7"
-    ]
+    [">", "(define-data-var cursor int 6)"],
+    [">", "(var-get cursor)"],
+    ["<", "6"],
+    [">", "(var-set cursor (+ (var-get cursor) 1))"],
+    ["<", "true"],
+    [">", "(var-get cursor)"],
+    ["<", "7"]
   ]
 }

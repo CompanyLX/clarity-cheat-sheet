@@ -13,10 +13,5 @@
     "Assets defined using <i>define-non-fungible-token</i> may be used in <i>nft-transfer?</i>, <i>nft-mint?</i>, and <i>nft-get-owner?</i> functions"
   ],
   "signature": "(define-non-fungible-token asset-name asset-identifier-type)",
-  "examples": [
-    [
-      ">",
-      "(define-non-fungible-token names (buff 50))"
-    ]
-  ]
+  "examples": [[">", "(define-non-fungible-token names (buff 50))"]]
 }

@@ -1,40 +1,23 @@
 {
-  "wip": true,
   "id": "div",
   "name": "/",
-  "byname": "",
-  "input": "",
-  "output": "",
-  "signature": "",
-  "since": 2.1,
+  "byname": "divide",
+  "input": "[int, ... | uint, ...]",
+  "output": "[int | uint]",
+  "signature": "(/ INPUT-1 INPUT-2 ...)",
   "description": [
     "Integer divides a variable number of integer inputs and returns the result. In the event of division by zero, throws a runtime error."
   ],
-  "signature": "(/ i1 i2...)",
   "examples": [
-    [
-      ">",
-      "(/ 2 3)"
-    ],
-    [
-      "<",
-      "0"
-    ],
-    [
-      ">",
-      "(/ 5 2)"
-    ],
-    [
-      "<",
-      "2"
-    ],
-    [
-      ">",
-      "(/ 4 2 2)"
-    ],
-    [
-      "<",
-      "1"
-    ]
+    [">", "(/ 2 3)"],
+    ["<", "0"],
+    [">", "(/ 5 2)"],
+    ["<", "2"],
+    [">", "(/ 4 2 2)"],
+    ["<", "1"],
+    [">", "(/ 0 9)"],
+    ["<", "0"],
+    [">", "(/ 9 0)"],
+    ["!", ""]
   ]
 }

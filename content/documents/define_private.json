@@ -14,29 +14,11 @@
   ],
   "signature": "(define-private (function-name (arg-name-0 arg-type-0) (arg-name-1 arg-type-1) ...) function-body)",
   "examples": [
-    [
-      ">",
-      "(define-private (max-of (i1 int) (i2 int))"
-    ],
-    [
-      ">",
-      "(if (> i1 i2)"
-    ],
-    [
-      ">",
-      "i1"
-    ],
-    [
-      ">",
-      "i2))"
-    ],
-    [
-      ">",
-      "(max-of 4 6)"
-    ],
-    [
-      "<",
-      "6"
-    ]
+    [">", "(define-private (max-of (i1 int) (i2 int))"],
+    [">", "(if (> i1 i2)"],
+    [">", "i1"],
+    [">", "i2))"],
+    [">", "(max-of 4 6)"],
+    ["<", "6"]
   ]
 }

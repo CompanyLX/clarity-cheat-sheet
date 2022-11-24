@@ -14,13 +14,7 @@
   ],
   "signature": "(define-read-only (function-name (arg-name-0 arg-type-0) (arg-name-1 arg-type-1) ...) function-body)",
   "examples": [
-    [
-      ">",
-      "(define-read-only (just-return-one-hundred)"
-    ],
-    [
-      ">",
-      "(* 10 10))\""
-    ]
+    [">", "(define-read-only (just-return-one-hundred)"],
+    [">", "(* 10 10))\""]
   ]
 }

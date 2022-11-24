@@ -11,10 +11,7 @@
     "Returns the current block height of the underlying burn blockchain as a uint"
   ],
   "examples": [
-    [
-      ">",
-      "(> burn-block-height 1000)"
-    ],
+    [">", "(> burn-block-height 1000)"],
     [
       "<",
       "true if the current height of the underlying burn blockchain has passed 1000 blocks."

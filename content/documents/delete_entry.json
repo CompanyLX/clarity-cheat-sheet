@@ -12,41 +12,14 @@
   ],
   "signature": "(map-delete map-name key-tuple)",
   "examples": [
-    [
-      ">",
-      "(define-map names-map { name: (string-ascii 10) } { id: int })"
-    ],
-    [
-      ">",
-      "(map-insert names-map { name: \"blockstack\" } { id: 1337 })"
-    ],
-    [
-      "<",
-      "true"
-    ],
-    [
-      ">",
-      "(map-delete names-map { name: \"blockstack\" })"
-    ],
-    [
-      "<",
-      "true"
-    ],
-    [
-      ">",
-      "(map-delete names-map { name: \"blockstack\" })"
-    ],
-    [
-      "<",
-      "false"
-    ],
-    [
-      ">",
-      "(map-delete names-map (tuple (name \"blockstack\")))"
-    ],
-    [
-      ";",
-      "Same command, using a shorthand for constructing the tuple"
-    ]
+    [">", "(define-map names-map { name: (string-ascii 10) } { id: int })"],
+    [">", "(map-insert names-map { name: \"blockstack\" } { id: 1337 })"],
+    ["<", "true"],
+    [">", "(map-delete names-map { name: \"blockstack\" })"],
+    ["<", "true"],
+    [">", "(map-delete names-map { name: \"blockstack\" })"],
+    ["<", "false"],
+    [">", "(map-delete names-map (tuple (name \"blockstack\")))"],
+    [";", "Same command, using a shorthand for constructing the tuple"]
   ]
 }

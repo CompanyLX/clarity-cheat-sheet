@@ -13,29 +13,11 @@
   ],
   "signature": "(string-to-int? (string-ascii|string-utf8))",
   "examples": [
-    [
-      ">",
-      "(string-to-int? \"1\")"
-    ],
-    [
-      "<",
-      "(some 1)"
-    ],
-    [
-      ">",
-      "(string-to-int? u\"-1\")"
-    ],
-    [
-      "<",
-      "(some -1)"
-    ],
-    [
-      ">",
-      "(string-to-int? \"a\")"
-    ],
-    [
-      "<",
-      "none"
-    ]
+    [">", "(string-to-int? \"1\")"],
+    ["<", "(some 1)"],
+    [">", "(string-to-int? u\"-1\")"],
+    ["<", "(some -1)"],
+    [">", "(string-to-int? \"a\")"],
+    ["<", "none"]
   ]
 }

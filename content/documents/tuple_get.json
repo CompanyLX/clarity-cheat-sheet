@@ -12,41 +12,14 @@
   ],
   "signature": "(get key-name tuple)",
   "examples": [
-    [
-      ">",
-      "(define-map names-map { name: (string-ascii 12) } { id: int })"
-    ],
-    [
-      ">",
-      "(map-insert names-map { name: \"blockstack\" } { id: 1337 })"
-    ],
-    [
-      "<",
-      "true"
-    ],
-    [
-      ">",
-      "(get id (tuple (name \"blockstack\") (id 1337)))"
-    ],
-    [
-      "<",
-      "1337"
-    ],
-    [
-      ">",
-      "(get id (map-get? names-map (tuple (name \"blockstack\"))))"
-    ],
-    [
-      "<",
-      "(some 1337)"
-    ],
-    [
-      ">",
-      "(get id (map-get? names-map (tuple (name \"non-existent\"))))"
-    ],
-    [
-      "<",
-      "none"
-    ]
+    [">", "(define-map names-map { name: (string-ascii 12) } { id: int })"],
+    [">", "(map-insert names-map { name: \"blockstack\" } { id: 1337 })"],
+    ["<", "true"],
+    [">", "(get id (tuple (name \"blockstack\") (id 1337)))"],
+    ["<", "1337"],
+    [">", "(get id (map-get? names-map (tuple (name \"blockstack\"))))"],
+    ["<", "(some 1337)"],
+    [">", "(get id (map-get? names-map (tuple (name \"non-existent\"))))"],
+    ["<", "none"]
   ]
 }

@@ -14,69 +14,27 @@
   ],
   "signature": "(fold func sequence_A initial_B)",
   "examples": [
-    [
-      ">",
-      "(fold * (list 2 2 2) 1)"
-    ],
-    [
-      "<",
-      "8"
-    ],
-    [
-      ">",
-      "(fold * (list 2 2 2) 0)"
-    ],
-    [
-      "<",
-      "0"
-    ],
-    [
-      ">",
-      ""
-    ],
-    [
-      ";",
-      "calculates (- 11 (- 7 (- 3 2)))"
-    ],
-    [
-      ">",
-      "(fold - (list 3 7 11) 2)"
-    ],
-    [
-      "<",
-      "5"
-    ],
+    [">", "(fold * (list 2 2 2) 1)"],
+    ["<", "8"],
+    [">", "(fold * (list 2 2 2) 0)"],
+    ["<", "0"],
+    [">", ""],
+    [";", "calculates (- 11 (- 7 (- 3 2)))"],
+    [">", "(fold - (list 3 7 11) 2)"],
+    ["<", "5"],
     [
       ">",
       "(define-private (concat-string (a (string-ascii 20)) (b (string-ascii 20))) (unwrap-panic (as-max-len? (concat a b) u20)))"
     ],
-    [
-      ">",
-      "(fold concat-string \"cdef\" \"ab\")"
-    ],
-    [
-      "<",
-      "\"fedcab"
-    ],
-    [
-      ">",
-      "(fold concat-string (list \"cd\" \"ef\") \"ab\")"
-    ],
-    [
-      "<",
-      "\"efcdab"
-    ],
+    [">", "(fold concat-string \"cdef\" \"ab\")"],
+    ["<", "\"fedcab"],
+    [">", "(fold concat-string (list \"cd\" \"ef\") \"ab\")"],
+    ["<", "\"efcdab"],
     [
       ">",
       "(define-private (concat-buff (a (buff 20)) (b (buff 20))) (unwrap-panic (as-max-len? (concat a b) u20)))"
     ],
-    [
-      ">",
-      "(fold concat-buff 0x03040506 0x0102)"
-    ],
-    [
-      "<",
-      "0x060504030102"
-    ]
+    [">", "(fold concat-buff 0x03040506 0x0102)"],
+    ["<", "0x060504030102"]
   ]
 }

@@ -7,26 +7,12 @@
   "output": "",
   "signature": "",
   "since": 2.1,
-  "description": [
-    "Returns the inverse of the boolean input."
-  ],
+  "description": ["Returns the inverse of the boolean input."],
   "signature": "(not b1)",
   "examples": [
-    [
-      ">",
-      "(not true)"
-    ],
-    [
-      "<",
-      "false"
-    ],
-    [
-      ">",
-      "(not (is-eq 1 2))"
-    ],
-    [
-      "<",
-      "true"
-    ]
+    [">", "(not true)"],
+    ["<", "false"],
+    [">", "(not (is-eq 1 2))"],
+    ["<", "true"]
   ]
 }

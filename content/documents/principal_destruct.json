@@ -18,10 +18,7 @@
   ],
   "signature": "(principal-destruct? principal-address)",
   "examples": [
-    [
-      ">",
-      "(principal-destruct? 'STB44HYPYAT2BB2QE513NSP81HTMYWBJP02HPGK6)"
-    ],
+    [">", "(principal-destruct? 'STB44HYPYAT2BB2QE513NSP81HTMYWBJP02HPGK6)"],
     [
       "<",
       "(ok (tuple (hash-bytes 0x164247d6f2b425ac5771423ae6c80c754f7172b0) (name none) (version 0x1a)))"
@@ -34,10 +31,7 @@
       "<",
       "(ok (tuple (hash-bytes 0x164247d6f2b425ac5771423ae6c80c754f7172b0) (name (some \"foo\")) (version 0x1a)))"
     ],
-    [
-      ">",
-      "(principal-destruct? 'SP3X6QWWETNBZWGBK6DRGTR1KX50S74D3433WDGJY)"
-    ],
+    [">", "(principal-destruct? 'SP3X6QWWETNBZWGBK6DRGTR1KX50S74D3433WDGJY)"],
     [
       "<",
       "(err (tuple (hash-bytes 0xfa6bf38ed557fe417333710d6033e9419391a320) (name none) (version 0x16)))"

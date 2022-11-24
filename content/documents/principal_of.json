@@ -17,9 +17,6 @@
       ">",
       "(principal-of? 0x03adb8de4bfb65db2cfd6120d55c6526ae9c52e675db7e47308636534ba7786110)"
     ],
-    [
-      "<",
-      "(ok ST1AW6EKPGT61SQ9FNVDS17RKNWT8ZP582VF9HSCP)"
-    ]
+    ["<", "(ok ST1AW6EKPGT61SQ9FNVDS17RKNWT8ZP582VF9HSCP)"]
   ]
 }

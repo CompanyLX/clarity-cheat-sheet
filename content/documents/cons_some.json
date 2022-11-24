@@ -12,21 +12,9 @@
   ],
   "signature": "(some value)",
   "examples": [
-    [
-      ">",
-      "(some 1)"
-    ],
-    [
-      "<",
-      "(some 1)"
-    ],
-    [
-      ">",
-      "(is-none (some 2))"
-    ],
-    [
-      "<",
-      "false"
-    ]
+    [">", "(some 1)"],
+    ["<", "(some 1)"],
+    [">", "(is-none (some 2))"],
+    ["<", "false"]
   ]
 }

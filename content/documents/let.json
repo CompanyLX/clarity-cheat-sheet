@@ -12,21 +12,12 @@
   ],
   "signature": "(let ((name1 expr1) (name2 expr2) ...) expr-body1 expr-body2 ... expr-body-last)",
   "examples": [
-    [
-      ">",
-      "(let ((a 2) (b (+ 5 6 7))) (print a) (print b) (+ a b))"
-    ],
-    [
-      "<",
-      "20"
-    ],
+    [">", "(let ((a 2) (b (+ 5 6 7))) (print a) (print b) (+ a b))"],
+    ["<", "20"],
     [
       ">",
       "(let ((a 5) (c (+ a 1)) (d (+ c 1)) (b (+ a c d))) (print a) (print b) (+ a b))"
     ],
-    [
-      "<",
-      "23"
-    ]
+    ["<", "23"]
   ]
 }

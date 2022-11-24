@@ -12,53 +12,17 @@
   ],
   "signature": "(slice sequence left-position right-position)",
   "examples": [
-    [
-      ">",
-      "(slice \"blockstack\" u5 u10)"
-    ],
-    [
-      "<",
-      "(some \"stack\")"
-    ],
-    [
-      ">",
-      "(slice (list 1 2 3 4 5) u5 u9)"
-    ],
-    [
-      "<",
-      "none"
-    ],
-    [
-      ">",
-      "(slice (list 1 2 3 4 5) u3 u4)"
-    ],
-    [
-      "<",
-      "(some (4))"
-    ],
-    [
-      ">",
-      "(slice \"abcd\" u1 u3)"
-    ],
-    [
-      "<",
-      "(some \"bc\")"
-    ],
-    [
-      ">",
-      "(slice \"abcd\" u2 u2)"
-    ],
-    [
-      "<",
-      "(some \"\")"
-    ],
-    [
-      ">",
-      "(slice \"abcd\" u3 u1)"
-    ],
-    [
-      "<",
-      "none"
-    ]
+    [">", "(slice \"blockstack\" u5 u10)"],
+    ["<", "(some \"stack\")"],
+    [">", "(slice (list 1 2 3 4 5) u5 u9)"],
+    ["<", "none"],
+    [">", "(slice (list 1 2 3 4 5) u3 u4)"],
+    ["<", "(some (4))"],
+    [">", "(slice \"abcd\" u1 u3)"],
+    ["<", "(some \"bc\")"],
+    [">", "(slice \"abcd\" u2 u2)"],
+    ["<", "(some \"\")"],
+    [">", "(slice \"abcd\" u3 u1)"],
+    ["<", "none"]
   ]
 }

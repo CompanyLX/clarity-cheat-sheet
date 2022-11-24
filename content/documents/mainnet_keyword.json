@@ -11,13 +11,7 @@
     "Returns a boolean indicating whether or not the code is running on the mainnet"
   ],
   "examples": [
-    [
-      ">",
-      "(print is-in-mainnet)"
-    ],
-    [
-      ";",
-      "Will print 'true' if the code is running on the mainnet"
-    ]
+    [">", "(print is-in-mainnet)"],
+    [";", "Will print 'true' if the code is running on the mainnet"]
   ]
 }

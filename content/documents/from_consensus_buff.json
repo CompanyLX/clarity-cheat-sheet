@@ -12,69 +12,27 @@
   ],
   "signature": "(from-consensus-buff type-signature buffer)",
   "examples": [
-    [
-      ">",
-      "(from-consensus-buff int 0x0000000000000000000000000000000001)"
-    ],
-    [
-      "<",
-      "(some 1)"
-    ],
-    [
-      ">",
-      "(from-consensus-buff uint 0x0000000000000000000000000000000001)"
-    ],
-    [
-      "<",
-      "none"
-    ],
-    [
-      ">",
-      "(from-consensus-buff uint 0x0100000000000000000000000000000001)"
-    ],
-    [
-      "<",
-      "(some u1)"
-    ],
-    [
-      ">",
-      "(from-consensus-buff bool 0x0000000000000000000000000000000001)"
-    ],
-    [
-      "<",
-      "none"
-    ],
-    [
-      ">",
-      "(from-consensus-buff bool 0x03)"
-    ],
-    [
-      "<",
-      "(some true)"
-    ],
-    [
-      ">",
-      "(from-consensus-buff bool 0x04)"
-    ],
-    [
-      "<",
-      "(some false)"
-    ],
+    [">", "(from-consensus-buff int 0x0000000000000000000000000000000001)"],
+    ["<", "(some 1)"],
+    [">", "(from-consensus-buff uint 0x0000000000000000000000000000000001)"],
+    ["<", "none"],
+    [">", "(from-consensus-buff uint 0x0100000000000000000000000000000001)"],
+    ["<", "(some u1)"],
+    [">", "(from-consensus-buff bool 0x0000000000000000000000000000000001)"],
+    ["<", "none"],
+    [">", "(from-consensus-buff bool 0x03)"],
+    ["<", "(some true)"],
+    [">", "(from-consensus-buff bool 0x04)"],
+    ["<", "(some false)"],
     [
       ">",
       "(from-consensus-buff principal 0x051fa46ff88886c2ef9762d970b4d2c63678835bd39d)"
     ],
-    [
-      "<",
-      "(some SZ2J6ZY48GV1EZ5V2V5RB9MP66SW86PYKKQ9H6DPR)"
-    ],
+    ["<", "(some SZ2J6ZY48GV1EZ5V2V5RB9MP66SW86PYKKQ9H6DPR)"],
     [
       ">",
       "(from-consensus-buff { abc: int, def: int } 0x0c00000002036162630000000000000000000000000000000003036465660000000000000000000000000000000004)"
     ],
-    [
-      "<",
-      "(some (tuple (abc 3) (def 4)))"
-    ]
+    ["<", "(some (tuple (abc 3) (def 4)))"]
   ]
 }

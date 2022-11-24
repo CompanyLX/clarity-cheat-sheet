@@ -20,17 +20,8 @@
       ">",
       "(define-public (forward-get-balance (user principal) (contract <token-a-trait>))"
     ],
-    [
-      ">",
-      "(begin"
-    ],
-    [
-      ">",
-      "(ok (contract-of contract))))"
-    ],
-    [
-      "<",
-      "the principal of the contract implementing <token-a-trait>"
-    ]
+    [">", "(begin"],
+    [">", "(ok (contract-of contract))))"],
+    ["<", "the principal of the contract implementing <token-a-trait>"]
   ]
 }
