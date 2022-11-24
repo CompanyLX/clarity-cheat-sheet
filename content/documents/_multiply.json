@@ -1,22 +1,30 @@
 {
-  "wip": true,
   "id": "_multiply",
   "name": "*",
   "byname": "Multiply",
-  "input": "",
-  "output": "",
-  "signature": "",
-  "since": 2.1,
+  "input": "[int, ... | uint, ...]",
+  "output": "[int | uint]",
+  "signature": "(* INPUT-1 INPUT-2 ...)",
   "description": [
-    "Multiplies a variable number of integer inputs and returns the result. In the event of an <u>overflow</u>, throws a runtime error."
+    "Multiplies a variable number of integer inputs and returns the result. In the event of an <u>overflow</u> or <u>underflow</u>, throws a runtime error."
   ],
-  "signature": "(* i1 i2...)",
   "examples": [
     [">", "(* 2 3)"],
     ["<", "6"],
+    [">", "(* u2 u3)"],
+    ["<", "u6"],
     [">", "(* 5 2)"],
     ["<", "10"],
+    [">", "(* u5 u3)"],
+    ["<", "u15"],
     [">", "(* 2 2 2)"],
-    ["<", "8"]
+    ["<", "8"],
+    [">", "(* -3 -5 -7 -9)"],
+    ["<", "945"],
+    [">", "(* 4 4 -1)"],
+    ["<", "-16"],
+    [";", "Attempt to multiply diffent types"],
+    [">", "(* u1 1)"],
+    ["!", ""]
   ]
 }
