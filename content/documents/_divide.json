@@ -1,7 +1,7 @@
 {
-  "id": "div",
+  "id": "_divide",
   "name": "/",
-  "byname": "divide",
+  "byname": "Divide",
   "input": "[int, ... | uint, ...]",
   "output": "[int | uint]",
   "signature": "(/ INPUT-1 INPUT-2 ...)",

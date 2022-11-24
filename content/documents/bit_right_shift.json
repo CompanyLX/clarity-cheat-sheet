@@ -1,5 +1,5 @@
 {
-  "id": "bitwise_right_shift",
+  "id": "bit_right_shift",
   "name": "bit-shift-right",
   "input": "int | uint, uint",
   "output": "int | uint",

@@ -1,5 +1,5 @@
 {
-  "id": "bitwise_and",
+  "id": "bit_and",
   "name": "bit-and",
   "input": "int, ... | uint, ...",
   "output": "int | uint",

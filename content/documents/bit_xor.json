@@ -1,5 +1,5 @@
 {
-  "id": "bitwise_xor",
+  "id": "bit_xor",
   "name": "bit-xor",
   "input": "int, ... | uint, ...",
   "output": "int | uint",

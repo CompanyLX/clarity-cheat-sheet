@@ -1,7 +1,7 @@
 {
-  "id": "add",
+  "id": "_add",
   "name": "+",
-  "byname": "add",
+  "byname": "Add",
   "input": "[int, ... | uint, ...]",
   "output": "[int | uint]",
   "signature": "(+ INPUT-1 INPUT-2 ...)",

@@ -1,8 +1,8 @@
 {
   "wip": true,
-  "id": "mul",
+  "id": "_multiply",
   "name": "*",
-  "byname": "",
+  "byname": "Multiply",
   "input": "",
   "output": "",
   "signature": "",

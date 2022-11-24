@@ -1,8 +1,8 @@
 {
   "wip": true,
-  "id": "sub",
+  "id": "_subtract",
   "name": "-",
-  "byname": "",
+  "byname": "Subtract",
   "input": "",
   "output": "",
   "signature": "",
