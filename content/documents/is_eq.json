@@ -5,7 +5,6 @@
   "byname": "",
   "input": "A, A, ...",
   "output": "bool",
-  "signature": "",
   "since": 2.1,
   "description": [
     "Compares the inputted values, returning <i>true</i> if they are all equal. Note that <u>unlike</u> the <i>(and ...)</i> function, <i>(is-eq ...)</i> will <u>not</u> short-circuit. All values supplied to is-eq <u>must</u> be the same type."

@@ -5,7 +5,6 @@
   "byname": "",
   "input": "AssetName, A, principal",
   "output": "(response bool uint)",
-  "signature": "",
   "since": 2.1,
   "description": [
     "<i>nft-burn?</i> is used to burn an asset that the <i>sender</i> principal owns. The asset must have been defined using <i>define-non-fungible-token</i>, and the supplied <i>asset-identifier</i> must be of the same type specified in that definition.",

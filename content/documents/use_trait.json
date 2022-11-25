@@ -5,7 +5,6 @@
   "byname": "",
   "input": "VarName, TraitIdentifier",
   "output": "Not Applicable",
-  "signature": "",
   "since": 2.1,
   "description": [
     "<i>use-trait</i> is used to bring a trait, defined in another contract, to the current contract. Subsequent references to an imported trait are signaled with the syntax <i>&lt;trait-alias&gt;</i>.",

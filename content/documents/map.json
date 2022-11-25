@@ -5,7 +5,6 @@
   "byname": "",
   "input": "Function(A, B, ..., N) -> X, sequence_A, sequence_B, ..., sequence_N",
   "output": "(list X)",
-  "signature": "",
   "since": 2.1,
   "description": [
     "The <i>map</i> function applies the function <i>func</i> to each corresponding element of the input sequences, and outputs a <u>list</u> of the same type containing the outputs from those function applications. Applicable sequence types are <i>(list A)</i>, <i>buff</i>, <i>string-ascii</i> and <i>string-utf8</i>, for which the corresponding element types are, respectively, <i>A</i>, <i>(buff 1)</i>, <i>(string-ascii 1)</i> and <i>(string-utf8 1)</i>. The <i>func</i> argument must be a literal function name. Also, note that, no matter what kind of sequences the inputs are, the output is always a list."

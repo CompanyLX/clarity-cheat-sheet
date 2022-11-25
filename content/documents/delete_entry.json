@@ -5,7 +5,6 @@
   "byname": "",
   "input": "MapName, tuple",
   "output": "bool",
-  "signature": "",
   "since": 2.1,
   "description": [
     "The <i>map-delete</i> function removes the value associated with the input key for the given map. If an item exists and is removed, the function returns <i>true</i>. If a value did not exist for this key in the data map, the function returns <i>false</i>."

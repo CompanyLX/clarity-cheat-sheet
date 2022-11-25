@@ -5,7 +5,6 @@
   "byname": "",
   "input": "(optional A)",
   "output": "bool",
-  "signature": "",
   "since": 2.1,
   "description": [
     "<i>is-none</i> tests a supplied option value, returning <i>true</i> if the option value is <i>(none)</i>, and <i>false</i> if it is a <i>(some ...)</i>."

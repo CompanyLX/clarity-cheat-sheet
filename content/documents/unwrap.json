@@ -5,7 +5,6 @@
   "byname": "",
   "input": "(optional A) | (response A B)",
   "output": "A",
-  "signature": "",
   "since": 2.1,
   "description": [
     "The <i>unwrap</i> function attempts to &quot;unpack&quot; its argument: if the argument is an option type, and the argument is a <i>(some ...)</i> option, this function returns the inner value of the option. If the argument is a response type, and the argument is an <i>(ok ...)</i> response, it returns the inner value of the <i>ok</i>. If the supplied argument is either an <i>(err ...)</i> or a <i>(none)</i> value, <i>unwrap</i> throws a runtime error, aborting any further processing of the current transaction."

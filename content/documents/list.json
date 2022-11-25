@@ -5,7 +5,6 @@
   "byname": "",
   "input": "A, ...",
   "output": "(list A)",
-  "signature": "",
   "since": 2.1,
   "description": [
     "The <i>list</i> function constructs a list composed of the inputted values. Each supplied value must be of the same type."

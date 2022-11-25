@@ -5,7 +5,6 @@
   "byname": "",
   "input": "Function(A) -> bool, sequence_A",
   "output": "sequence_A",
-  "signature": "",
   "since": 2.1,
   "description": [
     "The <i>filter</i> function applies the input function <i>func</i> to each element of the input sequence, and returns the same sequence with any elements removed for which <i>func</i> returned <i>false</i>. Applicable sequence types are <i>(list A)</i>, <i>buff</i>, <i>string-ascii</i> and <i>string-utf8</i>, for which the corresponding element types are, respectively, <i>A</i>, <i>(buff 1)</i>, <i>(string-ascii 1)</i> and <i>(string-utf8 1)</i>. The <i>func</i> argument must be a literal function name."

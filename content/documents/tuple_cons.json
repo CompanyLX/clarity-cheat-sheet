@@ -5,7 +5,6 @@
   "byname": "",
   "input": "(key-name A), (key-name-2 B), ...",
   "output": "(tuple (key-name A) (key-name-2 B) ...)",
-  "signature": "",
   "since": 2.1,
   "description": [
     "The <i>tuple</i> special form constructs a typed tuple from the supplied key and expression pairs. A <i>get</i> function can use typed tuples as input to select specific values from a given tuple. Key names may not appear multiple times in the same tuple definition. Supplied expressions are evaluated and associated with the expressions&quot; paired key name.",

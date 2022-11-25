@@ -5,7 +5,6 @@
   "byname": "",
   "input": "",
   "output": "",
-  "signature": "",
   "since": 2.1,
   "description": [
     "Converts an integer, either <i>int</i> or <i>uint</i>, to a <i>string-ascii</i> string-value representation.",

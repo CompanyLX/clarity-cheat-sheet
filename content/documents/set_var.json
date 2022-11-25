@@ -5,7 +5,6 @@
   "byname": "",
   "input": "VarName, AnyType",
   "output": "bool",
-  "signature": "",
   "since": 2.1,
   "description": [
     "The <i>var-set</i> function sets the value associated with the input variable to the inputted value. The function always returns <i>true</i>."

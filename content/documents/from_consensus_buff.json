@@ -5,7 +5,6 @@
   "byname": "",
   "input": "type-signature(t), buff",
   "output": "(optional t)",
-  "signature": "",
   "since": 2.1,
   "description": [
     "<i>from-consensus-buff</i> is a special function that will deserialize a buffer into a Clarity value, using the SIP-005 serialization of the Clarity value. The type that <i>from-consensus-buff</i> tries to deserialize into is provided by the first parameter to the function. If it fails to deserialize the type, the method returns <i>none</i>."

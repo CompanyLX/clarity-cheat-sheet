@@ -5,7 +5,6 @@
   "byname": "",
   "input": "(buff 33)",
   "output": "(response principal uint)",
-  "signature": "",
   "since": 2.1,
   "description": [
     "The <i>principal-of?</i> function returns the principal derived from the provided public key. If the <i>public-key</i> is invalid, it will return the error code <i>(err u1).</i>.",

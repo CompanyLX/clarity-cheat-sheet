@@ -5,7 +5,6 @@
   "byname": "",
   "input": "BlockInfoPropertyName, uint",
   "output": "(optional buff) | (optional uint)",
-  "signature": "",
   "since": 2.1,
   "description": [
     "The <i>get-block-info?</i> function fetches data for a block of the given <b>Stacks</b> block height. The value and type returned are determined by the specified <i>BlockInfoPropertyName</i>. If the provided <i>block-height</i> does not correspond to an existing block prior to the current block, the function returns <i>none</i>. The currently available property names are as follows:",

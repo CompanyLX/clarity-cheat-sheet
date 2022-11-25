@@ -5,7 +5,6 @@
   "byname": "",
   "input": "AssetName, A",
   "output": "(optional principal)",
-  "signature": "",
   "since": 2.1,
   "description": [
     "<i>nft-get-owner?</i> returns the owner of an asset, identified by <i>asset-identifier</i>, or <i>none</i> if the asset does not exist. The asset type must have been defined using <i>define-non-fungible-token</i>, and the supplied <i>asset-identifier</i> must be of the same type specified in that definition."

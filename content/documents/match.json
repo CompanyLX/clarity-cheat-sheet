@@ -5,7 +5,6 @@
   "byname": "",
   "input": "",
   "output": "C",
-  "signature": "",
   "since": 2.1,
   "description": [
     "The <i>match</i> function is used to test and destructure optional and response types.",

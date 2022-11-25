@@ -5,7 +5,6 @@
   "byname": "",
   "input": "(buff 32), A",
   "output": "A",
-  "signature": "",
   "since": 2.1,
   "description": [
     "The <i>at-block</i> function evaluates the expression <i>expr</i> <u>as if</u> it were evaluated at the end of the block indicated by the <u>block-hash</u> argument. The <i>expr</i> closure must be read-only.",

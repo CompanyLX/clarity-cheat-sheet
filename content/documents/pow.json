@@ -5,7 +5,6 @@
   "byname": "",
   "input": "",
   "output": "",
-  "signature": "",
   "since": 2.1,
   "description": [
     "Returns the result of raising <i>i1</i> to the power of <i>i2</i>. In the event of an <u>overflow</u>, throws a runtime error. Note: Corner cases are handled with the following rules: <b> if both `i1` and `i2` are `0`, return `1` </b> if <i>i1</i> is <i>1</i>, return <i>1</i> <b> if `i1` is `0`, return `0` </b> if <i>i2</i> is <i>1</i>, return <i>i1</i> * if <i>i2</i> is negative or greater than <i>u32::MAX</i>, throw a runtime error"

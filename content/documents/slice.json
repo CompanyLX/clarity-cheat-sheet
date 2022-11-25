@@ -5,7 +5,6 @@
   "byname": "",
   "input": "sequence_A, uint, uint",
   "output": "(optional sequence_A)",
-  "signature": "",
   "since": 2.1,
   "description": [
     "The <i>slice</i> function attempts to return a sub-sequence of that starts at <i>left-position</i> (inclusive), and ends at <i>right-position</i> (non-inclusive). If <i>left_position</i>==<i>right_position</i>, the function returns an empty sequence. If either <i>left_position</i> or <i>right_position</i> are out of bounds OR if <i>right_position</i> is less than <i>left_position</i>, the function returns <i>none</i>."

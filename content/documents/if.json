@@ -5,7 +5,6 @@
   "byname": "",
   "input": "bool, A, A",
   "output": "A",
-  "signature": "",
   "since": 2.1,
   "description": [
     "The <i>if</i> function admits a boolean argument and two expressions which must return the same type. In the case that the boolean input is <i>true</i>, the <i>if</i> function evaluates and returns <i>expr1</i>. If the boolean input is <i>false</i>, the <i>if</i> function evaluates and returns <i>expr2</i>."

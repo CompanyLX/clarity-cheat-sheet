@@ -5,7 +5,6 @@
   "byname": "",
   "input": "((name1 AnyType) (name2 AnyType) ...), AnyType, ... A",
   "output": "A",
-  "signature": "",
   "since": 2.1,
   "description": [
     "The <i>let</i> function accepts a list of <i>variable name</i> and <i>expression</i> pairs, evaluating each expression and <u>binding</u> it to the corresponding variable name. <i>let</i> bindings are sequential: when a <i>let</i> binding is evaluated, it may refer to prior binding. The <u>context</u> created by this set of bindings is used for evaluating its body expressions. The let expression returns the value of the last such body expression. Note: intermediary statements returning a response type must be checked"

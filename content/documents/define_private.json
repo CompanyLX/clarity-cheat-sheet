@@ -5,7 +5,6 @@
   "byname": "",
   "input": "MethodSignature, MethodBody",
   "output": "Not Applicable",
-  "signature": "",
   "since": 2.1,
   "description": [
     "<i>define-private</i> is used to define <u>private</u> functions for a smart contract. Private functions may not be called from other smart contracts, nor may they be invoked directly by users. Instead, these functions may only be invoked by other functions defined in the same smart contract.",

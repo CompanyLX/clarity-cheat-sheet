@@ -5,7 +5,6 @@
   "byname": "",
   "input": "A",
   "output": "A",
-  "signature": "",
   "since": 2.1,
   "description": [
     "The <i>print</i> function evaluates and returns its input expression. On Stacks Core nodes configured for development (as opposed to production mining nodes), this function prints the resulting value to <i>STDOUT</i> (standard output)."

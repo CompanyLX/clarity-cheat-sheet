@@ -5,7 +5,6 @@
   "byname": "",
   "input": "MethodSignature, MethodBody",
   "output": "Not Applicable",
-  "signature": "",
   "since": 2.1,
   "description": [
     "<i>define-constant</i> is used to define a private constant value in a smart contract. The expression passed into the definition is evaluated at contract launch, in the order that it is supplied in the contract. This can lead to undefined function or undefined variable errors in the event that a function or variable used in the expression has not been defined before the constant.",

@@ -5,7 +5,6 @@
   "byname": "",
   "input": "A",
   "output": "(optional A)",
-  "signature": "",
   "since": 2.1,
   "description": [
     "The <i>some</i> function constructs a <i>optional</i> type from the input value."

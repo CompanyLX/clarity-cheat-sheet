@@ -5,7 +5,6 @@
   "byname": "",
   "input": "",
   "output": "principal",
-  "signature": "",
   "since": 2.1,
   "description": [
     "Returns the original sender of the current transaction, or if <i>as-contract</i> was called to modify the sending context, it returns that contract principal."

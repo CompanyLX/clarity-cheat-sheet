@@ -5,7 +5,6 @@
   "byname": "",
   "input": "Function(A, B) -> B, sequence_A, B",
   "output": "B",
-  "signature": "",
   "since": 2.1,
   "description": [
     "The <i>fold</i> function condenses <i>sequence_A</i> into a value of type <i>B</i> by recursively applies the function <i>func</i> to each element of the input sequence <u>and</u> the output of a previous application of <i>func</i>.",

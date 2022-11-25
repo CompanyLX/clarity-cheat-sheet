@@ -5,7 +5,6 @@
   "byname": "",
   "input": "MapName, tuple_A, tuple_B",
   "output": "bool",
-  "signature": "",
   "since": 2.1,
   "description": [
     "The <i>map-insert</i> function sets the value associated with the input key to the inputted value if and only if there is not already a value associated with the key in the map. If an insert occurs, the function returns <i>true</i>. If a value already existed for this key in the data map, the function returns <i>false</i>.",

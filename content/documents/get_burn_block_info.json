@@ -5,7 +5,6 @@
   "byname": "",
   "input": "BurnBlockInfoPropertyName, uint",
   "output": "(optional buff) | (optional (tuple (addrs (list 2 (tuple (hashbytes (buff 32)) (version (buff 1))))) (payout uint)))",
-  "signature": "",
   "since": 2.1,
   "description": [
     "The <i>get-burn-block-info?</i> function fetches data for a block of the given <b>burnchain</b> block height. The value and type returned are determined by the specified <i>BlockInfoPropertyName</i>.  Valid values for <i>block-height</i> only include heights between the burnchain height at the time the Stacks chain was launched, and the last-processed burnchain block.  If the <i>block-height</i> argument falls outside of this range, then <i>none</i> shall be returned.",

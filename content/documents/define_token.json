@@ -5,7 +5,6 @@
   "byname": "",
   "input": "TokenName, <uint>",
   "output": "Not Applicable",
-  "signature": "",
   "since": 2.1,
   "description": [
     "<i>define-fungible-token</i> is used to define a new fungible token class for use in the current contract.",

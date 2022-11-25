@@ -5,7 +5,6 @@
   "byname": "",
   "input": "",
   "output": "bool",
-  "signature": "",
   "since": 2.1,
   "description": [
     "Returns whether or not the code is running in a regression test"

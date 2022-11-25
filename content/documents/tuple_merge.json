@@ -5,7 +5,6 @@
   "byname": "",
   "input": "tuple, tuple",
   "output": "tuple",
-  "signature": "",
   "since": 2.1,
   "description": [
     "The <i>merge</i> function returns a new tuple with the combined fields, without mutating the supplied tuples."

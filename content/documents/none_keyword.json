@@ -5,7 +5,6 @@
   "byname": "",
   "input": "",
   "output": "(optional ?)",
-  "signature": "",
   "since": 2.1,
   "description": [
     "Represents the <u>none</u> option indicating no value for a given optional (analogous to a null value)."
