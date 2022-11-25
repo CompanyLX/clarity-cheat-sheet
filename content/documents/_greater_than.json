@@ -1,16 +1,14 @@
 {
   "wip": true,
-  "id": "greater",
+  "id": "_greater_than",
   "name": ">",
   "byname": "",
   "input": "",
   "output": "",
-  "signature": "",
-  "since": 2.1,
+  "signature": "(> i1 i2)",
   "description": [
     "Compares two integers, returning <i>true</i> if <i>i1</i> is greater than <i>i2</i> and false otherwise. i1 and i2 must be of the same type. Starting with Stacks 1.0, the <i>&gt;</i>-comparable types are <i>int</i> and <i>uint</i>. Starting with Stacks 2.1, the <i>&gt;</i>-comparable types are expanded to include <i>string-ascii</i>, <i>string-utf8</i> and <i>buff</i>."
   ],
-  "signature": "(> i1 i2)",
   "examples": [
     [">", "(> 1 2)"],
     ["<", "false"],

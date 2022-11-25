@@ -1,16 +1,14 @@
 {
   "wip": true,
-  "id": "leq",
+  "id": "_less_than_or_equal_to",
   "name": "<=",
   "byname": "",
   "input": "",
   "output": "",
-  "signature": "",
-  "since": 2.1,
+  "signature": "(<= i1 i2)",
   "description": [
     "Compares two integers, returning true if <i>i1</i> is less than or equal to <i>i2</i> and <i>false</i> otherwise. i1 and i2 must be of the same type. Starting with Stacks 1.0, the <i>&lt;=</i>-comparable types are <i>int</i> and <i>uint</i>. Starting with Stacks 2.1, the <i>&lt;=</i>-comparable types are expanded to include <i>string-ascii</i>, <i>string-utf8</i> and <i>buff</i>."
   ],
-  "signature": "(<= i1 i2)",
   "examples": [
     [">", "(<= 1 1)"],
     ["<", "true"],
