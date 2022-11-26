@@ -1,27 +1,31 @@
 {
-  "wip": true,
   "id": "_greater_than",
   "name": ">",
-  "byname": "",
-  "input": "",
-  "output": "",
-  "signature": "(> i1 i2)",
+  "byname": "Greater than",
+  "input": "[int | uint | buff | string-ascii | string-utf8], [int | uint | buff | string-ascii | string-utf8]",
+  "output": "bool",
+  "signature": "(> INPUT-1 INPUT-2)",
   "changed": 2.1,
   "description": [
-    "Compares two integers, returning <i>true</i> if <i>i1</i> is greater than <i>i2</i> and false otherwise. i1 and i2 must be of the same type. Starting with Stacks 1.0, the <i>&gt;</i>-comparable types are <i>int</i> and <i>uint</i>. Starting with Stacks 2.1, the <i>&gt;</i>-comparable types are expanded to include <i>string-ascii</i>, <i>string-utf8</i> and <i>buff</i>."
+    "Compares two inputs (Inputs must be of the same type), returns <b>true</b> if <i>INPUT-1</i> is greater than <i>INPUT-2</i> and <b>false</b> otherwise.",
+    "Stacks 1.0, the <i>&gt;</i> comparable types are <i>int</i> and <i>uint</i>.",
+    "Stacks 2.1, the <i>&gt;</i> comparable types are expanded to include <i>string-ascii</i>, <i>string-utf8</i> and <i>buff</i>."
   ],
   "examples": [
     [">", "(> 1 2)"],
     ["<", "false"],
     [">", "(> 5 2)"],
     ["<", "true"],
+    [">", "(> u6 u9)"],
+    ["<", "false"],
     [">", "(> \"baa\" \"aaa\")"],
     ["<", "true"],
     [">", "(> \"aaa\" \"aa\")"],
     ["<", "true"],
     [">", "(> 0x02 0x01)"],
     ["<", "true"],
+    [";", "Attempt to compare diffent types"],
     [">", "(> 5 u2)"],
-    [";", "Throws type error"]
+    ["!", ""]
   ]
 }
