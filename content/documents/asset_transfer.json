@@ -1,17 +1,22 @@
 {
-  "wip": true,
   "id": "asset_transfer",
   "name": "nft-transfer?",
-  "input": "AssetName, A, principal, principal",
-  "output": "(response bool uint)",
-  "description": [
-    "<i>nft-transfer?</i> is used to change the owner of an asset identified by <i>asset-identifier</i> from <i>sender</i> to <i>recipient</i>. The <i>asset-class</i> must have been defined by <i>define-non-fungible-token</i> and <i>asset-identifier</i> must be of the type specified in that definition. In contrast to <i>stx-transfer?</i>, any user can transfer the asset. When used, relevant guards need to be added.",
-    "This function returns (ok true) if the transfer is successful. In the event of an unsuccessful transfer it returns one of the following error codes:",
-    "<i>(err u1)</i> -- <i>sender</i> does not own the asset.",
-    "<i>(err u2)</i> -- <i>sender</i> and <i>recipient</i> are the same principal",
-    "<i>(err u3)</i> -- asset identified by asset-identifier does not exist"
+  "inputs": [
+    ["ASSET-CLASS", "CLASS-NAME"],
+    ["ASSET-IDENTIFIER", "ANY-VALUE"],
+    ["SENDER", "principal"],
+    ["RECIPIENT", "principal"]
   ],
-  "signature": "(nft-transfer? asset-class asset-identifier sender recipient)",
+  "output": "(response [bool | uint])",
+  "signature": "(nft-transfer? ASSET-CLASS ASSET-IDENTIFIER SENDER RECIPIENT)",
+  "description": [
+    "<i>nft-transfer?</i> is used to change the owner of an asset identified by <i>ASSET-IDENTIFIER</i> from <i>SENDER</i> to <i>RECIPIENT</i>. The <i>ASSET-CLASS</i> must have been defined by <i>define-non-fungible-token</i> and <i>ASSET-IDENTIFIER</i> must be of the type specified in that definition. In contrast to <i>stx-transfer?</i>, any user can transfer the asset. When used, relevant guards need to be added.",
+    "This function returns (ok true) if the transfer is successful.",
+    "In the event of an unsuccessful transfer it returns one of the following error codes:",
+    "<i>(err u1)</i> : <i>SENDER</i> does not own the asset.",
+    "<i>(err u2)</i> : <i>SENDER</i> and <i>RECIPIENT</i> are the same principal.",
+    "<i>(err u3)</i> : asset identified by <i>ASSET-IDENTIFIER</i> does not exist."
+  ],
   "examples": [
     [">", "(define-non-fungible-token stackaroo (string-ascii 40))"],
     [
