@@ -2,14 +2,14 @@
   "wip": true,
   "id": "asset_transfer",
   "name": "nft-transfer?",
-  "byname": "",
   "input": "AssetName, A, principal, principal",
   "output": "(response bool uint)",
-  "since": 2.1,
   "description": [
     "<i>nft-transfer?</i> is used to change the owner of an asset identified by <i>asset-identifier</i> from <i>sender</i> to <i>recipient</i>. The <i>asset-class</i> must have been defined by <i>define-non-fungible-token</i> and <i>asset-identifier</i> must be of the type specified in that definition. In contrast to <i>stx-transfer?</i>, any user can transfer the asset. When used, relevant guards need to be added.",
     "This function returns (ok true) if the transfer is successful. In the event of an unsuccessful transfer it returns one of the following error codes:",
-    "<i>(err u1)</i> -- <i>sender</i> does not own the asset <i>(err u2)</i> -- <i>sender</i> and <i>recipient</i> are the same principal <i>(err u3)</i> -- asset identified by asset-identifier does not exist"
+    "<i>(err u1)</i> -- <i>sender</i> does not own the asset.",
+    "<i>(err u2)</i> -- <i>sender</i> and <i>recipient</i> are the same principal",
+    "<i>(err u3)</i> -- asset identified by asset-identifier does not exist"
   ],
   "signature": "(nft-transfer? asset-class asset-identifier sender recipient)",
   "examples": [
