@@ -1,8 +1,8 @@
 {
   "id": "asserts_max_len",
   "name": "as-max-len?",
-  "input": "(buff | string-ascii | string-utf8 | list), uint",
-  "output": "(optional INPUT-1) | none",
+  "input": "[buff | string-ascii | string-utf8 | list], uint",
+  "output": "[(optional INPUT-1) | none]",
   "signature": "(as-max-len? INPUT-1 INPUT-2)",
   "description": [
     "The <i>as-max-len?</i> function takes a sequence argument and an unsigned integer value, literal length argument. The function returns an optional type. If the input sequence length is less than or equal to the supplied <b>INPUT-2</b>, this returns <i>(some sequence)</i>, otherwise it returns <i>none</i>."
