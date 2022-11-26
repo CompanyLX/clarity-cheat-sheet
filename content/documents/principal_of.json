@@ -5,7 +5,7 @@
   "byname": "",
   "input": "(buff 33)",
   "output": "(response principal uint)",
-  "changed_since": 2.1,
+  "changed": 2.1,
   "description": [
     "The <i>principal-of?</i> function returns the principal derived from the provided public key. If the <i>public-key</i> is invalid, it will return the error code <i>(err u1).</i>.",
     "Note: Before Stacks 2.1, this function has a bug, in that the principal returned would always be a testnet single-signature principal, even if the function were run on the mainnet. Starting with Stacks 2.1, this bug is fixed, so that this function will return a principal suited to the network it is called on. In particular, if this is called on the mainnet, it will return a single-signature mainnet principal."
