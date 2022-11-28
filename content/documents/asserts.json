@@ -5,7 +5,7 @@
     ["BOOLEAN-EXPRESSION", "bool"],
     ["THROWN-VALUE", "ANY-TYPE"]
   ],
-  "output": "[bool | THROWN-VALUE]",
+  "output": "bool | THROWN-VALUE",
   "signature": "(asserts! BOOLEAN-EXPRESSION THROWN-VALUE)",
   "description": [
     "The <i>asserts!</i> function admits a boolean argument and asserts its evaluation: if bool expression is <b>true</b>, <i>asserts!</i> returns <b>true</b> and proceeds in the program execution. If the supplied argument is returning a false value, <i>asserts!</i> <u>throws</u> <b>THROWN-VALUE</b> and exits the current control-flow."
