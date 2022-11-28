@@ -1,15 +1,18 @@
 {
-  "wip": true,
   "id": "begin",
   "name": "begin",
-  "byname": "",
-  "input": "AnyType, ... A",
-  "output": "A",
-  "since": 2.1,
-  "description": [
-    "The <i>begin</i> function evaluates each of its input expressions, returning the return value of the last such expression. Note: intermediary statements returning a response type must be checked."
+  "inputs": [
+    ["EXPRESSION-1", "ANY-EXPRESSION"],
+    ["EXPRESSION-2", "ANY-EXPRESSION"],
+    ["...", "ANY-EXPRESSION"],
+    ["EXPRESSION-N", "ANY-EXPRESSION"]
   ],
-  "signature": "(begin expr1 expr2 expr3 ... expr-last)",
+  "output": "ANY-VALUE",
+  "signature": "(begin EXPRESSION-1 EXPRESSION-2 ... EXPRESSION-N)",
+  "description": [
+    "The <i>begin</i> function evaluates each of its input expressions, returning the return value of the last such expression.",
+    "Note: intermediary statements returning a response type must be checked."
+  ],
   "examples": [
     [">", "(begin (+ 1 2) 4 5)"],
     ["<", "5"]
