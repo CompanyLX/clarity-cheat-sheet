@@ -1,6 +1,6 @@
 {
   "wip": true,
-  "id": "burn_token",
+  "id": "ft_burn",
   "name": "ft-burn?",
   "byname": "",
   "input": "TokenName, uint, principal",

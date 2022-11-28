@@ -1,6 +1,6 @@
 {
   "wip": true,
-  "id": "unwrap",
+  "id": "unwrap_panic",
   "name": "unwrap-panic",
   "byname": "",
   "input": "(optional A) | (response A B)",

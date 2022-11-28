@@ -1,6 +1,6 @@
 {
   "wip": true,
-  "id": "define_token",
+  "id": "define_fungible_token",
   "name": "define-fungible-token",
   "byname": "",
   "input": "TokenName, <uint>",
