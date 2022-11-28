@@ -1,6 +1,6 @@
 {
   "wip": true,
-  "id": "define_asset",
+  "id": "define_non_fungible_token",
   "name": "define-non-fungible-token",
   "byname": "",
   "input": "AssetName, TypeSignature",

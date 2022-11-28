@@ -1,0 +1,30 @@
+{
+  "id": "nft_burn",
+  "name": "nft-burn?",
+  "inputs": [
+    ["ASSET-CLASS", "CLASS-NAME"],
+    ["ASSET-IDENTIFIER", "ANY-VALUE"],
+    ["SENDER", "principal"]
+  ],
+  "output": "(response [bool | uint])",
+  "signature": "(nft-burn? ASSET-CLASS ASSET-IDENTIFIER SENDER)",
+  "description": [
+    "<i>nft-burn?</i> is used to burn an asset that the <b>SENDER</b> principal owns. The asset must have been defined using <i>define-non-fungible-token</i>, and the supplied <b>ASSET-IDENTIFIER</b> must be of the same type specified in that definition.",
+    "On a successful burn, it returns <b>(ok true)</b>. In the event of an unsuccessful burn it returns one of the following error codes:",
+    "<b>(err u1)</b> - <i>SENDER</i> does not own the specified asset",
+    "<b>(err u3)</b> - the asset specified by <b>ASSET-IDENTIFIER</b> does not exist"
+  ],
+  "examples": [
+    [">", "(define-non-fungible-token stackaroo (string-ascii 40))"],
+    [
+      ">",
+      "(nft-mint? stackaroo \"Roo\" 'SPAXYA5XS51713FDTQ8H94EJ4V579CXMTRNBZKSF)"
+    ],
+    ["<", "(ok true)"],
+    [
+      ">",
+      "(nft-burn? stackaroo \"Roo\" 'SPAXYA5XS51713FDTQ8H94EJ4V579CXMTRNBZKSF)"
+    ],
+    ["<", "(ok true)"]
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "wip": true,
-  "id": "get_owner",
+  "id": "nft_get_owner",
   "name": "nft-get-owner?",
   "byname": "",
   "input": "AssetName, A",

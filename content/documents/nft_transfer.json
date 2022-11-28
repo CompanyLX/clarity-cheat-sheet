@@ -1,7 +1,7 @@
 {
-  "id": "asset_transfer",
+  "id": "nft_transfer",
   "name": "nft-transfer?",
-  "inputs": [
+  "inputs": [ 
     ["ASSET-CLASS", "CLASS-NAME"],
     ["ASSET-IDENTIFIER", "ANY-VALUE"],
     ["SENDER", "principal"],
