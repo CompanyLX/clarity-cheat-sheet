@@ -2,15 +2,14 @@
   "wip": true,
   "id": "buff_to_uint_le",
   "name": "buff-to-uint-le",
-  "byname": "",
-  "input": "",
-  "output": "",
+  "input": [["BYTE-BUFFER", "(buff 16)"]],
+  "output": "int",
+  "signature": "(buff-to-uint-le BYTE-BUFFER)",
   "since": 2.1,
   "description": [
     "Converts a byte buffer to an unsigned integer use a little-endian encoding.. The byte buffer can be up to 16 bytes in length. If there are fewer than 16 bytes, as this function uses a little-endian encoding, the input behaves as if it is zero-padded on the <u>right</u>.",
     "Note: This function is only available starting with Stacks 2.1."
   ],
-  "signature": "(buff-to-uint-le (buff 16))",
   "examples": [
     [">", "(buff-to-uint-le 0x01)"],
     ["<", "u1"],

@@ -1,16 +1,13 @@
 {
-  "wip": true,
   "id": "buff_to_int_be",
   "name": "buff-to-int-be",
-  "byname": "",
-  "input": "",
-  "output": "",
+  "input": [["BYTE-BUFFER", "(buff 16)"]],
+  "output": "int",
+  "signature": "(buff-to-int-be BYTE-BUFFER)",
   "since": 2.1,
   "description": [
-    "Converts a byte buffer to a signed integer use a big-endian encoding. The byte buffer can be up to 16 bytes in length. If there are fewer than 16 bytes, as this function uses a big-endian encoding, the input behaves as if it is zero-padded on the <u>left</u>.",
-    "Note: This function is only available starting with Stacks 2.1."
+    "Converts a byte buffer to a signed integer use a big-endian encoding. The byte buffer can be up to 16 bytes in length. If there are fewer than 16 bytes, as this function uses a big-endian encoding, the input behaves as if it is zero-padded on the <u>left</u>."
   ],
-  "signature": "(buff-to-int-be (buff 16))",
   "examples": [
     [">", "(buff-to-int-be 0x01)"],
     ["<", "1"],
