@@ -1,11 +1,16 @@
 {
   "id": "and",
   "name": "and",
-  "input": "bool",
+  "inputs": [
+    ["BOOLEAN-1", "bool"],
+    ["BOOLEAN-2", "bool"],
+    ["...", "bool"],
+    ["BOOLEAN-N", "bool"]
+  ],
   "output": "bool",
   "signature": "(and INPUT-1 INPUT-2 ...)",
   "description": [
-    "One of the logical functions, to determine if all boolean inputs are <b>true</b>.",
+    "One of the logical functions, to determine if all boolean arguments are <b>true</b>.",
     "Importantly, the supplied arguments are evaluated in-order and lazily. Lazy evaluation means that if one of the arguments returns <b>false</b>, the function short-circuits, and no subsequent arguments are evaluated."
   ],
   "examples": [

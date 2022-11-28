@@ -8,7 +8,7 @@
     ["...", "int | uint"],
     ["NUMBER-N", "int | uint"]
   ],
-  "output": "[int | uint]",
+  "output": "int | uint",
   "signature": "(/ NUMBER-1 NUMBER-2 ... NUMBER-N)",
   "description": [
     "Divides a variable number of integer inputs and returns the whole integer of the result. In the event of a <u>division by zero</u>, throws a runtime error."
