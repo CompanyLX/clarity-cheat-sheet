@@ -2,9 +2,14 @@
   "id": "_divide",
   "name": "/",
   "byname": "Divide",
-  "input": "[int, ... | uint, ...]",
+  "inputs": [
+    ["NUMBER-1", "int | uint"],
+    ["NUMBER-2", "int | uint"],
+    ["...", "int | uint"],
+    ["NUMBER-N", "int | uint"]
+  ],
   "output": "[int | uint]",
-  "signature": "(/ INPUT-1 INPUT-2 ...)",
+  "signature": "(/ NUMBER-1 NUMBER-2 ... NUMBER-N)",
   "description": [
     "Divides a variable number of integer inputs and returns the whole integer of the result. In the event of a <u>division by zero</u>, throws a runtime error."
   ],
