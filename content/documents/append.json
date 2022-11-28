@@ -2,10 +2,14 @@
   "id": "append",
   "name": "append",
   "input": "(list ANY-TYPES), ANY-TYPES",
+  "inputs": [
+    ["LIST", "(list ANY-TYPES)"],
+    ["VALUE", "ANY-TYPES"]
+  ],
   "output": "(list ANY-TYPES)",
-  "signature": "(append INPUT-1 INPUT-2)",
+  "signature": "(append LIST VALUE)",
   "description": [
-    "The <i>append</i> function takes a list (<b>INPUT-1</b>), another value (<b>INPUT-2</b>) with the same entry type, adds that value to the end of the list and returns a list of the same type."
+    "The <i>append</i> function takes a <b>LIST</b>, another <b>VALUE</b> with the same entry type, adds that value to the end of the list and returns a list of the same type."
   ],
   "examples": [
     [">", "(append (list 1 2 3 4) 5)"],
