@@ -1,15 +1,15 @@
 {
-  "wip": true,
   "id": "at_block",
   "name": "at-block",
-  "byname": "",
-  "input": "(buff 32), A",
-  "output": "A",
-  "since": 2.1,
+  "inputs": [
+    ["BLOCK-HASH", "(buff 32)"],
+    ["EXPRESSION", "ANY-EXPRESSION"]
+  ],
+  "output": "ANY-VALUE",
   "description": [
-    "The <i>at-block</i> function evaluates the expression <i>expr</i> <u>as if</u> it were evaluated at the end of the block indicated by the <u>block-hash</u> argument. The <i>expr</i> closure must be read-only.",
+    "The <i>at-block</i> function evaluates the <b>EXPRESSION</b> <u>as if</u> it were evaluated at the end of the block indicated by the <b>BLOCK-HASH</b> argument. The <b>EXPRESSION</b> closure must be read-only.",
     "Note: The block identifying hash must be a hash returned by the <i>id-header-hash</i> block information property. This hash uniquely identifies Stacks blocks and is unique across Stacks forks. While the hash returned by <i>header-hash</i> is unique within the context of a single fork, it is not unique across Stacks forks.",
-    "The function returns the result of evaluating <i>expr</i>."
+    "The function returns the result of evaluating <b>EXPRESSION</b>."
   ],
   "signature": "(at-block id-block-hash expr)",
   "examples": [
@@ -19,10 +19,11 @@
       "(at-block 0x0000000000000000000000000000000000000000000000000000000000000000 block-height)"
     ],
     ["<", "u0"],
-    [">", "(at-block (get-block-info? id-header-hash 0) (var-get data))"],
     [
       ";",
-      "Throws NoSuchDataVariable because `data` wasn't initialized at block height 0"
-    ]
+      "Throws NoSuchDataVariable because 'data' wasn't initialized at block height 0"
+    ],
+    [">", "(at-block (get-block-info? id-header-hash 0) (var-get data))"],
+    ["!", ""]
   ]
 }
