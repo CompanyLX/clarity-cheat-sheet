@@ -8,7 +8,7 @@
     ["NUMBER-N", "int | uint"]
   ],
   "output": "int | uint",
-  "signature": "(bit-and NUMBER-1 NUMBER-2 ... NUMBER-N)",
+  "signature": "(bit-or NUMBER-1 NUMBER-2 ... NUMBER-N)",
   "since": 2.1,
   "description": [
     "<i>bit-or</i> is a binary operation, performs the <b>logical OR</b> operation on each pair of the corresponding bits of the integer inputs and return resulting integer."

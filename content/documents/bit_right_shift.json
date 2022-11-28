@@ -2,16 +2,14 @@
   "id": "bit_right_shift",
   "name": "bit-shift-right",
   "inputs": [
-    ["NUMBER-1", "int | uint"],
-    ["NUMBER-2", "int | uint"],
-    ["...", "int | uint"],
-    ["NUMBER-N", "int | uint"]
+    ["NUMBER", "int | uint"],
+    ["SHIFT-AMOUNT", "uint"]
   ],
   "output": "int | uint",
-  "signature": "(bit-and NUMBER-1 NUMBER-2 ... NUMBER-N)",
+  "signature": "(bit-shift-right NUMBER SHIFT-AMOUNT)",
   "since": 2.1,
   "description": [
-    "Shifts all the bits in <i>INPUT-1</i> to the right by the number of places specified in <i>INPUT-2</i> modulo 128 (the bit width of Clarity integers). When <i>INPUT-1</i> is a <i>uint</i> (unsigned integer), new bits are filled with zeros. When <i>INPUT-1</i> is an <i>int</i> (signed integer), the sign is preserved, meaning that new bits are filled with the value of the previous sign-bit.",
+    "Shifts all the bits in <b>NUMBER</b> to the right by the number of places specified in <b>SHIFT-AMOUNT</i> modulo 128 (the bit width of Clarity integers). When <i>INPUT-1</b> is a <i>uint</i> (unsigned integer), new bits are filled with zeros. When <i>INPUT-1</i> is an <i>int</i> (signed integer), the sign is preserved, meaning that new bits are filled with the value of the previous sign-bit.",
     "Note that there is a deliberate choice made to ignore arithmetic overflow for this operation. In use cases where overflow should be detected, developers should use <i>*</i>, <i>/</i>, and <i>pow</i> instead of the shift operators."
   ],
   "example": [

@@ -2,17 +2,15 @@
   "id": "bit_left_shift",
   "name": "bit-shift-left",
   "inputs": [
-    ["NUMBER-1", "int | uint"],
-    ["NUMBER-2", "int | uint"],
-    ["...", "int | uint"],
-    ["NUMBER-N", "int | uint"]
+    ["NUMBER", "int | uint"],
+    ["SHIFT-AMOUNT", "uint"]
   ],
   "output": "int | uint",
-  "signature": "(bit-and NUMBER-1 NUMBER-2 ... NUMBER-N)",
+  "signature": "(bit-shift-left NUMBER SHIFT-AMOUNT)",
   "since": 2.1,
   "description": [
-    "Shifts all the bits in <i>INPUT-1</i> to the left by the number of places specified in <i>INPUT-2</i> modulo 128 (the bit width of Clarity integers).",
-    "Note that there is a deliberate choice made to ignore arithmetic overflow for this operation.  In use cases where overflow should be detected, developers should use <i>*</i>, <i>/</i>, and <i>pow</i> instead of the shift operators."
+    "Shifts all the bits in <b>NUMBER</b> to the left by the number of places specified in <b>SHIFT-AMOUNT</b> modulo 128 (the bit width of Clarity integers).",
+    "Note that there is a deliberate choice made to ignore arithmetic overflow for this operation. In use cases where overflow should be detected, developers should use <i>*</i>, <i>/</i>, and <i>pow</i> instead of the shift operators."
   ],
   "example": [
     [">", "(bit-shift-left 2 u1)"],

@@ -2,16 +2,13 @@
   "id": "bit_not",
   "name": "bit-not",
   "inputs": [
-    ["NUMBER-1", "int | uint"],
-    ["NUMBER-2", "int | uint"],
-    ["...", "int | uint"],
-    ["NUMBER-N", "int | uint"]
+    ["NUMBER", "int | uint"]
   ],
   "output": "int | uint",
-  "signature": "(bit-and NUMBER-1 NUMBER-2 ... NUMBER-N)",
+  "signature": "(bit-not NUMBER)",
   "since": 2.1,
   "description": [
-    "Returns the one&quot;s compliement (sometimes also called the bitwise compliment or not operator) of <i>INPUT-1</i>, effectively reversing the bits in <i>INPUT-1</i>. In other words, every bit that is <i>1</i> in <i>INPUT-1</i> will be <i>0</i> in the result. Conversely, every bit that is <i>0</i> in <i>INPUT-1</i> will be <i>1</i> in the result."
+    "Returns the one&quot;s compliement (sometimes also called the bitwise compliment or not operator) of <i>NUMBER</i>, effectively reversing the bits in <i>NUMBER</i>. In other words, every bit that is <i>1</i> in <i>NUMBER</i> will be <i>0</i> in the result. Conversely, every bit that is <i>0</i> in <i>NUMBER</i> will be <i>1</i> in the result."
   ],
   "example": [
     [">", "(bit-not 3)"],

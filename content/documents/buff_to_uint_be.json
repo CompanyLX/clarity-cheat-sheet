@@ -1,5 +1,4 @@
 {
-  "wip": true,
   "id": "buff_to_uint_be",
   "name": "buff-to-uint-be",
   "input": [["BYTE-BUFFER", "(buff 16)"]],
