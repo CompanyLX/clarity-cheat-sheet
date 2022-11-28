@@ -2,9 +2,14 @@
   "id": "_subtract",
   "name": "-",
   "byname": "Subtract",
-  "input": "[int, ... | uint, ...]",
+  "inputs": [
+    ["NUMBER-1", "int | uint"],
+    ["NUMBER-2", "int | uint"],
+    ["...", "int | uint"],
+    ["NUMBER-N", "int | uint"]
+  ],
   "output": "[int | uint]",
-  "signature": "(- INPUT-1 INPUT-2 ...)",
+  "signature": "(- NUMBER-1 NUMBER-2 ... NUMBER-N)",
   "description": [
     "Subtracts a variable number of integer inputs and returns the result. In the event of an <u>overflow</u> or <u>underflow</u>, throws a runtime error."
   ],
