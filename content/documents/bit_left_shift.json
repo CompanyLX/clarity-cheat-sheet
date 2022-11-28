@@ -1,9 +1,14 @@
 {
   "id": "bit_left_shift",
   "name": "bit-shift-left",
-  "input": "int | uint, uint",
+  "inputs": [
+    ["NUMBER-1", "int | uint"],
+    ["NUMBER-2", "int | uint"],
+    ["...", "int | uint"],
+    ["NUMBER-N", "int | uint"]
+  ],
   "output": "int | uint",
-  "signature": "(bit-shift-left INPUT-1 INPUT-2)",
+  "signature": "(bit-and NUMBER-1 NUMBER-2 ... NUMBER-N)",
   "since": 2.1,
   "description": [
     "Shifts all the bits in <i>INPUT-1</i> to the left by the number of places specified in <i>INPUT-2</i> modulo 128 (the bit width of Clarity integers).",

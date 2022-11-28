@@ -1,9 +1,14 @@
 {
   "id": "bit_and",
   "name": "bit-and",
-  "input": "int, ... | uint, ...",
+  "inputs": [
+    ["NUMBER-1", "int | uint"],
+    ["NUMBER-2", "int | uint"],
+    ["...", "int | uint"],
+    ["NUMBER-N", "int | uint"]
+  ],
   "output": "int | uint",
-  "signature": "(bit-and INPUT-1 INPUT-2 ...)",
+  "signature": "(bit-and NUMBER-1 NUMBER-2 ... NUMBER-N)",
   "since": 2.1,
   "description": [
     "<i>bit-and</i> is a binary operation, performs the <b>logical AND</b> operation on each pair of the corresponding bits of the integer inputs and return resulting integer."

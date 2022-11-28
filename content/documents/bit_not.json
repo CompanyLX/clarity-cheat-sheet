@@ -1,9 +1,14 @@
 {
   "id": "bit_not",
   "name": "bit-not",
-  "input": "int | uint",
+  "inputs": [
+    ["NUMBER-1", "int | uint"],
+    ["NUMBER-2", "int | uint"],
+    ["...", "int | uint"],
+    ["NUMBER-N", "int | uint"]
+  ],
   "output": "int | uint",
-  "signature": "(bit-not INPUT-1)",
+  "signature": "(bit-and NUMBER-1 NUMBER-2 ... NUMBER-N)",
   "since": 2.1,
   "description": [
     "Returns the one&quot;s compliement (sometimes also called the bitwise compliment or not operator) of <i>INPUT-1</i>, effectively reversing the bits in <i>INPUT-1</i>. In other words, every bit that is <i>1</i> in <i>INPUT-1</i> will be <i>0</i> in the result. Conversely, every bit that is <i>0</i> in <i>INPUT-1</i> will be <i>1</i> in the result."
