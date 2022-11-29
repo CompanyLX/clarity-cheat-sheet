@@ -10,7 +10,7 @@
   "signature": "(>= VALUE-1 VALUE-2)",
   "changed": 2.1,
   "description": [
-    "Compares two inputs (Inputs must be of the same type), returns <b>true</b> if <i>VALUE-1</i> is greater than or equal to <i>VALUE-2</i> and <b>false</b> otherwise.",
+    "Compares two arguments (They must be of the same type), returns <b>true</b> if <b>VALUE-1</b> is greater than or equal to <b>VALUE-2</b> and <b>false</b> otherwise.",
     "Stacks 1.0, the <i>&gt;=</i> comparable types are <i>int</i> and <i>uint</i>.",
     "Stacks 2.1, the <i>&gt;=</i> comparable types are expanded to include <i>string-ascii</i>, <i>string-utf8</i> and <i>buff</i>."
   ],
