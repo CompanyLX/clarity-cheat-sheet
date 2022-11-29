@@ -3,7 +3,7 @@
   "id": "false_keyword",
   "name": "false",
   "byname": "",
-  "input": "",
+  "inputs": "",
   "output": "bool",
   "since": 2.1,
   "description": ["Boolean false constant."],

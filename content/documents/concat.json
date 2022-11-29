@@ -1,7 +1,7 @@
 {
   "id": "concat",
   "name": "concat",
-  "input": "[buff | string-ascii | string-utf8 | list], [buff | string-ascii | string-utf8 | list]",
+  "inputs": "[buff | string-ascii | string-utf8 | list], [buff | string-ascii | string-utf8 | list]",
   "output": "[buff | string-ascii | string-utf8 | list]",
   "signature": "(concat INPUT-1 INPUT-1)",
   "description": [

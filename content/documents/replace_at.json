@@ -3,7 +3,7 @@
   "id": "replace_at",
   "name": "replace-at?",
   "byname": "",
-  "input": "sequence_A, uint, A",
+  "inputs": "sequence_A, uint, A",
   "output": "(optional sequence_A)",
   "since": 2.1,
   "description": [

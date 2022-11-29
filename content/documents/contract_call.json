@@ -3,7 +3,7 @@
   "id": "contract_call",
   "name": "contract-call?",
   "byname": "",
-  "input": "ContractName, PublicFunctionName, Arg0, ...",
+  "inputs": "ContractName, PublicFunctionName, Arg0, ...",
   "output": "(response A B)",
   "since": 2.1,
   "description": [

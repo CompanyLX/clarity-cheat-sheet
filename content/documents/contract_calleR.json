@@ -3,7 +3,7 @@
   "id": "contract_caller",
   "name": "contract-caller",
   "byname": "",
-  "input": "",
+  "inputs": "",
   "output": "principal",
   "since": 2.1,
   "description": [

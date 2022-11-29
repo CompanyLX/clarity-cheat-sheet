@@ -3,7 +3,7 @@
   "id": "element_at",
   "name": "element-at?",
   "byname": "",
-  "input": "sequence_A, uint",
+  "inputs": "sequence_A, uint",
   "output": "(optional A)",
   "since": 2.1,
   "description": [

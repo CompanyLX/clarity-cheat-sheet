@@ -3,7 +3,7 @@
   "id": "fold",
   "name": "fold",
   "byname": "",
-  "input": "Function(A, B) -> B, sequence_A, B",
+  "inputs": "Function(A, B) -> B, sequence_A, B",
   "output": "B",
   "since": 2.1,
   "description": [

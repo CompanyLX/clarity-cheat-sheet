@@ -3,7 +3,7 @@
   "id": "is_in_regtest",
   "name": "is-in-regtest",
   "byname": "",
-  "input": "",
+  "inputs": "",
   "output": "bool",
   "since": 2.1,
   "description": [

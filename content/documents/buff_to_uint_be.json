@@ -1,7 +1,7 @@
 {
   "id": "buff_to_uint_be",
   "name": "buff-to-uint-be",
-  "input": [["BYTE-BUFFER", "(buff 16)"]],
+  "inputs": [["BYTE-BUFFER", "(buff 16)"]],
   "output": "int",
   "signature": "(buff-to-uint-be BYTE-BUFFER)",
   "since": 2.1,

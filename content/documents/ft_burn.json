@@ -3,7 +3,7 @@
   "id": "ft_burn",
   "name": "ft-burn?",
   "byname": "",
-  "input": "TokenName, uint, principal",
+  "inputs": "TokenName, uint, principal",
   "output": "(response bool uint)",
   "since": 2.1,
   "description": [

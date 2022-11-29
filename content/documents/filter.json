@@ -3,7 +3,7 @@
   "id": "filter",
   "name": "filter",
   "byname": "",
-  "input": "Function(A) -> bool, sequence_A",
+  "inputs": "Function(A) -> bool, sequence_A",
   "output": "sequence_A",
   "since": 2.1,
   "description": [

@@ -1,9 +1,10 @@
 {
   "name": "",
   "byname": "",
-  "input": "",
+  "inputs": [],
   "output": "",
   "since": 2.1,
+  "changed": 2.1,
   "description": [""],
   "examples": [
     [">", ""],

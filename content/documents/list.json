@@ -3,7 +3,7 @@
   "id": "list",
   "name": "list",
   "byname": "",
-  "input": "A, ...",
+  "inputs": "A, ...",
   "output": "(list A)",
   "since": 2.1,
   "description": [

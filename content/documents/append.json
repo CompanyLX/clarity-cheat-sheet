@@ -1,7 +1,7 @@
 {
   "id": "append",
   "name": "append",
-  "input": "(list ANY-TYPES), ANY-TYPES",
+  "inputs": "(list ANY-TYPES), ANY-TYPES",
   "inputs": [
     ["LIST", "(list ANY-TYPES)"],
     ["VALUE", "ANY-TYPES"]

@@ -3,7 +3,7 @@
   "id": "let",
   "name": "let",
   "byname": "",
-  "input": "((name1 AnyType) (name2 AnyType) ...), AnyType, ... A",
+  "inputs": "((name1 AnyType) (name2 AnyType) ...), AnyType, ... A",
   "output": "A",
   "since": 2.1,
   "description": [

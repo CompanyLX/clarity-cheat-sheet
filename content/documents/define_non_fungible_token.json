@@ -3,7 +3,7 @@
   "id": "define_non_fungible_token",
   "name": "define-non-fungible-token",
   "byname": "",
-  "input": "AssetName, TypeSignature",
+  "inputs": "AssetName, TypeSignature",
   "output": "Not Applicable",
   "since": 2.1,
   "description": [

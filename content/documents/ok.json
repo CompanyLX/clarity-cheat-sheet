@@ -3,7 +3,7 @@
   "id": "ok",
   "name": "ok",
   "byname": "",
-  "input": "A",
+  "inputs": "A",
   "output": "(response A B)",
   "since": 2.1,
   "description": [

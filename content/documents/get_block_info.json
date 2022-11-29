@@ -3,7 +3,7 @@
   "id": "get_block_info",
   "name": "get-block-info?",
   "byname": "",
-  "input": "BlockInfoPropertyName, uint",
+  "inputs": "BlockInfoPropertyName, uint",
   "output": "(optional buff) | (optional uint)",
   "since": 2.1,
   "description": [

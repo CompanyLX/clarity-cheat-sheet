@@ -3,7 +3,7 @@
   "id": "nft_get_owner",
   "name": "nft-get-owner?",
   "byname": "",
-  "input": "AssetName, A",
+  "inputs": "AssetName, A",
   "output": "(optional principal)",
   "since": 2.1,
   "description": [

@@ -3,7 +3,7 @@
   "id": "use_trait",
   "name": "use-trait",
   "byname": "",
-  "input": "VarName, TraitIdentifier",
+  "inputs": "VarName, TraitIdentifier",
   "output": "Not Applicable",
   "since": 2.1,
   "description": [

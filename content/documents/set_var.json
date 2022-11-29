@@ -3,7 +3,7 @@
   "id": "set_var",
   "name": "var-set",
   "byname": "",
-  "input": "VarName, AnyType",
+  "inputs": "VarName, AnyType",
   "output": "bool",
   "since": 2.1,
   "description": [

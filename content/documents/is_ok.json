@@ -3,7 +3,7 @@
   "id": "is_ok",
   "name": "is-ok",
   "byname": "",
-  "input": "(response A B)",
+  "inputs": "(response A B)",
   "output": "bool",
   "since": 2.1,
   "description": [

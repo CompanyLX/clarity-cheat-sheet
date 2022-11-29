@@ -3,7 +3,7 @@
   "id": "mainnet_keyword",
   "name": "is-in-mainnet",
   "byname": "",
-  "input": "",
+  "inputs": "",
   "output": "bool",
   "since": 2.1,
   "description": [

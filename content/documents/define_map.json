@@ -3,7 +3,7 @@
   "id": "define_map",
   "name": "define-map",
   "byname": "",
-  "input": "MapName, TypeDefinition, TypeDefinition",
+  "inputs": "MapName, TypeDefinition, TypeDefinition",
   "output": "Not Applicable",
   "since": 2.1,
   "description": [

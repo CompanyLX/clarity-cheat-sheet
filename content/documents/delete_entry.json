@@ -3,7 +3,7 @@
   "id": "delete_entry",
   "name": "map-delete",
   "byname": "",
-  "input": "MapName, tuple",
+  "inputs": "MapName, tuple",
   "output": "bool",
   "since": 2.1,
   "description": [

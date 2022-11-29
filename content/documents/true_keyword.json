@@ -3,7 +3,7 @@
   "id": "true_keyword",
   "name": "true",
   "byname": "",
-  "input": "",
+  "inputs": "",
   "output": "bool",
   "since": 2.1,
   "description": ["Boolean true constant."],

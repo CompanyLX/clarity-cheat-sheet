@@ -3,7 +3,7 @@
   "id": "get_balance",
   "name": "ft-get-balance",
   "byname": "",
-  "input": "TokenName, principal",
+  "inputs": "TokenName, principal",
   "output": "uint",
   "since": 2.1,
   "description": [

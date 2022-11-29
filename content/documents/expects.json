@@ -3,7 +3,7 @@
   "id": "expects",
   "name": "unwrap!",
   "byname": "",
-  "input": "(optional A) | (response A B), C",
+  "inputs": "(optional A) | (response A B), C",
   "output": "A",
   "since": 2.1,
   "description": [

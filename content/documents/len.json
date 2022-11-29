@@ -3,7 +3,7 @@
   "id": "len",
   "name": "len",
   "byname": "",
-  "input": "sequence_A",
+  "inputs": "sequence_A",
   "output": "uint",
   "since": 2.1,
   "description": [

@@ -3,7 +3,7 @@
   "id": "get_token_supply",
   "name": "ft-get-supply",
   "byname": "",
-  "input": "TokenName",
+  "inputs": "TokenName",
   "output": "uint",
   "since": 2.1,
   "description": [

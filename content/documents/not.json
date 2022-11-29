@@ -3,7 +3,7 @@
   "id": "not",
   "name": "not",
   "byname": "",
-  "input": "",
+  "inputs": "",
   "output": "",
   "since": 2.1,
   "description": ["Returns the inverse of the boolean input."],

@@ -3,7 +3,7 @@
   "id": "print",
   "name": "print",
   "byname": "",
-  "input": "A",
+  "inputs": "A",
   "output": "A",
   "since": 2.1,
   "description": [

@@ -3,7 +3,7 @@
   "id": "try",
   "name": "try!",
   "byname": "",
-  "input": "(optional A) | (response A B)",
+  "inputs": "(optional A) | (response A B)",
   "output": "A",
   "since": 2.1,
   "description": [

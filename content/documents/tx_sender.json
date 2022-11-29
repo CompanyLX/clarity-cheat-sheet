@@ -3,7 +3,7 @@
   "id": "tx_sender",
   "name": "tx-sender",
   "byname": "",
-  "input": "",
+  "inputs": "",
   "output": "principal",
   "since": 2.1,
   "description": [

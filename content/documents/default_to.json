@@ -3,7 +3,7 @@
   "id": "default_to",
   "name": "default-to",
   "byname": "",
-  "input": "A, (optional A)",
+  "inputs": "A, (optional A)",
   "output": "A",
   "since": 2.1,
   "description": [

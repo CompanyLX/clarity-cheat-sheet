@@ -3,7 +3,7 @@
   "id": "equals",
   "name": "is-eq",
   "byname": "",
-  "input": "A, A, ...",
+  "inputs": "A, A, ...",
   "output": "bool",
   "since": 2.1,
   "description": [

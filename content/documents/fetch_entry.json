@@ -3,7 +3,7 @@
   "id": "fetch_entry",
   "name": "map-get?",
   "byname": "",
-  "input": "MapName, tuple",
+  "inputs": "MapName, tuple",
   "output": "(optional (tuple))",
   "since": 2.1,
   "description": [

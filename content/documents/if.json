@@ -3,7 +3,7 @@
   "id": "if",
   "name": "if",
   "byname": "",
-  "input": "bool, A, A",
+  "inputs": "bool, A, A",
   "output": "A",
   "since": 2.1,
   "description": [

@@ -3,7 +3,7 @@
   "id": "define_trait",
   "name": "define-trait",
   "byname": "",
-  "input": "VarName, [MethodSignature]",
+  "inputs": "VarName, [MethodSignature]",
   "output": "Not Applicable",
   "signature": "(define-trait trait-name ((func1-name (arg1-type arg2-type ...) (return-type))))",
   "since": 2.1,

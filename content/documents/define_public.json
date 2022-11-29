@@ -3,7 +3,7 @@
   "id": "define_public",
   "name": "define-public",
   "byname": "",
-  "input": "MethodSignature, MethodBody",
+  "inputs": "MethodSignature, MethodBody",
   "output": "Not Applicable",
   "since": 2.1,
   "description": [

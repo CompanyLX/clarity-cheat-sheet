@@ -3,7 +3,7 @@
   "id": "stx_liquid_supply",
   "name": "stx-liquid-supply",
   "byname": "",
-  "input": "",
+  "inputs": "",
   "output": "uint",
   "since": 2.1,
   "description": [

@@ -1,7 +1,6 @@
 {
   "id": "block_height",
   "name": "block-height",
-  "input": [],
   "output": "uint",
   "description": [
     "Returns the current block height of the Stacks blockchain as an unsigned integer."

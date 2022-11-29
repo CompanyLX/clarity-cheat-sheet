@@ -3,7 +3,7 @@
   "id": "impl_trait",
   "name": "impl-trait",
   "byname": "",
-  "input": "TraitIdentifier",
+  "inputs": "TraitIdentifier",
   "output": "Not Applicable",
   "since": 2.1,
   "description": [

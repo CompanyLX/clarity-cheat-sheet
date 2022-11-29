@@ -3,7 +3,7 @@
   "id": "token_transfer",
   "name": "ft-transfer?",
   "byname": "",
-  "input": "TokenName, uint, principal, principal",
+  "inputs": "TokenName, uint, principal, principal",
   "output": "(response bool uint)",
   "since": 2.1,
   "description": [

@@ -3,7 +3,7 @@
   "id": "map",
   "name": "map",
   "byname": "",
-  "input": "Function(A, B, ..., N) -> X, sequence_A, sequence_B, ..., sequence_N",
+  "inputs": "Function(A, B, ..., N) -> X, sequence_A, sequence_B, ..., sequence_N",
   "output": "(list X)",
   "since": 2.1,
   "description": [

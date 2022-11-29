@@ -3,7 +3,7 @@
   "id": "set_entry",
   "name": "map-set",
   "byname": "",
-  "input": "MapName, tuple_A, tuple_B",
+  "inputs": "MapName, tuple_A, tuple_B",
   "output": "bool",
   "since": 2.1,
   "description": [

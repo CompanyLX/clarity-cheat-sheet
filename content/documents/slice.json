@@ -3,7 +3,7 @@
   "id": "slice",
   "name": "slice",
   "byname": "",
-  "input": "sequence_A, uint, uint",
+  "inputs": "sequence_A, uint, uint",
   "output": "(optional sequence_A)",
   "since": 2.1,
   "description": [

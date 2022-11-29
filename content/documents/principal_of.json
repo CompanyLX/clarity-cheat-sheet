@@ -3,7 +3,7 @@
   "id": "principal_of",
   "name": "principal-of?",
   "byname": "",
-  "input": "(buff 33)",
+  "inputs": "(buff 33)",
   "output": "(response principal uint)",
   "changed": 2.1,
   "description": [

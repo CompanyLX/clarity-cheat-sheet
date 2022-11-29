@@ -3,7 +3,7 @@
   "id": "tuple_get",
   "name": "get",
   "byname": "",
-  "input": "KeyName, (tuple) | (optional (tuple))",
+  "inputs": "KeyName, (tuple) | (optional (tuple))",
   "output": "A",
   "since": 2.1,
   "description": [

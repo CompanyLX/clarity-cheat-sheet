@@ -3,7 +3,7 @@
   "id": "fetch_var",
   "name": "var-get",
   "byname": "",
-  "input": "VarName",
+  "inputs": "VarName",
   "output": "A",
   "since": 2.1,
   "description": [

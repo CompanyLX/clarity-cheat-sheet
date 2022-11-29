@@ -3,7 +3,7 @@
   "id": "insert_entry",
   "name": "map-insert",
   "byname": "",
-  "input": "MapName, tuple_A, tuple_B",
+  "inputs": "MapName, tuple_A, tuple_B",
   "output": "bool",
   "since": 2.1,
   "description": [

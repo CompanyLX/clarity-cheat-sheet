@@ -3,7 +3,7 @@
   "id": "contract_of",
   "name": "contract-of",
   "byname": "",
-  "input": "Trait",
+  "inputs": "Trait",
   "output": "principal",
   "since": 2.1,
   "description": [

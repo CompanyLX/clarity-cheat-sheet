@@ -3,7 +3,7 @@
   "id": "mint_asset",
   "name": "nft-mint?",
   "byname": "",
-  "input": "AssetName, A, principal",
+  "inputs": "AssetName, A, principal",
   "output": "(response bool uint)",
   "since": 2.1,
   "description": [

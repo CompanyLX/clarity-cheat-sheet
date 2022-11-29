@@ -3,7 +3,7 @@
   "id": "tuple_cons",
   "name": "tuple",
   "byname": "",
-  "input": "(key-name A), (key-name-2 B), ...",
+  "inputs": "(key-name A), (key-name-2 B), ...",
   "output": "(tuple (key-name A) (key-name-2 B) ...)",
   "since": 2.1,
   "description": [

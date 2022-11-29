@@ -3,7 +3,7 @@
   "id": "to_consensus_buff",
   "name": "to-consensus-buff?",
   "byname": "",
-  "input": "any",
+  "inputs": "any",
   "output": "(optional buff)",
   "since": 2.1,
   "description": [

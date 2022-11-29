@@ -3,7 +3,7 @@
   "id": "from_consensus_buff",
   "name": "from-consensus-buff",
   "byname": "",
-  "input": "type-signature(t), buff",
+  "inputs": "type-signature(t), buff",
   "output": "(optional t)",
   "since": 2.1,
   "description": [

@@ -3,7 +3,7 @@
   "id": "tuple_merge",
   "name": "merge",
   "byname": "",
-  "input": "tuple, tuple",
+  "inputs": "tuple, tuple",
   "output": "tuple",
   "since": 2.1,
   "description": [

@@ -3,7 +3,7 @@
   "id": "stx_transfer_memo",
   "name": "stx-transfer-memo?",
   "byname": "",
-  "input": "uint, principal, principal, buff",
+  "inputs": "uint, principal, principal, buff",
   "output": "(response bool uint)",
   "since": 2.1,
   "description": [

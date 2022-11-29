@@ -3,7 +3,7 @@
   "id": "tx_sponsor",
   "name": "tx-sponsor?",
   "byname": "",
-  "input": "",
+  "inputs": "",
   "output": "optional principal",
   "since": 2.1,
   "description": [

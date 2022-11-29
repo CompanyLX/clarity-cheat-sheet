@@ -3,7 +3,7 @@
   "id": "unwrap_err_panic",
   "name": "unwrap-err-panic",
   "byname": "",
-  "input": "(response A B)",
+  "inputs": "(response A B)",
   "output": "B",
   "since": 2.1,
   "description": [

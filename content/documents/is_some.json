@@ -3,7 +3,7 @@
   "id": "is_some",
   "name": "is-some",
   "byname": "",
-  "input": "(optional A)",
+  "inputs": "(optional A)",
   "output": "bool",
   "since": 2.1,
   "description": [

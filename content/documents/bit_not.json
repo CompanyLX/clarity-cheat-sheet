@@ -1,9 +1,7 @@
 {
   "id": "bit_not",
   "name": "bit-not",
-  "inputs": [
-    ["NUMBER", "int | uint"]
-  ],
+  "inputs": [["NUMBER", "int | uint"]],
   "output": "int | uint",
   "signature": "(bit-not NUMBER)",
   "since": 2.1,

@@ -3,7 +3,7 @@
   "id": "index_of",
   "name": "index-of",
   "byname": "",
-  "input": "sequence_A, A",
+  "inputs": "sequence_A, A",
   "output": "(optional uint)",
   "signature": "(index-of sequence item)",
   "since": 2.1,

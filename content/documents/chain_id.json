@@ -1,7 +1,6 @@
 {
   "id": "chain_id",
   "name": "chain-id",
-  "input": [],
   "output": "uint",
   "since": 2.1,
   "description": [

@@ -3,7 +3,7 @@
   "id": "unwrap_err",
   "name": "unwrap-err!",
   "byname": "",
-  "input": "(response A B), C",
+  "inputs": "(response A B), C",
   "output": "B",
   "since": 2.1,
   "description": [
