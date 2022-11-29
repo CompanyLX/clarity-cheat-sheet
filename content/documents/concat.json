@@ -1,9 +1,12 @@
 {
   "id": "concat",
   "name": "concat",
-  "inputs": "[buff | string-ascii | string-utf8 | list], [buff | string-ascii | string-utf8 | list]",
-  "output": "[buff | string-ascii | string-utf8 | list]",
-  "signature": "(concat INPUT-1 INPUT-1)",
+  "inputs": [
+    ["SEQUENCE-VALUE-1", "buff | string-ascii | string-utf8 | list"],
+    ["SEQUENCE-VALUE-2", "buff | string-ascii | string-utf8 | list"]
+  ],
+  "output": "buff | string-ascii | string-utf8 | list",
+  "signature": "(concat SEQUENCE-VALUE-1 SEQUENCE-VALUE-2)",
   "description": [
     "The <i>concat</i> function takes two sequences of the same type, and returns a concatenated sequence of the same type."
   ],
