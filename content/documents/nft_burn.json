@@ -3,7 +3,7 @@
   "name": "nft-burn?",
   "inputs": [
     ["ASSET-CLASS", "CLASS-NAME"],
-    ["ASSET-IDENTIFIER", "ANY-VALUE"],
+    ["ASSET-IDENTIFIER", "ANY-TYPES"],
     ["SENDER", "principal"]
   ],
   "output": "(response [bool | uint])",

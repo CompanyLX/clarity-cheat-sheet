@@ -5,12 +5,12 @@
   "inputs": [
     ["CONTRACT-PRINCIPAL", "principal"],
     ["FUNCTION-NAME", "string-ascii"],
-    ["FUNCTION-ARGUMENT-1", "ANY-VALUE"],
-    ["FUNCTION-ARGUMENT-2", "ANY-VALUE"],
-    ["...", "ANY-VALUE"],
-    ["FUNCTION-ARGUMENT-N", "ANY-VALUE"]
+    ["FUNCTION-ARGUMENT-1", "ANY-TYPES"],
+    ["FUNCTION-ARGUMENT-2", "ANY-TYPES"],
+    ["...", "ANY-TYPES"],
+    ["FUNCTION-ARGUMENT-N", "ANY-TYPES"]
   ],
-  "output": "(response ANY-VALUE)",
+  "output": "(response ANY-TYPES)",
   "signature": "(contract-call? CONTRACT-PRINCIPAL FUNCTION-NAME FUNCTION-ARGUMENT-1 FUNCTION-ARGUMENT-2 ... FUNCTION-ARGUMENT-N)",
   "description": [
     "The <i>contract-call?</i> function executes the given public function of the given contract. You <u>may not</u> use this function to call a public function defined in the current contract. If the public function returns <b>err</b>, any database changes resulting from calling <i>contract-call?</i> are aborted. If the function returns <b>ok</b>, database changes occurred."

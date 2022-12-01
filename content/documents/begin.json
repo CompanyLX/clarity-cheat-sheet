@@ -7,7 +7,7 @@
     ["...", "ANY-EXPRESSION"],
     ["EXPRESSION-N", "ANY-EXPRESSION"]
   ],
-  "output": "ANY-VALUE",
+  "output": "ANY-TYPES",
   "signature": "(begin EXPRESSION-1 EXPRESSION-2 ... EXPRESSION-N)",
   "description": [
     "The <i>begin</i> function evaluates each of its input expressions, returning the return value of the last such expression.",

@@ -2,7 +2,7 @@
   "id": "as_contract",
   "name": "as-contract",
   "inputs": [["EXPRESSION", "ANY-EXPRESSION"]],
-  "output": "ANY-TYPE",
+  "output": "ANY-TYPES",
   "signature": "(as-contract EXPRESSION)",
   "description": [
     "The <i>as-contract</i> function switches the current context&quot;s <i>tx-sender</i> value to the <u>contract&quot;s</u> principal and executes <b>EXPRESSION</b> with that context. It returns the resulting value of <b>EXPRESSION</b>."

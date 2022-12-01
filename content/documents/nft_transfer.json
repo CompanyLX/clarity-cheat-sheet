@@ -3,7 +3,7 @@
   "name": "nft-transfer?",
   "inputs": [
     ["ASSET-CLASS", "CLASS-NAME"],
-    ["ASSET-IDENTIFIER", "ANY-VALUE"],
+    ["ASSET-IDENTIFIER", "ANY-TYPES"],
     ["SENDER", "principal"],
     ["RECIPIENT", "principal"]
   ],

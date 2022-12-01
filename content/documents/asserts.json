@@ -3,7 +3,7 @@
   "name": "asserts!",
   "inputs": [
     ["BOOLEAN-EXPRESSION", "bool"],
-    ["THROWN-VALUE", "ANY-TYPE"]
+    ["THROWN-VALUE", "ANY-TYPES"]
   ],
   "output": "bool | THROWN-VALUE",
   "signature": "(asserts! BOOLEAN-EXPRESSION THROWN-VALUE)",
