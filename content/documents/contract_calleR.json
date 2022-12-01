@@ -1,16 +1,12 @@
 {
-  "wip": true,
   "id": "contract_caller",
   "name": "contract-caller",
-  "byname": "",
-  "inputs": "",
   "output": "principal",
-  "since": 2.1,
   "description": [
     "Returns the caller of the current contract context. If this contract is the first one called by a signed transaction, the caller will be equal to the signing principal. If <i>contract-call?</i> was used to invoke a function from a new contract, <i>contract-caller</i> changes to the <u>calling</u> contract&quot;s principal. If <i>as-contract</i> is used to change the <i>tx-sender</i> context, <i>contract-caller</i> <u>also</u> changes to the same contract principal."
   ],
   "examples": [
-    [">", "(print contract-caller)"],
-    [";", "Will print out a Stacks address of the transaction sender"]
+    [">", "contract-caller"],
+    ["<", "ST000000000000000000002AMW42H"]
   ]
 }
