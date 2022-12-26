@@ -1,8 +1,6 @@
 {
-  "wip": true,
   "id": "contract_of",
   "name": "contract-of",
-  "byname": "",
   "inputs": "Trait",
   "output": "principal",
   "since": 2.1,
